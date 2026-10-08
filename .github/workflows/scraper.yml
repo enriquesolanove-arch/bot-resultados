@@ -1,0 +1,35 @@
+name: Actualizador de Resultados
+
+on:
+  schedule:
+    # Se ejecuta cada 15 minutos entre las 8 AM y 8 PM (Hora Venezuela)
+    - cron: '*/15 12-00 * * *'
+  workflow_dispatch: # Permite ejecutarlo manualmente cuando quieras
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar librerias
+        run: |
+          pip install -r requirements.txt
+
+      - name: Ejecutar Scraper
+        run: python main.py
+
+      - name: Guardar cambios y subir resultados
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Auto-update resultados" || exit 0
+          git push
+          
