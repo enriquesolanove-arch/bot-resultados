@@ -2,9 +2,8 @@ name: Actualizador de Resultados
 
 on:
   schedule:
-    # Se ejecuta cada 15 minutos entre las 8 AM y 8 PM (Hora Venezuela)
-    - cron: '*/15 12-00 * * *'
-  workflow_dispatch: # Permite ejecutarlo manualmente cuando quieras
+    - cron: '*/15 12-23 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
