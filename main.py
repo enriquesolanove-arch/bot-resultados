@@ -1,16 +1,31 @@
+import os
 import json
 import re
 import requests
+import asyncio
+from threading import Thread
+from flask import Flask
 from requests.auth import HTTPBasicAuth
 from telethon import TelegramClient, events
 
+# --- SERVIDOR WEB DUMMY PARA ENGAÑAR A RENDER ---
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot de resultados activo 24/7"
+
+def run_flask():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
+
 # --- CONFIGURACIÓN DE ACCESOS ---
 API_ID = 30070257
-API_HASH = 'f276b94bb1b88422bf44ad842995c3e0'
-CANAL_ORIGEN = '@resultadosagharoldjose'  
+API_HASH = 'f276b94bb1b88422bf44ad842995c3e0' 
+CANAL_ORIGEN = '@resultadosagharoldjose'   # Nombre de usuario o enlace del canal
 
-NEOCITIES_USER = 'agenciaopdorada' 
-NEOCITIES_PASS = 'abc123'  
+NEOCITIES_USER = 'agenciaopdorada'
+NEOCITIES_PASS = 'abc123' 
 
 client = TelegramClient('sesion_resultados', API_ID, API_HASH)
 lista_resultados = []
@@ -55,6 +70,13 @@ async def handler_nuevo_mensaje(event):
             lista_resultados.pop()
         subir_a_neocities(lista_resultados)
 
-print("🤖 Bot activo...")
-client.start()
-client.run_until_disconnected()
+if __name__ == '__main__':
+    # Inicia Flask en un hilo secundario para responder a Render
+    t = Thread(target=run_flask)
+    t.daemon = True
+    t.start()
+
+    print("🤖 Bot activo...")
+    client.start()
+    client.run_until_disconnected()
+    
