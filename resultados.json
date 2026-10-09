@@ -1,5 +1,17 @@
 [
   {
+    "loteria": "CALAMAR B",
+    "hora": "02:00 PM",
+    "numero": "73",
+    "animal": "Hipopotamo"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "02:00 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
     "loteria": "MONJE MILLONARIO",
     "hora": "02:05 PM",
     "numero": "37",
@@ -130,17 +142,5 @@
     "hora": "02:00 PM",
     "numero": "21",
     "animal": "Gallo"
-  },
-  {
-    "loteria": "RULETA ROYAL",
-    "hora": "01:30 PM",
-    "numero": "32",
-    "animal": "Ardilla"
-  },
-  {
-    "loteria": "GATAZO",
-    "hora": "01:40 PM",
-    "numero": "43",
-    "animal": "Mariposa"
   }
 ]
