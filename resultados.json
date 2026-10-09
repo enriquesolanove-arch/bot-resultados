@@ -1,5 +1,35 @@
 [
   {
+    "loteria": "MEGA GUACA",
+    "hora": "02:30 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "02:15 PM",
+    "numero": "88",
+    "animal": "Estrella"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "02:15 PM",
+    "numero": "91",
+    "animal": "Morrocoy"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "02:10 PM",
+    "numero": "43",
+    "animal": "Mariposa"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "02:10 PM",
+    "numero": "27",
+    "animal": "Perro"
+  },
+  {
     "loteria": "CALAMAR B",
     "hora": "02:00 PM",
     "numero": "73",
@@ -124,23 +154,5 @@
     "hora": "02:00 PM",
     "numero": "00",
     "animal": "Ballena"
-  },
-  {
-    "loteria": "CENTENA ANIMAL",
-    "hora": "02:00 PM",
-    "numero": "08",
-    "animal": "Ratón"
-  },
-  {
-    "loteria": "LOTTO PANTERA",
-    "hora": "02:00 PM",
-    "numero": "11",
-    "animal": "Gato"
-  },
-  {
-    "loteria": "LOTOANIMALITO",
-    "hora": "02:00 PM",
-    "numero": "21",
-    "animal": "Gallo"
   }
 ]
