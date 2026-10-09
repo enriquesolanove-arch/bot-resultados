@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configurar Python
         uses: actions/setup-python@v4
