@@ -1,7 +1,7 @@
 import os
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
@@ -77,14 +77,15 @@ async def extraer_y_publicar():
     with open('resultados.json', 'w', encoding='utf-8') as f:
         json.dump(resultados, f, ensure_ascii=False, indent=2)
 
-    # Guardar registro de enviados para que nunca se repitan (acumulamos hasta 200)
+    # Guardar registro de enviados para que nunca se repitan (acumulamos hasta 300)
     with open(enviados_path, 'w', encoding='utf-8') as f:
-        json.dump(enviados[-200:], f, ensure_ascii=False, indent=2)
+        json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
 
-    # --- MANEJO DE MENSAJES DE CIERRE AUTOMÁTICOS ---
-    ahora = datetime.now()
-    fecha_hoy = ahora.strftime('%Y-%m-%d')
-    hora_actual_str = ahora.strftime("%H:%M")
+    # --- MANEJO DE HORA LOCAL (Venezuela UTC-4) ---
+    # Forzamos la hora correcta restando las horas del servidor de GitHub
+    ahora_venezuela = datetime.utcnow() - timedelta(hours=4)
+    fecha_hoy = ahora_venezuela.strftime('%Y-%m-%d')
+    hora_actual_str = ahora_venezuela.strftime("%H:%M")
     
     # Mensaje de cierre de tanda
     id_cierre_tanda = f"cierre-tanda-{fecha_hoy}"
@@ -97,11 +98,14 @@ async def extraer_y_publicar():
         try:
             await client.send_message(CANAL_DESTINO, msg_tanda, parse_mode='markdown')
             enviados.append(id_cierre_tanda)
+            # Actualizamos de nuevo el json de enviados con este mensaje
+            with open(enviados_path, 'w', encoding='utf-8') as f:
+                json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
             print("📤 Enviado mensaje de cierre de tanda.")
         except Exception as e:
             print(f"Error enviando cierre de tanda: {e}")
 
-    # Mensaje de buenas noches a partir de las 10:00 PM (22:00)
+    # Mensaje de buenas noches estrictamente a partir de las 10:00 PM (22:00) hora de Venezuela
     id_buenas_noches = f"buenas-noches-{fecha_hoy}"
     if hora_actual_str >= "22:00" and id_buenas_noches not in enviados:
         msg_noches = (
@@ -111,6 +115,8 @@ async def extraer_y_publicar():
         try:
             await client.send_message(CANAL_DESTINO, msg_noches, parse_mode='markdown')
             enviados.append(id_buenas_noches)
+            with open(enviados_path, 'w', encoding='utf-8') as f:
+                json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
             print("📤 Enviado mensaje de buenas noches.")
         except Exception as e:
             print(f"Error enviando buenas noches: {e}")
@@ -124,4 +130,4 @@ async def main():
 
 if __name__ == "__main__":
     client.loop.run_until_complete(main())
-    
+            
