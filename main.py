@@ -10,7 +10,7 @@ api_hash = os.environ["TELEGRAM_API_HASH"]
 string_session = os.environ["TELEGRAM_STRING_SESSION"]
 
 # Nombre de usuario del canal de Telegram (sin @)
-CANAL_TELEGRAM = 'LottoActivoOficial'  # Asegúrate de colocar el username real del canal
+CANAL_TELEGRAM = 'resultadosagharoldjose'  # Asegúrate de colocar el username real del canal
 
 client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
