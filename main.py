@@ -71,9 +71,11 @@ async def extraer_y_publicar():
                 except Exception as e:
                     print(f"⚠️ Error al publicar en Telegram: {e}")
 
-    # Guardar archivo JSON actualizado para la web
-    with open('resultados.json', 'w', encoding='utf-8') as f:
-        json.dump(resultados, f, ensure_ascii=False, indent=2)
+        # Guardar en formato JavaScript para que Neocities lo lea sin problemas de CORS
+    contenido_js = f"const resultadosData = {json.dumps(resultados, ensure_ascii=False, indent=2)};"
+    with open('datos.js', 'w', encoding='utf-8') as f:
+        f.write(contenido_js)
+        
 
     # Guardar registro de enviados
     with open(enviados_path, 'w', encoding='utf-8') as f:
