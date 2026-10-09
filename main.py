@@ -9,9 +9,8 @@ api_id = int(os.environ["TELEGRAM_API_ID"])
 api_hash = os.environ["TELEGRAM_API_HASH"]
 string_session = os.environ["TELEGRAM_STRING_SESSION"]
 
-# Canal o grupo de Telegram desde donde se leen los resultados (Nombre de usuario o ID)
-# Cambia 'tu_canal_resultados' por el username real del canal sin @
-CANAL_TELEGRAM = 'resultadosagharoldjose' 
+# Nombre de usuario del canal de Telegram (sin @)
+CANAL_TELEGRAM = 'LottoActivoOficial'  # Asegúrate de colocar el username real del canal
 
 client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
@@ -25,33 +24,23 @@ async def extraer_resultados():
             
         texto = message.text.strip()
         
-        # Expresión regular orientada a loterías de animalitos / triples
-        # Ejemplo esperado: "Lotto Activo 10:00 AM - 25 Gallina"
-        # Adapta este patrón según la estructura de texto exacta del canal
-        patron = r'(?P<loteria>[A-Za-z\s]+)\s+(?P<hora>\d{1,2}:\d{2}\s*(?:AM|PM|am|pm))\s*[-:]?\s*(?P<numero>\d{1,2})\s*[-:]?\s*(?P<animal>[A-Za-z]+)'
-        coincidencia = re.search(patron, texto)
+        # Expresión regular ajustada para capturar:
+        # Lotería (después de 🎰)
+        # Hora, Número y Animal (después de 🕒)
+        pattern = r'🎰\s*(?P<loteria>[^\n]+)\n+🕒\s*(?P<hora>\d{1,2}:\d{2}\s*(?:AM|PM|am|pm))\s+(?P<numero>\d{1,2})\s*[-:]?\s*(?P<animal>[A-Za-zÁÉÍÓÚáéíóúÑñ]+)'
         
-        if coincidencia:
-            datos = coincidencia.groupdict()
+        match = re.search(pattern, texto)
+        
+        if match:
+            datos = match.groupdict()
             resultados.append({
                 "loteria": datos["loteria"].strip(),
                 "hora": datos["hora"].strip().upper(),
                 "numero": datos["numero"].zfill(2), # Formato a 2 dígitos (ej: 05)
                 "animal": datos["animal"].strip().capitalize()
             })
-        else:
-            # Procesamiento alternativo simple por líneas si no coincide con el patrón estricto
-            lineas = texto.split('\n')
-            for linea in lineas:
-                if any(k in linea.lower() for k in ['activo', 'granjita', 'selva', 'guacharo', 'dato']):
-                    resultados.append({
-                        "loteria": "Sorteo",
-                        "hora": "En vivo",
-                        "numero": "00",
-                        "animal": linea.strip()
-                    })
 
-    # Guardar en archivo resultados.json
+    # Guardar en resultados.json
     with open('resultados.json', 'w', encoding='utf-8') as f:
         json.dump(resultados, f, ensure_ascii=False, indent=2)
         
