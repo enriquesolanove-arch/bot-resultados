@@ -1,5 +1,35 @@
 [
   {
+    "loteria": "SELVA PLUS",
+    "hora": "11:15 AM",
+    "numero": "68",
+    "animal": "Jaguar"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "11:15 AM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "11:10 AM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "11:10 AM",
+    "numero": "50",
+    "animal": "Canario"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "11:10 AM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
     "loteria": "MONJE MILLONARIO",
     "hora": "11:05 AM",
     "numero": "51",
@@ -130,23 +160,5 @@
     "hora": "11:00 AM",
     "numero": "27",
     "animal": "Perro"
-  },
-  {
-    "loteria": "LOTTO PANTERA",
-    "hora": "11:00 AM",
-    "numero": "00",
-    "animal": "Ballena"
-  },
-  {
-    "loteria": "LOTOANIMALITO",
-    "hora": "11:00 AM",
-    "numero": "13",
-    "animal": "Mono"
-  },
-  {
-    "loteria": "GATAZO",
-    "hora": "10:40 AM",
-    "numero": "48",
-    "animal": "Puerco"
   }
 ]
