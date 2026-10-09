@@ -2,7 +2,6 @@ import os
 import json
 import re
 from datetime import datetime
-import pytz
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
@@ -83,13 +82,12 @@ async def extraer_y_publicar():
         json.dump(enviados[-200:], f, ensure_ascii=False, indent=2)
 
     # --- MANEJO DE MENSAJES DE CIERRE AUTOMÁTICOS ---
-    # Configurar zona horaria (ajusta según tu país, ej: America/Caracas)
-    tz = pytz.timezone('America/Caracas')
-    ahora = datetime.now(tz)
+    ahora = datetime.now()
+    fecha_hoy = ahora.strftime('%Y-%m-%d')
     hora_actual_str = ahora.strftime("%H:%M")
     
-    # Marcador para el mensaje de cierre de tanda (se puede enviar si se publicaron cosas nuevas y ya pasó la tarde/noche)
-    id_cierre_tanda = f"cierre-tanda-{ahora.strftime('%Y-%m-%d')}"
+    # Mensaje de cierre de tanda
+    id_cierre_tanda = f"cierre-tanda-{fecha_hoy}"
     if nuevos_enviados_en_esta_ejecucion and id_cierre_tanda not in enviados:
         msg_tanda = (
             f"✅ *¡Listo los resultados a esta hora!* ⏰\n"
@@ -103,8 +101,8 @@ async def extraer_y_publicar():
         except Exception as e:
             print(f"Error enviando cierre de tanda: {e}")
 
-    # Mensaje de buenas noches automático a partir de las 10:00 PM (22:00)
-    id_buenas_noches = f"buenas-noches-{ahora.strftime('%Y-%m-%d')}"
+    # Mensaje de buenas noches a partir de las 10:00 PM (22:00)
+    id_buenas_noches = f"buenas-noches-{fecha_hoy}"
     if hora_actual_str >= "22:00" and id_buenas_noches not in enviados:
         msg_noches = (
             f"🌙 *¡Buenas noches para todos!* ✨\n"
@@ -126,4 +124,4 @@ async def main():
 
 if __name__ == "__main__":
     client.loop.run_until_complete(main())
-            
+    
