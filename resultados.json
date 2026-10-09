@@ -1,5 +1,29 @@
 [
   {
+    "loteria": "RULETA ROYAL",
+    "hora": "02:30 PM",
+    "numero": "26",
+    "animal": "Vaca"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "02:30 PM",
+    "numero": "00",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "02:30 PM",
+    "numero": "84",
+    "animal": "Camaron"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "02:30 PM",
+    "numero": "10",
+    "animal": "Tigre"
+  },
+  {
     "loteria": "MEGA GUACA",
     "hora": "02:30 PM",
     "numero": "19",
@@ -124,35 +148,5 @@
     "hora": "02:00 PM",
     "numero": "34",
     "animal": "Venado"
-  },
-  {
-    "loteria": "CONDOR GANA",
-    "hora": "02:00 PM",
-    "numero": "00",
-    "animal": "Delfín"
-  },
-  {
-    "loteria": "GUACHARO ACTIVO",
-    "hora": "02:00 PM",
-    "numero": "36",
-    "animal": "Culebra"
-  },
-  {
-    "loteria": "LA GRANJITA",
-    "hora": "02:00 PM",
-    "numero": "01",
-    "animal": "Carnero"
-  },
-  {
-    "loteria": "ZOOLOGICO ACTIVO",
-    "hora": "02:00 PM",
-    "numero": "17",
-    "animal": "Pavo"
-  },
-  {
-    "loteria": "LOTTO ACTIVO RDOMINICANA",
-    "hora": "02:00 PM",
-    "numero": "00",
-    "animal": "Ballena"
   }
 ]
