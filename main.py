@@ -11,7 +11,7 @@ string_session = os.environ["TELEGRAM_STRING_SESSION"]
 
 # Canal o grupo de Telegram desde donde se leen los resultados (Nombre de usuario o ID)
 # Cambia 'tu_canal_resultados' por el username real del canal sin @
-CANAL_TELEGRAM = 'tu_canal_resultados' 
+CANAL_TELEGRAM = 'resultadosagharoldjose' 
 
 client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
