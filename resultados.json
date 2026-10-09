@@ -1,5 +1,29 @@
 [
   {
+    "loteria": "LOTOANIMALITO",
+    "hora": "01:00 PM",
+    "numero": "11",
+    "animal": "Gato"
+  },
+  {
+    "loteria": "MEGA ANIMAL",
+    "hora": "01:00 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "12:30 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "12:40 PM",
+    "numero": "17",
+    "animal": "Pavo"
+  },
+  {
     "loteria": "GRANJAZO",
     "hora": "12:30 PM",
     "numero": "38",
@@ -124,35 +148,5 @@
     "hora": "12:00 PM",
     "numero": "49",
     "animal": "Espátula"
-  },
-  {
-    "loteria": "MEGA ANIMAL",
-    "hora": "12:00 PM",
-    "numero": "23",
-    "animal": "Cebra"
-  },
-  {
-    "loteria": "FRUITAGANA",
-    "hora": "12:00 PM",
-    "numero": "26",
-    "animal": "Mora"
-  },
-  {
-    "loteria": "TROPIGANA",
-    "hora": "12:00 PM",
-    "numero": "00",
-    "animal": "Ballena"
-  },
-  {
-    "loteria": "CONDOR GANA",
-    "hora": "12:00 PM",
-    "numero": "20",
-    "animal": "Cochino"
-  },
-  {
-    "loteria": "LA GRANJITA",
-    "hora": "12:00 PM",
-    "numero": "13",
-    "animal": "Mono"
   }
 ]
