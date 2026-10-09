@@ -21,20 +21,29 @@ async def extraer_y_publicar():
     # Cargar enviados históricos o persistentes si existen
     enviados_path = 'enviados.json'
     enviados = []
+    es_primera_vez = False
+    
     if os.path.exists(enviados_path):
         with open(enviados_path, 'r', encoding='utf-8') as f:
             try:
                 enviados = json.load(f)
             except:
                 enviados = []
+    else:
+        es_primera_vez = True
+
+    # Recoger mensajes del canal origen
+    mensajes_recogidos = []
+    async for message in client.iter_messages(CANAL_ORIGEN, limit=40):
+        if message.text:
+            mensajes_recogidos.append(message)
+
+    # Invertimos la lista para procesar del más antiguo al más nuevo
+    mensajes_recogidos.reverse()
 
     nuevos_enviados_en_esta_ejecucion = False
 
-    # Leemos los mensajes recientes del canal de origen
-    async for message in client.iter_messages(CANAL_ORIGEN, limit=40):
-        if not message.text:
-            continue
-            
+    for message in mensajes_recogidos:
         texto = message.text.strip()
         
         # Patrón para capturar el resultado
@@ -51,10 +60,16 @@ async def extraer_y_publicar():
             }
             resultados.append(item)
 
-            # Identificador único por sorteo, hora y número
             identificador = f"{item['loteria']}-{item['hora']}-{item['numero']}"
             
-            # Si NO ha sido enviado antes, lo mandamos a Telegram
+            # Si es la primera vez que se ejecuta, marcamos los existentes 
+            # para evitar inundar el canal con sorteos viejos de golpe.
+            if es_primera_vez:
+                if identificador not in enviados:
+                    enviados.append(identificador)
+                continue
+
+            # Si ya está inicializado, publicamos únicamente los nuevos en vivo
             if identificador not in enviados:
                 mensaje_telegram = (
                     f"🎰 *RESULTADO EN VIVO* 🎰\n"
@@ -73,23 +88,28 @@ async def extraer_y_publicar():
                 except Exception as e:
                     print(f"⚠️ Error al publicar en Telegram: {e}")
 
+    # Si era la primera ejecución, guardamos el estado base para arrancar limpios
+    if es_primera_vez:
+        with open(enviados_path, 'w', encoding='utf-8') as f:
+            json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
+        print("🛡️ Historial inicializado correctamente. A partir de ahora solo publicará lo nuevo.")
+
     # Guardar archivo JSON actualizado para la web
     with open('resultados.json', 'w', encoding='utf-8') as f:
         json.dump(resultados, f, ensure_ascii=False, indent=2)
 
-    # Guardar registro de enviados para que nunca se repitan (acumulamos hasta 300)
-    with open(enviados_path, 'w', encoding='utf-8') as f:
-        json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
+    if not es_primera_vez:
+        with open(enviados_path, 'w', encoding='utf-8') as f:
+            json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
 
     # --- MANEJO DE HORA LOCAL (Venezuela UTC-4) ---
-    # Forzamos la hora correcta restando las horas del servidor de GitHub
     ahora_venezuela = datetime.utcnow() - timedelta(hours=4)
     fecha_hoy = ahora_venezuela.strftime('%Y-%m-%d')
     hora_actual_str = ahora_venezuela.strftime("%H:%M")
     
-    # Mensaje de cierre de tanda
+    # Mensaje de cierre de tanda (solo si no es la primera ejecución y hubo novedades)
     id_cierre_tanda = f"cierre-tanda-{fecha_hoy}"
-    if nuevos_enviados_en_esta_ejecucion and id_cierre_tanda not in enviados:
+    if not es_primera_vez and nuevos_enviados_en_esta_ejecucion and id_cierre_tanda not in enviados:
         msg_tanda = (
             f"✅ *¡Listo los resultados a esta hora!* ⏰\n"
             f"La taquilla sigue activa 🎰. Escríbenos para realizar tu jugada 📲.\n\n"
@@ -98,16 +118,15 @@ async def extraer_y_publicar():
         try:
             await client.send_message(CANAL_DESTINO, msg_tanda, parse_mode='markdown')
             enviados.append(id_cierre_tanda)
-            # Actualizamos de nuevo el json de enviados con este mensaje
             with open(enviados_path, 'w', encoding='utf-8') as f:
                 json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
             print("📤 Enviado mensaje de cierre de tanda.")
         except Exception as e:
             print(f"Error enviando cierre de tanda: {e}")
 
-    # Mensaje de buenas noches estrictamente a partir de las 10:00 PM (22:00) hora de Venezuela
+    # Mensaje de buenas noches estricto a las 10:00 PM (22:00) hora de Venezuela
     id_buenas_noches = f"buenas-noches-{fecha_hoy}"
-    if hora_actual_str >= "22:00" and id_buenas_noches not in enviados:
+    if not es_primera_vez and hora_actual_str >= "22:00" and id_buenas_noches not in enviados:
         msg_noches = (
             f"🌙 *¡Buenas noches para todos!* ✨\n"
             f"Cerramos operaciones por el día de hoy. Mañana nos activamos nuevamente con más fuerza y mejores jugadas por *Agencia Oportunidad Dorada* 🎰🔥."
@@ -130,4 +149,4 @@ async def main():
 
 if __name__ == "__main__":
     client.loop.run_until_complete(main())
-            
+                
