@@ -3,6 +3,18 @@
     "loteria": "Sorteo",
     "hora": "En vivo",
     "numero": "00",
+    "animal": "🎰 SELVA PLUS"
+  },
+  {
+    "loteria": "Sorteo",
+    "hora": "En vivo",
+    "numero": "00",
+    "animal": "🎰 GRANJITA PLUS"
+  },
+  {
+    "loteria": "Sorteo",
+    "hora": "En vivo",
+    "numero": "00",
     "animal": "🎰 LOTTO ACTIVO"
   },
   {
@@ -10,23 +22,5 @@
     "hora": "En vivo",
     "numero": "00",
     "animal": "🎰 LA GRANJITA"
-  },
-  {
-    "loteria": "Sorteo",
-    "hora": "En vivo",
-    "numero": "00",
-    "animal": "🎰 GUACHARO ACTIVO"
-  },
-  {
-    "loteria": "Sorteo",
-    "hora": "En vivo",
-    "numero": "00",
-    "animal": "🎰 ZOOLOGICO ACTIVO"
-  },
-  {
-    "loteria": "Sorteo",
-    "hora": "En vivo",
-    "numero": "00",
-    "animal": "🎰 LOTTO ACTIVO RDOMINICANA"
   }
 ]
