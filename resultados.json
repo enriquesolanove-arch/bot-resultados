@@ -1,5 +1,23 @@
 [
   {
+    "loteria": "GATAZO",
+    "hora": "04:40 PM",
+    "numero": "06",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "04:30 PM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "04:30 PM",
+    "numero": "71",
+    "animal": "Rabipelao"
+  },
+  {
     "loteria": "LOTTO ACTIVO RD INT",
     "hora": "04:30 PM",
     "numero": "30",
@@ -748,23 +766,5 @@
     "hora": "01:05 PM",
     "numero": "20",
     "animal": "Cochino"
-  },
-  {
-    "loteria": "GRANJA MILLONARIA",
-    "hora": "01:00 PM",
-    "numero": "22",
-    "animal": "Camello"
-  },
-  {
-    "loteria": "GUACHARO ACTIVO",
-    "hora": "01:00 PM",
-    "numero": "12",
-    "animal": "Caballo"
-  },
-  {
-    "loteria": "LOTTO ACTIVO",
-    "hora": "01:00 PM",
-    "numero": "21",
-    "animal": "Gallo"
   }
 ]
