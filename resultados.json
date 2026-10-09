@@ -1,5 +1,47 @@
 [
   {
+    "loteria": "SELVA PLUS",
+    "hora": "06:15 PM",
+    "numero": "42",
+    "animal": "Tucan"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "06:10 PM",
+    "numero": "32",
+    "animal": "Ardilla"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "06:15 PM",
+    "numero": "62",
+    "animal": "Cachicamo"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "06:10 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "06:10 PM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "06:00 PM",
+    "numero": "47",
+    "animal": "Pavo"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "06:00 PM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
     "loteria": "MONJE MILLONARIO",
     "hora": "06:05 PM",
     "numero": "68",
@@ -160,53 +202,5 @@
     "hora": "05:30 PM",
     "numero": "18",
     "animal": "Burro"
-  },
-  {
-    "loteria": "MEGA GUACA",
-    "hora": "05:30 PM",
-    "numero": "54",
-    "animal": "Orca"
-  },
-  {
-    "loteria": "GUACA ACTIVA",
-    "hora": "05:30 PM",
-    "numero": "07",
-    "animal": "Perico"
-  },
-  {
-    "loteria": "PANDA PLUS",
-    "hora": "05:30 PM",
-    "numero": "63",
-    "animal": "Cangrejo"
-  },
-  {
-    "loteria": "EL GUACHARITO MILLONARIO",
-    "hora": "05:30 PM",
-    "numero": "07",
-    "animal": "Perico"
-  },
-  {
-    "loteria": "SELVA PLUS",
-    "hora": "05:15 PM",
-    "numero": "76",
-    "animal": "Rinoceronte"
-  },
-  {
-    "loteria": "LOTTO GATO",
-    "hora": "05:10 PM",
-    "numero": "33",
-    "animal": "Pescado"
-  },
-  {
-    "loteria": "CENTENA PLUS",
-    "hora": "05:15 PM",
-    "numero": "24",
-    "animal": "Iguana"
-  },
-  {
-    "loteria": "LA RICACHONA",
-    "hora": "05:10 PM",
-    "numero": "33",
-    "animal": "Pescado"
   }
 ]
