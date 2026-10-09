@@ -1,5 +1,23 @@
 [
   {
+    "loteria": "RULETA ROYAL",
+    "hora": "03:30 PM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "03:40 PM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "03:30 PM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
     "loteria": "MEGA GUACA",
     "hora": "03:30 PM",
     "numero": "44",
@@ -142,23 +160,5 @@
     "hora": "03:00 PM",
     "numero": "23",
     "animal": "Cebra"
-  },
-  {
-    "loteria": "RULETON PERU",
-    "hora": "03:00 PM",
-    "numero": "13",
-    "animal": "Mono"
-  },
-  {
-    "loteria": "MEGA ANIMAL",
-    "hora": "03:00 PM",
-    "numero": "03",
-    "animal": "Ciempiés"
-  },
-  {
-    "loteria": "GUACHARO ACTIVO",
-    "hora": "03:00 PM",
-    "numero": "00",
-    "animal": "Delfín"
   }
 ]
