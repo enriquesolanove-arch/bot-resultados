@@ -1,5 +1,71 @@
 [
   {
+    "loteria": "GATAZO",
+    "hora": "11:40 AM",
+    "numero": "16",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "11:00 AM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "10:00 AM",
+    "numero": "06",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "09:00 AM",
+    "numero": "27",
+    "animal": "Perro"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "11:30 AM",
+    "numero": "10",
+    "animal": "Tigre"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "11:30 AM",
+    "numero": "04",
+    "animal": "Alacrán"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "11:30 AM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "11:30 AM",
+    "numero": "50",
+    "animal": "Canario"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "11:30 AM",
+    "numero": "70",
+    "animal": "Bisonte"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "11:30 AM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "11:30 AM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
     "loteria": "SELVA PLUS",
     "hora": "11:15 AM",
     "numero": "68",
@@ -88,77 +154,5 @@
     "hora": "11:00 AM",
     "numero": "26",
     "animal": "Vaca"
-  },
-  {
-    "loteria": "LOTTO LA QUINTA",
-    "hora": "11:00 AM",
-    "numero": "50",
-    "animal": "Medias"
-  },
-  {
-    "loteria": "LOTTO REAL",
-    "hora": "11:00 AM",
-    "numero": "14",
-    "animal": "Paloma"
-  },
-  {
-    "loteria": "FRUITAGANA",
-    "hora": "11:00 AM",
-    "numero": "25",
-    "animal": "Maiz"
-  },
-  {
-    "loteria": "TROPIGANA",
-    "hora": "11:00 AM",
-    "numero": "09",
-    "animal": "Águila"
-  },
-  {
-    "loteria": "CHANCE ANIMAL",
-    "hora": "11:00 AM",
-    "numero": "17",
-    "animal": "Pavo"
-  },
-  {
-    "loteria": "CONDOR GANA",
-    "hora": "11:00 AM",
-    "numero": "24",
-    "animal": "Iguana"
-  },
-  {
-    "loteria": "GUACHARO ACTIVO",
-    "hora": "11:00 AM",
-    "numero": "45",
-    "animal": "Garza"
-  },
-  {
-    "loteria": "LA GRANJITA",
-    "hora": "11:00 AM",
-    "numero": "01",
-    "animal": "Carnero"
-  },
-  {
-    "loteria": "ZOOLOGICO ACTIVO",
-    "hora": "11:00 AM",
-    "numero": "04",
-    "animal": "Alacrán"
-  },
-  {
-    "loteria": "MEGA ANIMAL",
-    "hora": "11:00 AM",
-    "numero": "12",
-    "animal": "Caballo"
-  },
-  {
-    "loteria": "LOTTO ACTIVO RDOMINICANA",
-    "hora": "11:00 AM",
-    "numero": "27",
-    "animal": "Perro"
-  },
-  {
-    "loteria": "CENTENA ANIMAL",
-    "hora": "11:00 AM",
-    "numero": "27",
-    "animal": "Perro"
   }
 ]
