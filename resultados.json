@@ -1,5 +1,35 @@
 [
   {
+    "loteria": "MEGA ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "07:00 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "07:00 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "07:00 PM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
     "loteria": "RULETA ROYAL",
     "hora": "06:30 PM",
     "numero": "11",
@@ -160,35 +190,5 @@
     "hora": "06:00 PM",
     "numero": "41",
     "animal": "Canguro"
-  },
-  {
-    "loteria": "GUACHARO ACTIVO",
-    "hora": "06:00 PM",
-    "numero": "56",
-    "animal": "Tiburon"
-  },
-  {
-    "loteria": "LA GRANJITA",
-    "hora": "06:00 PM",
-    "numero": "21",
-    "animal": "Gallo"
-  },
-  {
-    "loteria": "RULETON VENEZUELA",
-    "hora": "06:00 PM",
-    "numero": "07",
-    "animal": "Perico"
-  },
-  {
-    "loteria": "RULETON COLOMBIA",
-    "hora": "06:00 PM",
-    "numero": "21",
-    "animal": "Gallo"
-  },
-  {
-    "loteria": "RULETON PERU",
-    "hora": "06:00 PM",
-    "numero": "28",
-    "animal": "Zamuro"
   }
 ]
