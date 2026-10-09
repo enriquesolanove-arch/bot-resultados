@@ -1,5 +1,59 @@
 [
   {
+    "loteria": "SELVA PLUS",
+    "hora": "07:15 PM",
+    "numero": "70",
+    "animal": "Bisonte"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "07:00 PM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "07:00 PM",
+    "numero": "27",
+    "animal": "Perro"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "07:10 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "07:15 PM",
+    "numero": "92",
+    "animal": "Plaga"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "07:10 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "07:10 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "07:05 PM",
+    "numero": "74",
+    "animal": "Turpial"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "08:05 AM",
+    "numero": "59",
+    "animal": "Pantera"
+  },
+  {
     "loteria": "RULETA ACTIVA",
     "hora": "07:00 PM",
     "numero": "14",
@@ -154,53 +208,5 @@
     "hora": "06:30 PM",
     "numero": "65",
     "animal": "Gorila"
-  },
-  {
-    "loteria": "LOTTO ACTIVO RD INT",
-    "hora": "06:30 PM",
-    "numero": "22",
-    "animal": "Camello"
-  },
-  {
-    "loteria": "PANDA PLUS",
-    "hora": "06:30 PM",
-    "numero": "49",
-    "animal": "Pereza"
-  },
-  {
-    "loteria": "EL GUACHARITO MILLONARIO",
-    "hora": "06:30 PM",
-    "numero": "80",
-    "animal": "Murcielago"
-  },
-  {
-    "loteria": "SELVA PLUS",
-    "hora": "06:15 PM",
-    "numero": "42",
-    "animal": "Tucan"
-  },
-  {
-    "loteria": "LOTTO GATO",
-    "hora": "06:10 PM",
-    "numero": "32",
-    "animal": "Ardilla"
-  },
-  {
-    "loteria": "CENTENA PLUS",
-    "hora": "06:15 PM",
-    "numero": "62",
-    "animal": "Cachicamo"
-  },
-  {
-    "loteria": "LA RICACHONA",
-    "hora": "06:10 PM",
-    "numero": "22",
-    "animal": "Camello"
-  },
-  {
-    "loteria": "GRANJITA PLUS",
-    "hora": "06:10 PM",
-    "numero": "13",
-    "animal": "Mono"
   }
 ]
