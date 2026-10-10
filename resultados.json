@@ -1,65 +1,5 @@
 [
   {
-    "loteria": "LA RICACHONA",
-    "hora": "02:10 PM",
-    "numero": "23",
-    "animal": "Cebra"
-  },
-  {
-    "loteria": "CENTENA PLUS",
-    "hora": "02:15 PM",
-    "numero": "21",
-    "animal": "Gallo"
-  },
-  {
-    "loteria": "SELVA PLUS",
-    "hora": "02:15 PM",
-    "numero": "57",
-    "animal": "Pato"
-  },
-  {
-    "loteria": "CALAMAR A",
-    "hora": "02:00 PM",
-    "numero": "02",
-    "animal": "Toro"
-  },
-  {
-    "loteria": "CALAMAR B",
-    "hora": "02:00 PM",
-    "numero": "52",
-    "animal": "Pulpo"
-  },
-  {
-    "loteria": "RULETA ROYAL",
-    "hora": "12:30 PM",
-    "numero": "36",
-    "animal": "Culebra"
-  },
-  {
-    "loteria": "RULETA ROYAL",
-    "hora": "01:30 PM",
-    "numero": "18",
-    "animal": "Burro"
-  },
-  {
-    "loteria": "EL GUACHARITO MILLONARIO",
-    "hora": "02:30 PM",
-    "numero": "24",
-    "animal": "Iguana"
-  },
-  {
-    "loteria": "MEGA GUACA",
-    "hora": "02:30 PM",
-    "numero": "47",
-    "animal": "Pavo"
-  },
-  {
-    "loteria": "PANDA PLUS",
-    "hora": "02:30 PM",
-    "numero": "02",
-    "animal": "Toro"
-  },
-  {
     "loteria": "LOTTO ACTIVO RD INT",
     "hora": "02:30 PM",
     "numero": "31",
@@ -196,5 +136,53 @@
     "hora": "03:05 PM",
     "numero": "39",
     "animal": "Lechuza"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "03:00 PM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "03:00 PM",
+    "numero": "00",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "03:10 PM",
+    "numero": "74",
+    "animal": "Turpial"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "03:10 PM",
+    "numero": "17",
+    "animal": "Pavo"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "03:15 PM",
+    "numero": "47",
+    "animal": "Pavo"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "03:00 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "03:10 PM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "03:15 PM",
+    "numero": "51",
+    "animal": "Pelicano"
   }
 ]
