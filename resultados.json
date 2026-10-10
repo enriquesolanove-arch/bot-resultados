@@ -1,11 +1,5 @@
 [
   {
-    "loteria": "LOTOANIMALITO",
-    "hora": "01:00 PM",
-    "numero": "34",
-    "animal": "Venado"
-  },
-  {
     "loteria": "LOTTO PANTERA",
     "hora": "01:00 PM",
     "numero": "08",
@@ -214,5 +208,11 @@
     "hora": "01:30 PM",
     "numero": "31",
     "animal": "Lapa"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "01:40 PM",
+    "numero": "40",
+    "animal": "Avispa"
   }
 ]
