@@ -1,47 +1,5 @@
 [
   {
-    "loteria": "LOTTO REAL",
-    "hora": "10:00 AM",
-    "numero": "30",
-    "animal": "Caimán"
-  },
-  {
-    "loteria": "MEGA GUACA",
-    "hora": "10:30 AM",
-    "numero": "15",
-    "animal": "Zorro"
-  },
-  {
-    "loteria": "GRANJAZO",
-    "hora": "10:30 AM",
-    "numero": "61",
-    "animal": "Turpial"
-  },
-  {
-    "loteria": "GATAZO",
-    "hora": "10:40 AM",
-    "numero": "55",
-    "animal": "Oso"
-  },
-  {
-    "loteria": "LOTTO PANTERA",
-    "hora": "11:00 AM",
-    "numero": "30",
-    "animal": "Caimán"
-  },
-  {
-    "loteria": "LOTOANIMALITO",
-    "hora": "11:00 AM",
-    "numero": "36",
-    "animal": "Culebra"
-  },
-  {
-    "loteria": "CENTENA ANIMAL",
-    "hora": "11:00 AM",
-    "numero": "15",
-    "animal": "Zorro"
-  },
-  {
     "loteria": "LOTTO ACTIVO RDOMINICANA",
     "hora": "11:00 AM",
     "numero": "27",
@@ -196,5 +154,59 @@
     "hora": "11:10 AM",
     "numero": "20",
     "animal": "Cochino"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "11:15 AM",
+    "numero": "23",
+    "animal": "Cebra"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "11:30 AM",
+    "numero": "92",
+    "animal": "Cisne"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "11:30 AM",
+    "numero": "10",
+    "animal": "Tigre"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "11:30 AM",
+    "numero": "54",
+    "animal": "Grillo"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "11:30 AM",
+    "numero": "58",
+    "animal": "Dragon"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "11:30 AM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "11:30 AM",
+    "numero": "58",
+    "animal": "Castor"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "10:30 AM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "11:30 AM",
+    "numero": "11",
+    "animal": "Gato"
   }
 ]
