@@ -135,9 +135,9 @@ async def extraer_y_publicar():
         except Exception as e:
             print(f"Error enviando cierre de tanda: {e}")
 
-    # Mensaje de buenas noches a las 10:00 PM (22:00) hora de Venezuela
+    # Mensaje de buenas noches a las 09:00 PM (21:00) hora de Venezuela
     id_buenas_noches = f"buenas-noches-{fecha_hoy}"
-    if not es_primera_vez and hora_actual_str >= "22:00" and id_buenas_noches not in enviados:
+    if not es_primera_vez and hora_actual_str >= "21:00" and id_buenas_noches not in enviados:
         msg_noches = (
             f"🌙 *¡Buenas noches para todos!* ✨\n"
             f"Cerramos operaciones por el día de hoy. Mañana nos activamos nuevamente con más fuerza y mejores jugadas por *Agencia Oportunidad Dorada* 🎰🔥."
