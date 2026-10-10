@@ -1,53 +1,5 @@
 [
   {
-    "loteria": "CENTENA PLUS",
-    "hora": "05:15 PM",
-    "numero": "22",
-    "animal": "Camello"
-  },
-  {
-    "loteria": "SELVA PLUS",
-    "hora": "05:15 PM",
-    "numero": "85",
-    "animal": "Hamster"
-  },
-  {
-    "loteria": "LA RICACHONA",
-    "hora": "05:10 PM",
-    "numero": "14",
-    "animal": "Paloma"
-  },
-  {
-    "loteria": "RULETA ACTIVA",
-    "hora": "05:00 PM",
-    "numero": "09",
-    "animal": "Águila"
-  },
-  {
-    "loteria": "EL GUACHARITO MILLONARIO",
-    "hora": "05:30 PM",
-    "numero": "91",
-    "animal": "Morrocoy"
-  },
-  {
-    "loteria": "PANDA PLUS",
-    "hora": "05:30 PM",
-    "numero": "43",
-    "animal": "Mariposa"
-  },
-  {
-    "loteria": "LOTTO ACTIVO RD INT",
-    "hora": "05:30 PM",
-    "numero": "12",
-    "animal": "Caballo"
-  },
-  {
-    "loteria": "GRANJAZO",
-    "hora": "05:30 PM",
-    "numero": "29",
-    "animal": "Elefante"
-  },
-  {
     "loteria": "GATAZO",
     "hora": "05:40 PM",
     "numero": "05",
@@ -214,5 +166,41 @@
     "hora": "06:05 PM",
     "numero": "26",
     "animal": "Vaca"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "06:10 PM",
+    "numero": "06",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "06:15 PM",
+    "numero": "78",
+    "animal": "Mapache"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "06:10 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "06:10 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "06:15 PM",
+    "numero": "17",
+    "animal": "Pavo"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "06:00 PM",
+    "numero": "17",
+    "animal": "Pavo"
   }
 ]
