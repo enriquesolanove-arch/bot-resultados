@@ -1,59 +1,5 @@
 [
   {
-    "loteria": "CENTENA PLUS",
-    "hora": "08:15 AM",
-    "numero": "11",
-    "animal": "Gato"
-  },
-  {
-    "loteria": "SELVA PLUS",
-    "hora": "08:15 AM",
-    "numero": "03",
-    "animal": "Ciempiés"
-  },
-  {
-    "loteria": "EL GUACHARITO MILLONARIO",
-    "hora": "08:30 AM",
-    "numero": "25",
-    "animal": "Gallina"
-  },
-  {
-    "loteria": "GUACA ACTIVA",
-    "hora": "08:30 AM",
-    "numero": "09",
-    "animal": "Águila"
-  },
-  {
-    "loteria": "LOTTO ACTIVO RD INT",
-    "hora": "08:30 AM",
-    "numero": "24",
-    "animal": "Iguana"
-  },
-  {
-    "loteria": "MEGA GUACA",
-    "hora": "08:30 AM",
-    "numero": "60",
-    "animal": "Camaleon"
-  },
-  {
-    "loteria": "LOTOANIMALITO",
-    "hora": "09:00 AM",
-    "numero": "15",
-    "animal": "Zorro"
-  },
-  {
-    "loteria": "LOTTO PANTERA",
-    "hora": "09:00 AM",
-    "numero": "38",
-    "animal": "Turpial"
-  },
-  {
-    "loteria": "GUACHARO ACTIVO",
-    "hora": "09:00 AM",
-    "numero": "26",
-    "animal": "Vaca"
-  },
-  {
     "loteria": "CENTENA ANIMAL",
     "hora": "09:00 AM",
     "numero": "01",
@@ -208,5 +154,59 @@
     "hora": "09:15 AM",
     "numero": "73",
     "animal": "Hipopotamo"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "09:00 AM",
+    "numero": "17",
+    "animal": "Pavo"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "09:30 AM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "09:30 AM",
+    "numero": "86",
+    "animal": "Buey"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "09:30 AM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "09:30 AM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "09:30 AM",
+    "numero": "76",
+    "animal": "Mantiz"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "09:30 AM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "08:30 AM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "09:30 AM",
+    "numero": "34",
+    "animal": "Venado"
   }
 ]
