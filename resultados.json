@@ -1,29 +1,5 @@
 [
   {
-    "loteria": "LOTTO LA QUINTA",
-    "hora": "07:00 PM",
-    "numero": "43",
-    "animal": "Closet"
-  },
-  {
-    "loteria": "LOTTO REAL",
-    "hora": "07:00 PM",
-    "numero": "06",
-    "animal": "Rana"
-  },
-  {
-    "loteria": "GRANJA MILLONARIA",
-    "hora": "07:00 PM",
-    "numero": "02",
-    "animal": "Toro"
-  },
-  {
-    "loteria": "CHANCE ANIMAL",
-    "hora": "07:00 PM",
-    "numero": "10",
-    "animal": "Tigre"
-  },
-  {
     "loteria": "LOTTO ACTIVO",
     "hora": "07:00 PM",
     "numero": "35",
@@ -220,5 +196,23 @@
     "hora": "09:00 PM",
     "numero": "15",
     "animal": "Zorro"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "09:00 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "09:00 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "09:00 PM",
+    "numero": "24",
+    "animal": "Iguana"
   }
 ]
