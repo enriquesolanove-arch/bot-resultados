@@ -214,5 +214,11 @@
     "hora": "10:30 AM",
     "numero": "61",
     "animal": "Turpial"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "10:40 AM",
+    "numero": "55",
+    "animal": "Oso"
   }
 ]
