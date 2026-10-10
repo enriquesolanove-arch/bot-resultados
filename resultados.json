@@ -1,29 +1,5 @@
 [
   {
-    "loteria": "LOTTO ACTIVO RD INT",
-    "hora": "02:30 PM",
-    "numero": "31",
-    "animal": "Lapa"
-  },
-  {
-    "loteria": "RULETA ROYAL",
-    "hora": "02:30 PM",
-    "numero": "16",
-    "animal": "Oso"
-  },
-  {
-    "loteria": "LOTOANIMALITO",
-    "hora": "03:00 PM",
-    "numero": "04",
-    "animal": "Alacrán"
-  },
-  {
-    "loteria": "LOTTO PANTERA",
-    "hora": "03:00 PM",
-    "numero": "27",
-    "animal": "Perro"
-  },
-  {
     "loteria": "CENTENA ANIMAL",
     "hora": "03:00 PM",
     "numero": "21",
@@ -184,5 +160,47 @@
     "hora": "03:15 PM",
     "numero": "51",
     "animal": "Pelicano"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "03:30 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "03:30 PM",
+    "numero": "65",
+    "animal": "Araña"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "03:30 PM",
+    "numero": "72",
+    "animal": "Condor"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "03:30 PM",
+    "numero": "74",
+    "animal": "Turpial"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "03:30 PM",
+    "numero": "16",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "03:30 PM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "03:40 PM",
+    "numero": "27",
+    "animal": "Perro"
   }
 ]
