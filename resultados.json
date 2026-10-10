@@ -1,29 +1,5 @@
 [
   {
-    "loteria": "RULETA ACTIVA",
-    "hora": "06:00 PM",
-    "numero": "17",
-    "animal": "Pavo"
-  },
-  {
-    "loteria": "PANDA PLUS",
-    "hora": "06:30 PM",
-    "numero": "27",
-    "animal": "Perro"
-  },
-  {
-    "loteria": "EL GUACHARITO MILLONARIO",
-    "hora": "06:30 PM",
-    "numero": "04",
-    "animal": "Alacrán"
-  },
-  {
-    "loteria": "LOTTO ACTIVO RD INT",
-    "hora": "06:30 PM",
-    "numero": "35",
-    "animal": "Jirafa"
-  },
-  {
     "loteria": "GRANJAZO",
     "hora": "06:30 PM",
     "numero": "25",
@@ -196,5 +172,41 @@
     "hora": "07:05 PM",
     "numero": "41",
     "animal": "Canguro"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "07:10 PM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "07:10 PM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "07:10 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "07:15 PM",
+    "numero": "96",
+    "animal": "Murcielago"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "07:15 PM",
+    "numero": "89",
+    "animal": "Anguila"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "07:00 PM",
+    "numero": "06",
+    "animal": "Rana"
   }
 ]
