@@ -1,41 +1,5 @@
 [
   {
-    "loteria": "CALAMAR B",
-    "hora": "03:00 PM",
-    "numero": "00",
-    "animal": "Delfín"
-  },
-  {
-    "loteria": "GRANJITA PLUS",
-    "hora": "03:10 PM",
-    "numero": "74",
-    "animal": "Turpial"
-  },
-  {
-    "loteria": "LOTTO GATO",
-    "hora": "03:10 PM",
-    "numero": "17",
-    "animal": "Pavo"
-  },
-  {
-    "loteria": "CENTENA PLUS",
-    "hora": "03:15 PM",
-    "numero": "47",
-    "animal": "Pavo"
-  },
-  {
-    "loteria": "RULETA ACTIVA",
-    "hora": "03:00 PM",
-    "numero": "20",
-    "animal": "Cochino"
-  },
-  {
-    "loteria": "LA RICACHONA",
-    "hora": "03:10 PM",
-    "numero": "07",
-    "animal": "Perico"
-  },
-  {
     "loteria": "SELVA PLUS",
     "hora": "03:15 PM",
     "numero": "51",
@@ -202,5 +166,35 @@
     "hora": "04:00 PM",
     "numero": "30",
     "animal": "Caimán"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "04:00 PM",
+    "numero": "57",
+    "animal": "Pato"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "04:00 PM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "04:00 PM",
+    "numero": "29",
+    "animal": "Naranja"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "04:05 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "04:00 PM",
+    "numero": "14",
+    "animal": "Paloma"
   }
 ]
