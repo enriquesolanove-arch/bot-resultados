@@ -1,11 +1,5 @@
 [
   {
-    "loteria": "FRUITAGANA",
-    "hora": "07:00 PM",
-    "numero": "25",
-    "animal": "Maiz"
-  },
-  {
     "loteria": "LOTTO LA QUINTA",
     "hora": "07:00 PM",
     "numero": "43",
@@ -214,5 +208,17 @@
     "hora": "08:30 PM",
     "numero": "26",
     "animal": "Vaca"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "08:30 PM",
+    "numero": "03",
+    "animal": "Ciempiés"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "09:00 PM",
+    "numero": "15",
+    "animal": "Zorro"
   }
 ]
