@@ -100,9 +100,14 @@ async def extraer_y_publicar():
             json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
         print("🛡️ Historial inicializado correctamente.")
 
-    # Guardar archivo JSON actualizado para la web
+        # Guardar archivo JSON actualizado para la web
     with open('resultados.json', 'w', encoding='utf-8') as f:
         json.dump(resultados, f, ensure_ascii=False, indent=2)
+
+    # Generar script JavaScript (datos.js) para Neocities sin problemas de carga
+    with open('datos.js', 'w', encoding='utf-8') as f:
+        f.write(f"const RESULTADOS_LOTERIAS = {json.dumps(resultados, ensure_ascii=False, indent=2)};")
+        
 
     if not es_primera_vez:
         with open(enviados_path, 'w', encoding='utf-8') as f:
