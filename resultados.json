@@ -1,35 +1,5 @@
 [
   {
-    "loteria": "LA RICACHONA",
-    "hora": "04:10 PM",
-    "numero": "24",
-    "animal": "Iguana"
-  },
-  {
-    "loteria": "LOTTO GATO",
-    "hora": "04:10 PM",
-    "numero": "30",
-    "animal": "Caimán"
-  },
-  {
-    "loteria": "SELVA PLUS",
-    "hora": "04:15 PM",
-    "numero": "34",
-    "animal": "Venado"
-  },
-  {
-    "loteria": "CENTENA PLUS",
-    "hora": "04:15 PM",
-    "numero": "83",
-    "animal": "Buho"
-  },
-  {
-    "loteria": "EL GUACHARITO MILLONARIO",
-    "hora": "04:30 PM",
-    "numero": "56",
-    "animal": "Tiburon"
-  },
-  {
     "loteria": "PANDA PLUS",
     "hora": "04:30 PM",
     "numero": "22",
@@ -214,5 +184,41 @@
     "hora": "05:05 PM",
     "numero": "38",
     "animal": "Bufalo"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "05:10 PM",
+    "numero": "00",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "05:10 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "05:15 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "05:15 PM",
+    "numero": "85",
+    "animal": "Hamster"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "05:10 PM",
+    "numero": "14",
+    "animal": "Paloma"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "05:00 PM",
+    "numero": "09",
+    "animal": "Águila"
   }
 ]
