@@ -1,29 +1,5 @@
 [
   {
-    "loteria": "SELVA PLUS",
-    "hora": "03:15 PM",
-    "numero": "51",
-    "animal": "Pelicano"
-  },
-  {
-    "loteria": "GUACA ACTIVA",
-    "hora": "03:30 PM",
-    "numero": "05",
-    "animal": "León"
-  },
-  {
-    "loteria": "PANDA PLUS",
-    "hora": "03:30 PM",
-    "numero": "65",
-    "animal": "Araña"
-  },
-  {
-    "loteria": "MEGA GUACA",
-    "hora": "03:30 PM",
-    "numero": "72",
-    "animal": "Condor"
-  },
-  {
     "loteria": "EL GUACHARITO MILLONARIO",
     "hora": "03:30 PM",
     "numero": "74",
@@ -196,5 +172,35 @@
     "hora": "04:00 PM",
     "numero": "14",
     "animal": "Paloma"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "04:10 PM",
+    "numero": "70",
+    "animal": "Bisonte"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "04:10 PM",
+    "numero": "24",
+    "animal": "Iguana"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "04:10 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "04:15 PM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "04:15 PM",
+    "numero": "83",
+    "animal": "Buho"
   }
 ]
