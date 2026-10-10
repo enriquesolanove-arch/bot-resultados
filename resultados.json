@@ -1,17 +1,5 @@
 [
   {
-    "loteria": "CENTENA ANIMAL",
-    "hora": "09:00 AM",
-    "numero": "01",
-    "animal": "Carnero"
-  },
-  {
-    "loteria": "LOTTO ACTIVO RDOMINICANA",
-    "hora": "09:00 AM",
-    "numero": "00",
-    "animal": "Ballena"
-  },
-  {
     "loteria": "ZOOLOGICO ACTIVO",
     "hora": "09:00 AM",
     "numero": "25",
@@ -208,5 +196,11 @@
     "hora": "09:30 AM",
     "numero": "34",
     "animal": "Venado"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "09:40 AM",
+    "numero": "13",
+    "animal": "Mono"
   }
 ]
