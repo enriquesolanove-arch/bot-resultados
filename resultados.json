@@ -1,59 +1,5 @@
 [
   {
-    "loteria": "GRANJITA PLUS",
-    "hora": "11:10 AM",
-    "numero": "43",
-    "animal": "Mariposa"
-  },
-  {
-    "loteria": "RULETA ACTIVA",
-    "hora": "11:00 AM",
-    "numero": "35",
-    "animal": "Jirafa"
-  },
-  {
-    "loteria": "LA RICACHONA",
-    "hora": "11:10 AM",
-    "numero": "26",
-    "animal": "Vaca"
-  },
-  {
-    "loteria": "CENTENA PLUS",
-    "hora": "11:15 AM",
-    "numero": "49",
-    "animal": "Pereza"
-  },
-  {
-    "loteria": "LOTTO GATO",
-    "hora": "11:10 AM",
-    "numero": "20",
-    "animal": "Cochino"
-  },
-  {
-    "loteria": "SELVA PLUS",
-    "hora": "11:15 AM",
-    "numero": "23",
-    "animal": "Cebra"
-  },
-  {
-    "loteria": "EL GUACHARITO MILLONARIO",
-    "hora": "11:30 AM",
-    "numero": "92",
-    "animal": "Cisne"
-  },
-  {
-    "loteria": "GUACA ACTIVA",
-    "hora": "11:30 AM",
-    "numero": "10",
-    "animal": "Tigre"
-  },
-  {
-    "loteria": "PANDA PLUS",
-    "hora": "11:30 AM",
-    "numero": "54",
-    "animal": "Grillo"
-  },
-  {
     "loteria": "MEGA GUACA",
     "hora": "11:30 AM",
     "numero": "58",
@@ -220,5 +166,47 @@
     "hora": "12:00 PM",
     "numero": "25",
     "animal": "Gallina"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "12:00 PM",
+    "numero": "49",
+    "animal": "Pereza"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "12:05 PM",
+    "numero": "32",
+    "animal": "Ardilla"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "12:00 PM",
+    "numero": "27",
+    "animal": "Perro"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "12:10 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "12:10 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "12:10 PM",
+    "numero": "06",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "12:15 PM",
+    "numero": "68",
+    "animal": "Jaguar"
   }
 ]
