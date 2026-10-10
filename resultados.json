@@ -1,17 +1,5 @@
 [
   {
-    "loteria": "LOTTO ACTIVO RDOMINICANA",
-    "hora": "11:00 AM",
-    "numero": "27",
-    "animal": "Perro"
-  },
-  {
-    "loteria": "ZOOLOGICO ACTIVO",
-    "hora": "11:00 AM",
-    "numero": "22",
-    "animal": "Camello"
-  },
-  {
     "loteria": "MEGA ANIMAL",
     "hora": "11:00 AM",
     "numero": "22",
@@ -208,5 +196,11 @@
     "hora": "11:30 AM",
     "numero": "11",
     "animal": "Gato"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "11:40 AM",
+    "numero": "04",
+    "animal": "Alacrán"
   }
 ]
