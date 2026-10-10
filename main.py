@@ -43,17 +43,24 @@ async def extraer_y_publicar():
 
     nuevos_enviados_en_esta_ejecucion = False
 
+    # Patrón ultra flexible para capturar cualquier formato de resultado
+    pattern = r'(?:🎰|🎯)?\s*(?P<loteria>[A-ZÁÉÍÓÚÑ\s]+)\n+\s*(?:🕒)?\s*(?P<hora>\d{1,2}:\d{2}\s*(?:AM|PM|am|pm))\s+(?P<numero>\d{1,2})\s*[-:]?\s*(?P<animal>[A-Za-zÁÉÍÓÚáéíóúÑñ]+)'
+
     for message in mensajes_recogidos:
         texto = message.text.strip()
         
-        # Patrón para capturar el resultado
-        pattern = r'🎰\s*(?P<loteria>[^\n]+)\n+🕒\s*(?P<hora>\d{1,2}:\d{2}\s*(?:AM|PM|am|pm))\s+(?P<numero>\d{1,2})\s*[-:]?\s*(?P<animal>[A-Za-zÁÉÍÓÚáéíóúÑñ]+)'
         match = re.search(pattern, texto)
         
         if match:
             datos = match.groupdict()
+            loteria_nombre = datos["loteria"].replace("AGENCIA HAROLD JOSÉ", "").strip()
+            
+            # Si el texto extraído no es un nombre válido de lotería, saltar
+            if not loteria_nombre:
+                continue
+
             item = {
-                "loteria": datos["loteria"].strip(),
+                "loteria": loteria_nombre,
                 "hora": datos["hora"].strip().upper(),
                 "numero": datos["numero"].zfill(2),
                 "animal": datos["animal"].strip().capitalize()
@@ -62,14 +69,13 @@ async def extraer_y_publicar():
 
             identificador = f"{item['loteria']}-{item['hora']}-{item['numero']}"
             
-            # Si es la primera vez que se ejecuta, marcamos los existentes 
-            # para evitar inundar el canal con sorteos viejos de golpe.
+            # Si es la primera vez que corre, registra sin publicar para no saturar
             if es_primera_vez:
                 if identificador not in enviados:
                     enviados.append(identificador)
                 continue
 
-            # Si ya está inicializado, publicamos únicamente los nuevos en vivo
+            # Publicar nuevos resultados en vivo
             if identificador not in enviados:
                 mensaje_telegram = (
                     f"🎰 *RESULTADO EN VIVO* 🎰\n"
@@ -88,11 +94,11 @@ async def extraer_y_publicar():
                 except Exception as e:
                     print(f"⚠️ Error al publicar en Telegram: {e}")
 
-    # Si era la primera ejecución, guardamos el estado base para arrancar limpios
+    # Si era la primera ejecución, guardamos el estado base
     if es_primera_vez:
         with open(enviados_path, 'w', encoding='utf-8') as f:
             json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
-        print("🛡️ Historial inicializado correctamente. A partir de ahora solo publicará lo nuevo.")
+        print("🛡️ Historial inicializado correctamente.")
 
     # Guardar archivo JSON actualizado para la web
     with open('resultados.json', 'w', encoding='utf-8') as f:
@@ -102,12 +108,12 @@ async def extraer_y_publicar():
         with open(enviados_path, 'w', encoding='utf-8') as f:
             json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
 
-    # --- MANEJO DE HORA LOCAL (Venezuela UTC-4) ---
+    # --- HORA LOCAL (Venezuela UTC-4) ---
     ahora_venezuela = datetime.utcnow() - timedelta(hours=4)
     fecha_hoy = ahora_venezuela.strftime('%Y-%m-%d')
     hora_actual_str = ahora_venezuela.strftime("%H:%M")
     
-    # Mensaje de cierre de tanda (solo si no es la primera ejecución y hubo novedades)
+    # Mensaje de cierre de tanda tras publicar novedades
     id_cierre_tanda = f"cierre-tanda-{fecha_hoy}"
     if not es_primera_vez and nuevos_enviados_en_esta_ejecucion and id_cierre_tanda not in enviados:
         msg_tanda = (
@@ -124,7 +130,7 @@ async def extraer_y_publicar():
         except Exception as e:
             print(f"Error enviando cierre de tanda: {e}")
 
-    # Mensaje de buenas noches estricto a las 10:00 PM (22:00) hora de Venezuela
+    # Mensaje de buenas noches a las 10:00 PM (22:00) hora de Venezuela
     id_buenas_noches = f"buenas-noches-{fecha_hoy}"
     if not es_primera_vez and hora_actual_str >= "22:00" and id_buenas_noches not in enviados:
         msg_noches = (
@@ -149,4 +155,4 @@ async def main():
 
 if __name__ == "__main__":
     client.loop.run_until_complete(main())
-                
+    
