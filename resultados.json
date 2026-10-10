@@ -1,11 +1,5 @@
 [
   {
-    "loteria": "LOTTO GATO",
-    "hora": "07:10 PM",
-    "numero": "05",
-    "animal": "León"
-  },
-  {
     "loteria": "CENTENA PLUS",
     "hora": "07:15 PM",
     "numero": "92",
@@ -178,5 +172,11 @@
     "hora": "09:00 PM",
     "numero": "24",
     "animal": "Iguana"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "07:30 AM",
+    "numero": "31",
+    "animal": "Lapa"
   }
 ]
