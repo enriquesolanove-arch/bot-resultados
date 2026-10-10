@@ -1,1 +1,218 @@
-[]
+[
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "07:00 PM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "07:00 PM",
+    "numero": "27",
+    "animal": "Perro"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "07:00 PM",
+    "numero": "14",
+    "animal": "Paloma"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "08:05 AM",
+    "numero": "59",
+    "animal": "Pantera"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "07:05 PM",
+    "numero": "74",
+    "animal": "Turpial"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "07:10 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "07:10 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "07:15 PM",
+    "numero": "92",
+    "animal": "Plaga"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "07:10 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "07:00 PM",
+    "numero": "27",
+    "animal": "Perro"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "07:00 PM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "07:15 PM",
+    "numero": "70",
+    "animal": "Bisonte"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "07:30 PM",
+    "numero": "11",
+    "animal": "Gato"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "07:30 PM",
+    "numero": "86",
+    "animal": "Buey"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "07:30 PM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "07:30 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "07:30 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "07:30 PM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "07:30 PM",
+    "numero": "00",
+    "animal": "Tiburon"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "07:40 PM",
+    "numero": "45",
+    "animal": "Garza"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "08:00 PM",
+    "numero": "06",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "08:00 PM",
+    "numero": "25",
+    "animal": "Gallina"
+  },
+  {
+    "loteria": "MEGA ANIMAL",
+    "hora": "08:00 PM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "08:00 PM",
+    "numero": "40",
+    "animal": "Control"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "08:00 PM",
+    "numero": "24",
+    "animal": "Iguana"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "08:00 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "08:00 PM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "08:00 PM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "08:15 PM",
+    "numero": "23",
+    "animal": "Cebra"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "08:15 PM",
+    "numero": "09",
+    "animal": "Águila"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "08:30 PM",
+    "numero": "26",
+    "animal": "Vaca"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "08:30 PM",
+    "numero": "03",
+    "animal": "Ciempiés"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "09:00 PM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "09:00 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "09:00 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "09:00 PM",
+    "numero": "24",
+    "animal": "Iguana"
+  }
+]
