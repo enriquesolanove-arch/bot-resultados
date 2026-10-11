@@ -1,29 +1,5 @@
 [
   {
-    "loteria": "LOTTO LA QUINTA",
-    "hora": "07:00 PM",
-    "numero": "38",
-    "animal": "Pantalón"
-  },
-  {
-    "loteria": "RULETON VENEZUELA",
-    "hora": "07:00 PM",
-    "numero": "05",
-    "animal": "León"
-  },
-  {
-    "loteria": "CALAMAR A",
-    "hora": "07:00 PM",
-    "numero": "17",
-    "animal": "Pavo"
-  },
-  {
-    "loteria": "GUACHARO ACTIVO",
-    "hora": "07:00 PM",
-    "numero": "54",
-    "animal": "Grillo"
-  },
-  {
     "loteria": "CALAMAR B",
     "hora": "07:00 PM",
     "numero": "44",
@@ -220,5 +196,29 @@
     "hora": "08:30 PM",
     "numero": "06",
     "animal": "Rana"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "09:00 PM",
+    "numero": "11",
+    "animal": "Gato"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "09:00 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "09:00 PM",
+    "numero": "33",
+    "animal": "Pescado"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "09:00 PM",
+    "numero": "22",
+    "animal": "Camello"
   }
 ]
