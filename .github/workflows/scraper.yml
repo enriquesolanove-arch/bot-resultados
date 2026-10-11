@@ -30,12 +30,13 @@ jobs:
         run: |
           python main.py
 
-      - name: Guardar cambios si hay actualizaciones
+            - name: Guardar cambios si hay actualizaciones
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git pull origin main --rebase || true
-          git add resultados.json enviados.json || true
+          git add resultados.json enviados.json fecha_ultima.txt || true
           git commit -m "Actualización automática de resultados [skip ci]" || exit 0
           git push
+          
           
