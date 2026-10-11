@@ -1,11 +1,5 @@
 [
   {
-    "loteria": "FRUITAGANA",
-    "hora": "07:00 PM",
-    "numero": "07",
-    "animal": "Patilla"
-  },
-  {
     "loteria": "LOTTO LA QUINTA",
     "hora": "07:00 PM",
     "numero": "38",
@@ -214,5 +208,17 @@
     "hora": "08:15 PM",
     "numero": "44",
     "animal": "Chiguire"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "08:30 PM",
+    "numero": "55",
+    "animal": "Foca"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "08:30 PM",
+    "numero": "06",
+    "animal": "Rana"
   }
 ]
