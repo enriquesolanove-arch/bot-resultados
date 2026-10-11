@@ -1642,5 +1642,47 @@
     "hora": "02:15 PM",
     "numero": "67",
     "animal": "Avestruz"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "02:15 PM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "02:30 PM",
+    "numero": "72",
+    "animal": "Gorila"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "02:30 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "02:30 PM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "02:30 PM",
+    "numero": "57",
+    "animal": "Pato"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "01:30 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "02:30 PM",
+    "numero": "00",
+    "animal": "Tiburon"
   }
 ]
