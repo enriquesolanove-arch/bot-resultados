@@ -316,5 +316,11 @@
     "hora": "08:15 AM",
     "numero": "88",
     "animal": "Erizo"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "08:30 AM",
+    "numero": "01",
+    "animal": "Carnero"
   }
 ]
