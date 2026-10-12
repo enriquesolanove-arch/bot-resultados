@@ -2578,5 +2578,113 @@
     "hora": "06:40 PM",
     "numero": "20",
     "animal": "Cochino"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "07:00 PM",
+    "numero": "36",
+    "animal": "Culebra"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "07:00 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "07:00 PM",
+    "numero": "24",
+    "animal": "Iguana"
+  },
+  {
+    "loteria": "MEGA ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "00",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "LOTTOMAX",
+    "hora": "07:00 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "GUACHARO ACTIVO",
+    "hora": "07:00 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "07:00 PM",
+    "numero": "10",
+    "animal": "Tigre"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "07:00 PM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "07:00 PM",
+    "numero": "33",
+    "animal": "Poma"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "07:00 PM",
+    "numero": "04",
+    "animal": "Alacrán"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "07:00 PM",
+    "numero": "49",
+    "animal": "Espátula"
+  },
+  {
+    "loteria": "CHANCE ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "00",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "07:00 PM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "07:00 PM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "07:00 PM",
+    "numero": "17",
+    "animal": "Pavo"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "07:00 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "07:00 PM",
+    "numero": "14",
+    "animal": "Paloma"
   }
 ]
