@@ -2332,5 +2332,11 @@
     "hora": "05:30 PM",
     "numero": "09",
     "animal": "Águila"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "05:40 PM",
+    "numero": "29",
+    "animal": "Elefante"
   }
 ]
