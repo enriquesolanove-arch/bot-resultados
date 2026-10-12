@@ -1120,5 +1120,89 @@
     "hora": "12:00 PM",
     "numero": "25",
     "animal": "Gallina"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "12:00 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "12:00 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "GUACHARO ACTIVO",
+    "hora": "12:00 PM",
+    "numero": "48",
+    "animal": "Puercoespin"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "12:00 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "CHANCE ANIMAL",
+    "hora": "12:00 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "12:05 PM",
+    "numero": "11",
+    "animal": "Gato"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "12:00 PM",
+    "numero": "24",
+    "animal": "Iguana"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "12:00 PM",
+    "numero": "41",
+    "animal": "Canguro"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "12:00 PM",
+    "numero": "10",
+    "animal": "Tigre"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "12:10 PM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "12:10 PM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "12:15 PM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "12:10 PM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "12:15 PM",
+    "numero": "53",
+    "animal": "Caracol"
   }
 ]
