@@ -1474,5 +1474,11 @@
     "hora": "01:40 PM",
     "numero": "63",
     "animal": "Cangrejo"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "01:30 PM",
+    "numero": "15",
+    "animal": "Zorro"
   }
 ]
