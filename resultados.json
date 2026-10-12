@@ -310,5 +310,29 @@
     "hora": "08:15 AM",
     "numero": "97",
     "animal": "Loro"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "08:30 AM",
+    "numero": "44",
+    "animal": "Chiguire"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "08:30 AM",
+    "numero": "16",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "08:30 AM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "08:30 AM",
+    "numero": "00",
+    "animal": "Ballena"
   }
 ]
