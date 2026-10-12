@@ -2566,5 +2566,17 @@
     "hora": "06:30 PM",
     "numero": "35",
     "animal": "Jirafa"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "06:30 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "06:40 PM",
+    "numero": "20",
+    "animal": "Cochino"
   }
 ]
