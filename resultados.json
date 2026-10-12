@@ -2116,5 +2116,41 @@
     "hora": "04:40 PM",
     "numero": "02",
     "animal": "Toro"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "05:00 PM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "05:00 PM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "05:00 PM",
+    "numero": "29",
+    "animal": "Elefante"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "05:00 PM",
+    "numero": "18",
+    "animal": "Burro"
+  },
+  {
+    "loteria": "ZOOLOGICO ACTIVO",
+    "hora": "05:00 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "MEGA ANIMAL",
+    "hora": "05:00 PM",
+    "numero": "08",
+    "animal": "Ratón"
   }
 ]
