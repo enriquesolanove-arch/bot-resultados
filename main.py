@@ -1,7 +1,8 @@
 import os
 import json
 import re
-import requests
+import urllib.request
+import urllib.error
 from datetime import datetime, timedelta
 from telethon import TelegramClient
 from telethon.sessions import StringSession
@@ -14,13 +15,10 @@ string_session = os.environ["TELEGRAM_STRING_SESSION"]
 # ═══════════════════════════════════════════════════════════
 #  ⚙️ CONFIGURACIÓN DEL GIST (para la web)
 #  ─────────────────────────────────────────────────────────
-#  GITHUB_TOKEN: créalo en github.com/settings/tokens
-#                con permiso SOLO en "gist"
+#  TOKEN_GIST: Secret de GitHub con permiso "gist"
 #  GIST_ID: el código largo de la URL del Gist
-#           gist.github.com/usuario/5e2cc27bb9af46d52d83c660efb26742
-#                                 └─── este es el GIST_ID ───┘
 # ═══════════════════════════════════════════════════════════
-GITHUB_TOKEN = os.environ.get("TOKEN_GIST", "")  # Secret de GitHub Actions
+GITHUB_TOKEN = os.environ.get("TOKEN_GIST", "")
 GIST_ID = "5e2cc27bb9af46d52d83c660efb26742"
 
 CANAL_ORIGEN = 'resultadosagharoldjose'
@@ -30,34 +28,41 @@ client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
 
 def subir_a_gist(lista_resultados):
-    """Actualiza el archivo resultados.js dentro del Gist público."""
+    """Actualiza el archivo resultados.js dentro del Gist usando urllib (sin dependencias externas)"""
     if not GITHUB_TOKEN:
-        print("⚠️ GITHUB_TOKEN_GIST no está configurado, se omite la subida al Gist.")
+        print("⚠️ TOKEN_GIST no está configurado, se omite la subida al Gist.")
         return False
 
     contenido = "window.RESULTADOS = " + json.dumps(lista_resultados, ensure_ascii=False) + ";"
 
     url = f"https://api.github.com/gists/{GIST_ID}"
-    headers = {
-        "Authorization": f"token {GITHUB_TOKEN}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    data = {
+    data = json.dumps({
         "files": {
             "resultados.js": {
                 "content": contenido
             }
         }
+    }).encode("utf-8")
+
+    headers = {
+        "Authorization": f"token {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github.v3+json",
+        "Content-Type": "application/json",
+        "User-Agent": "bot-resultados"
     }
 
     try:
-        r = requests.patch(url, headers=headers, json=data, timeout=15)
-        if r.status_code == 200:
-            print(f"✅ Gist actualizado: {len(lista_resultados)} resultados")
-            return True
-        else:
-            print(f"❌ Error Gist: {r.status_code} - {r.text[:200]}")
-            return False
+        req = urllib.request.Request(url, data=data, headers=headers, method="PATCH")
+        with urllib.request.urlopen(req, timeout=15) as response:
+            if response.status == 200:
+                print(f"✅ Gist actualizado: {len(lista_resultados)} resultados")
+                return True
+            else:
+                print(f"❌ Error Gist: HTTP {response.status}")
+                return False
+    except urllib.error.HTTPError as e:
+        print(f"❌ Error HTTP Gist: {e.code} - {e.read().decode('utf-8')[:200]}")
+        return False
     except Exception as e:
         print(f"❌ Excepción Gist: {e}")
         return False
@@ -65,14 +70,14 @@ def subir_a_gist(lista_resultados):
 
 async def extraer_y_publicar():
     resultados = []
-    
+
     # Archivos de control
     enviados_path = 'enviados.json'
     fecha_archivo = 'fecha_ultima.txt'
-    
+
     enviados = []
     es_primera_vez = False
-    
+
     if os.path.exists(enviados_path):
         with open(enviados_path, 'r', encoding='utf-8') as f:
             try:
@@ -126,11 +131,11 @@ async def extraer_y_publicar():
     for message in mensajes_recogidos:
         texto = message.text.strip()
         match = re.search(pattern, texto)
-        
+
         if match:
             datos = match.groupdict()
             loteria_nombre = datos["loteria"].replace("AGENCIA HAROLD JOSÉ", "").strip()
-            
+
             if not loteria_nombre:
                 continue
 
@@ -142,7 +147,7 @@ async def extraer_y_publicar():
             }
 
             identificador = f"{item['loteria']}-{item['hora']}-{item['numero']}-{fecha_hoy}"
-            
+
             # Evitar duplicados en la lista web y de enviados
             if not any(r['loteria'] == item['loteria'] and r['hora'] == item['hora'] for r in resultados):
                 resultados.append(item)
@@ -163,7 +168,7 @@ async def extraer_y_publicar():
                     f"━━━━━━━━━━━━━━━━━━━\n"
                     f"📲 Agencia Oportunidad Dorada"
                 )
-                
+
                 try:
                     await client.send_message(CANAL_DESTINO, mensaje_telegram, parse_mode='markdown')
                     enviados.append(identificador)
