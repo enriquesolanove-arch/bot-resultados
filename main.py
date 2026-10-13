@@ -20,7 +20,7 @@ string_session = os.environ["TELEGRAM_STRING_SESSION"]
 #           gist.github.com/usuario/5e2cc27bb9af46d52d83c660efb26742
 #                                 └─── este es el GIST_ID ───┘
 # ═══════════════════════════════════════════════════════════
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN_GIST", "")  # Secret de GitHub Actions
+GITHUB_TOKEN = os.environ.get("TOKEN_GIST", "")  # Secret de GitHub Actions
 GIST_ID = "5e2cc27bb9af46d52d83c660efb26742"
 
 CANAL_ORIGEN = 'resultadosagharoldjose'
