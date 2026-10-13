@@ -2674,5 +2674,17 @@
     "hora": "07:00 PM",
     "numero": "12",
     "animal": "Caballo"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "07:00 PM",
+    "numero": "23",
+    "animal": "Cebra"
+  },
+  {
+    "loteria": "LOTTOMAX",
+    "hora": "03:00 PM",
+    "numero": "01",
+    "animal": "Carnero"
   }
 ]
