@@ -700,5 +700,71 @@
     "hora": "10:00 AM",
     "numero": "24",
     "animal": "Iguana"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "10:05 AM",
+    "numero": "63",
+    "animal": "Cangrejo"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "10:00 AM",
+    "numero": "18",
+    "animal": "Burro"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "10:10 AM",
+    "numero": "24",
+    "animal": "Iguana"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "10:10 AM",
+    "numero": "16",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "10:10 AM",
+    "numero": "03",
+    "animal": "Ciempiés"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "10:15 AM",
+    "numero": "56",
+    "animal": "Tiburon"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "10:15 AM",
+    "numero": "29",
+    "animal": "Elefante"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "10:30 AM",
+    "numero": "50",
+    "animal": "Canario"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "10:30 AM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "10:30 AM",
+    "numero": "23",
+    "animal": "Cebra"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "10:30 AM",
+    "numero": "25",
+    "animal": "Gallina"
   }
 ]
