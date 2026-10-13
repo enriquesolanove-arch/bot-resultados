@@ -208,5 +208,83 @@
     "hora": "09:00 PM",
     "numero": "20",
     "animal": "Cochino"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "07:30 AM",
+    "numero": "58",
+    "animal": "Dragon"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "08:00 AM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "08:00 AM",
+    "numero": "38",
+    "animal": "Turpial"
+  },
+  {
+    "loteria": "GUACHARO ACTIVO",
+    "hora": "08:00 AM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "08:00 AM",
+    "numero": "06",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "08:00 AM",
+    "numero": "36",
+    "animal": "Culebra"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "08:00 AM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "LA GRANJITA",
+    "hora": "08:00 AM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "08:00 AM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "08:00 AM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "08:00 AM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "08:00 AM",
+    "numero": "64",
+    "animal": "Gavilan"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "08:10 AM",
+    "numero": "01",
+    "animal": "Carnero"
   }
 ]
