@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import requests
 from datetime import datetime, timedelta
 from telethon import TelegramClient
 from telethon.sessions import StringSession
@@ -10,10 +11,57 @@ api_id = int(os.environ["TELEGRAM_API_ID"])
 api_hash = os.environ["TELEGRAM_API_HASH"]
 string_session = os.environ["TELEGRAM_STRING_SESSION"]
 
+# ═══════════════════════════════════════════════════════════
+#  ⚙️ CONFIGURACIÓN DEL GIST (para la web)
+#  ─────────────────────────────────────────────────────────
+#  GITHUB_TOKEN: créalo en github.com/settings/tokens
+#                con permiso SOLO en "gist"
+#  GIST_ID: el código largo de la URL del Gist
+#           gist.github.com/usuario/5e2cc27bb9af46d52d83c660efb26742
+#                                 └─── este es el GIST_ID ───┘
+# ═══════════════════════════════════════════════════════════
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN_GIST", "")  # Secret de GitHub Actions
+GIST_ID = "5e2cc27bb9af46d52d83c660efb26742"
+
 CANAL_ORIGEN = 'resultadosagharoldjose'
-CANAL_DESTINO = 'opdoradaresultados' 
+CANAL_DESTINO = 'opdoradaresultados'
 
 client = TelegramClient(StringSession(string_session), api_id, api_hash)
+
+
+def subir_a_gist(lista_resultados):
+    """Actualiza el archivo resultados.js dentro del Gist público."""
+    if not GITHUB_TOKEN:
+        print("⚠️ GITHUB_TOKEN_GIST no está configurado, se omite la subida al Gist.")
+        return False
+
+    contenido = "window.RESULTADOS = " + json.dumps(lista_resultados, ensure_ascii=False) + ";"
+
+    url = f"https://api.github.com/gists/{GIST_ID}"
+    headers = {
+        "Authorization": f"token {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    data = {
+        "files": {
+            "resultados.js": {
+                "content": contenido
+            }
+        }
+    }
+
+    try:
+        r = requests.patch(url, headers=headers, json=data, timeout=15)
+        if r.status_code == 200:
+            print(f"✅ Gist actualizado: {len(lista_resultados)} resultados")
+            return True
+        else:
+            print(f"❌ Error Gist: {r.status_code} - {r.text[:200]}")
+            return False
+    except Exception as e:
+        print(f"❌ Excepción Gist: {e}")
+        return False
+
 
 async def extraer_y_publicar():
     resultados = []
@@ -138,6 +186,12 @@ async def extraer_y_publicar():
         with open(enviados_path, 'w', encoding='utf-8') as f:
             json.dump(enviados[-300:], f, ensure_ascii=False, indent=2)
 
+    # ═══════════════════════════════════════════════════════════
+    #  📤 SUBIR AL GIST (para que la web lo lea en vivo)
+    # ═══════════════════════════════════════════════════════════
+    print(f"📤 Subiendo {len(resultados)} resultados al Gist...")
+    subir_a_gist(resultados)
+
     # Mensaje de cierre de tanda tras publicar novedades
     id_cierre_tanda = f"cierre-tanda-{fecha_hoy}"
     if not es_primera_vez and nuevos_enviados_en_esta_ejecucion and id_cierre_tanda not in enviados:
@@ -173,11 +227,12 @@ async def extraer_y_publicar():
 
     print(f"✅ Proceso finalizado con éxito.")
 
+
 async def main():
     async with client:
         print("🤖 Conectado a Telegram...")
         await extraer_y_publicar()
 
+
 if __name__ == "__main__":
     client.loop.run_until_complete(main())
-                
