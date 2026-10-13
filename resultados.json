@@ -1870,5 +1870,11 @@
     "hora": "03:30 PM",
     "numero": "36",
     "animal": "Culebra"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "03:30 PM",
+    "numero": "10",
+    "animal": "Tigre"
   }
 ]
