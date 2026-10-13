@@ -1606,5 +1606,59 @@
     "hora": "02:00 PM",
     "numero": "43",
     "animal": "Mariposa"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "02:05 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "02:00 PM",
+    "numero": "11",
+    "animal": "Gato"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "02:10 PM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "02:10 PM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "02:15 PM",
+    "numero": "79",
+    "animal": "Gusano"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "02:15 PM",
+    "numero": "03",
+    "animal": "Ciempiés"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "02:30 PM",
+    "numero": "66",
+    "animal": "Lobo"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "02:30 PM",
+    "numero": "71",
+    "animal": "Guacamaya"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "02:30 PM",
+    "numero": "43",
+    "animal": "Mariposa"
   }
 ]
