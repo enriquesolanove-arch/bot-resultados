@@ -1246,5 +1246,113 @@
     "hora": "12:40 PM",
     "numero": "17",
     "animal": "Pavo"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "01:00 PM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "01:00 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "01:00 PM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "01:00 PM",
+    "numero": "10",
+    "animal": "Tigre"
+  },
+  {
+    "loteria": "ZOOLOGICO ACTIVO",
+    "hora": "01:00 PM",
+    "numero": "16",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "LOTTOMAX",
+    "hora": "01:00 PM",
+    "numero": "23",
+    "animal": "Cebra"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "01:00 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "01:00 PM",
+    "numero": "11",
+    "animal": "Gato"
+  },
+  {
+    "loteria": "LA GRANJITA",
+    "hora": "01:00 PM",
+    "numero": "23",
+    "animal": "Cebra"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "01:00 PM",
+    "numero": "03",
+    "animal": "Ciempiés"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "01:00 PM",
+    "numero": "35",
+    "animal": "Destornillador"
+  },
+  {
+    "loteria": "GUACHARO ACTIVO",
+    "hora": "01:00 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "01:00 PM",
+    "numero": "27",
+    "animal": "Perro"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "01:00 PM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "CHANCE ANIMAL",
+    "hora": "01:00 PM",
+    "numero": "04",
+    "animal": "Alacrán"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "01:00 PM",
+    "numero": "16",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "01:00 PM",
+    "numero": "41",
+    "animal": "Canguro"
+  },
+  {
+    "loteria": "MEGA ANIMAL",
+    "hora": "01:00 PM",
+    "numero": "29",
+    "animal": "Elefante"
   }
 ]
