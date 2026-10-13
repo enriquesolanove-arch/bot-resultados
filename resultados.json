@@ -2008,5 +2008,101 @@
     "hora": "04:00 PM",
     "numero": "20",
     "animal": "Toronja"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "04:05 PM",
+    "numero": "74",
+    "animal": "Turpial"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "04:10 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "04:10 PM",
+    "numero": "09",
+    "animal": "Águila"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "04:10 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "04:15 PM",
+    "numero": "71",
+    "animal": "Guacamaya"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "04:15 PM",
+    "numero": "54",
+    "animal": "Grillo"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "04:00 PM",
+    "numero": "17",
+    "animal": "Pavo"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "04:00 PM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "04:00 PM",
+    "numero": "29",
+    "animal": "Elefante"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "04:30 PM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "04:30 PM",
+    "numero": "60",
+    "animal": "Camaleon"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "04:30 PM",
+    "numero": "65",
+    "animal": "Pulpo"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "04:30 PM",
+    "numero": "72",
+    "animal": "Pelicano"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "04:30 PM",
+    "numero": "03",
+    "animal": "Ciempiés"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "04:30 PM",
+    "numero": "11",
+    "animal": "Gato"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "04:30 PM",
+    "numero": "36",
+    "animal": "Culebra"
   }
 ]
