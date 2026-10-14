@@ -964,5 +964,53 @@
     "hora": "11:15 AM",
     "numero": "80",
     "animal": "Murcielago"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "11:30 AM",
+    "numero": "36",
+    "animal": "Culebra"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "11:30 AM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "11:30 AM",
+    "numero": "25",
+    "animal": "Gallina"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "11:30 AM",
+    "numero": "32",
+    "animal": "Ardilla"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "11:30 AM",
+    "numero": "56",
+    "animal": "Armiño"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "11:30 AM",
+    "numero": "75",
+    "animal": "Guacharo"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "11:30 AM",
+    "numero": "11",
+    "animal": "Gato"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "11:40 AM",
+    "numero": "17",
+    "animal": "Pavo"
   }
 ]
