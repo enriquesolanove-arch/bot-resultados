@@ -142,7 +142,7 @@ async def extraer_y_publicar():
             item = {
                 "loteria": loteria_nombre,
                 "hora": datos["hora"].strip().upper(),
-                "numero": datos["numero"].zfill(2),
+                "numero": datos["numero"],
                 "animal": datos["animal"].strip().capitalize()
             }
 
