@@ -196,5 +196,101 @@
     "hora": "07:30 AM",
     "numero": "17",
     "animal": "Pavo"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "08:00 AM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "08:00 AM",
+    "numero": "32",
+    "animal": "Ardilla"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "08:00 AM",
+    "numero": "32",
+    "animal": "Ardilla"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "08:00 AM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "GUACHARO ACTIVO",
+    "hora": "08:00 AM",
+    "numero": "24",
+    "animal": "Iguana"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "08:00 AM",
+    "numero": "50",
+    "animal": "Canario"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "08:00 AM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "LA GRANJITA",
+    "hora": "08:00 AM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "08:00 AM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "08:00 AM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "08:00 AM",
+    "numero": "26",
+    "animal": "Vaca"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "08:05 AM",
+    "numero": "53",
+    "animal": "Caracol"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "08:10 AM",
+    "numero": "69",
+    "animal": "Conejo"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "08:15 AM",
+    "numero": "60",
+    "animal": "Camaleon"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "08:10 AM",
+    "numero": "14",
+    "animal": "Paloma"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "08:15 AM",
+    "numero": "52",
+    "animal": "Pulpo"
   }
 ]
