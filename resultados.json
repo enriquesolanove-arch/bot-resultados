@@ -1408,5 +1408,29 @@
     "hora": "01:15 PM",
     "numero": "63",
     "animal": "Cangrejo"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "01:00 PM",
+    "numero": "09",
+    "animal": "Águila"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "01:30 PM",
+    "numero": "74",
+    "animal": "Turpial"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "01:30 PM",
+    "numero": "63",
+    "animal": "Cangrejo"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "01:30 PM",
+    "numero": "31",
+    "animal": "Lapa"
   }
 ]
