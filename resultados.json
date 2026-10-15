@@ -2464,5 +2464,77 @@
     "hora": "06:00 PM",
     "numero": "30",
     "animal": "Caimán"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "06:00 PM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "06:00 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "06:05 PM",
+    "numero": "59",
+    "animal": "Pantera"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "06:10 PM",
+    "numero": "49",
+    "animal": "Pereza"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "06:10 PM",
+    "numero": "0",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "06:15 PM",
+    "numero": "38",
+    "animal": "Bufalo"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "06:10 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "06:15 PM",
+    "numero": "60",
+    "animal": "Camaleon"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "06:30 PM",
+    "numero": "50",
+    "animal": "Canario"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "06:30 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "06:30 PM",
+    "numero": "27",
+    "animal": "Perro"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "06:30 PM",
+    "numero": "30",
+    "animal": "Caimán"
   }
 ]
