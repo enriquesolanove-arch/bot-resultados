@@ -292,5 +292,17 @@
     "hora": "08:15 AM",
     "numero": "52",
     "animal": "Pulpo"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "08:30 AM",
+    "numero": "38",
+    "animal": "Bufalo"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "08:30 AM",
+    "numero": "05",
+    "animal": "León"
   }
 ]
