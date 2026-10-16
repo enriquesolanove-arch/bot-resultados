@@ -166,10 +166,17 @@ def subir_a_gist(lista):
 
 
 async def extraer():
-    ahora_ven = datetime.utcnow() - timedelta(hours=4)
+        ahora_ven = datetime.utcnow() - timedelta(hours=4)
     hoy = ahora_ven.strftime('%Y-%m-%d')
 
     print(f"Fecha hoy: {hoy}")
+
+    # Últimos 3 días (hoy, ayer, antes de ayer)
+    fechas_ok = []
+    for i in range(3):
+        d = ahora_ven - timedelta(days=i)
+        fechas_ok.append(d.strftime('%Y-%m-%d'))
+    print(f"Fechas aceptadas: {fechas_ok}")
 
     pronosticos = []
     vistos = set()
