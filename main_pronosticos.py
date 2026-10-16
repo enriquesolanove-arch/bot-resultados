@@ -20,44 +20,51 @@ client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
 
 # ═══════════════════════════════════════════════════════════
-#  CATÁLOGO COMPLETO DE ANIMALES (1-75)
+#  CATÁLOGO COMPLETO DE ANIMALES (1-99)
 # ═══════════════════════════════════════════════════════════
 ANIMALES = [
-    # 0-36 Lotto Activo / La Granjita
+    # 0-36 (Lotto Activo / La Granjita)
     'ballena', 'delfin', 'carnero', 'toro', 'ciempies', 'alacran',
     'leon', 'rana', 'perico', 'raton', 'aguila', 'tigre', 'tigresa',
     'gato', 'caballo', 'mono', 'paloma', 'zorro', 'oso', 'pavo',
     'burro', 'chivo', 'cochino', 'gallo', 'camello', 'cebra',
     'iguana', 'gallina', 'vaca', 'perro', 'zamuro', 'elefante',
-    'caiman', 'lapa', 'ardilla', 'pescado', 'venado', 'jirafa',
-    'culebra', 'cachicamo', 'guacharito', 'guacharo', 'morochos',
-    # 37-75 Granjazo / Granja Millonaria / otros
-    'bufalo', 'pelicano', 'jabali', 'morza', 'morsa', 'hormiga',
+    'caiman', 'lapa', 'ardilla', 'pescado', 'venado',
+    # 37-75 (Granjazo / Granja Millonaria)
+    'jirafa', 'culebra', 'cachicamo', 'guacharito', 'guacharo',
+    'morochos', 'bufalo', 'pelicano', 'jabali', 'morza', 'hormiga',
     'comadreja', 'murcielago', 'tortuga', 'mariposa', 'panda', 'buho',
-    'puercoespin', 'avestruz', 'conejo', 'canguro', 'koala', 'pinguino',
-    'tiburon', 'ballenas', 'pulpo', 'cangrejo', 'langosta', 'foca',
+    'puercoespin', 'avestruz', 'conejo', 'canguro', 'koala',
+    'pinguino', 'tiburon', 'pulpo', 'cangrejo', 'langosta', 'foca',
     'lobo', 'hiena', 'pantera', 'leopardo', 'puma', 'rinoceronte',
-    'hipopotamo', 'jaguar', 'cocodrilo', 'serpiente', 'aguila real',
+    'hipopotamo', 'jaguar', 'cocodrilo', 'serpiente',
+    # 76-99 (otras loterías)
     'halcon', 'cuervo', 'loro', 'guacamaya', 'tucan', 'flamenco',
-    'pavo real', 'cisne', 'ganso', 'pato', 'gallito', 'faisan'
+    'cisne', 'ganso', 'pato', 'faisan', 'pavo real', 'abeja',
+    'escorpion', 'araña', 'grillo', 'saltamontes', 'libelula',
+    'pez espada', 'delfin rosado', 'manati', 'nutria', 'castor',
+    'erizo', 'topo', 'camaleon', 'lagartija', 'salamandra', 'rana toro',
+    'tortuga marina', 'cangrejo azul', 'estrella de mar', 'medusa',
+    'caballito de mar', 'pez payaso', 'mantarraya', 'tiburon blanco'
 ]
 
 # ═══════════════════════════════════════════════════════════
 #  RULETAS DE ANIMALITOS
 # ═══════════════════════════════════════════════════════════
 RULETAS_ANIMALES = [
-    'lotto activo', 'lottoactivo', 'lotto activo rd', 'lotto activo r',
+    'lotto activo', 'lottoactivo', 'lotto activo rd',
     'la granjita', 'lagranjita', 'granjita plus', 'granjita',
     'guacharo', 'guácharo', 'el guacharito', 'guacharito',
     'guacharito millonario',
     'selva plus', 'selvaplus', 'selva',
     'lotto real', 'lottoreal',
     'ruleta activa', 'ruletaactiva',
-    'granja millonaria', 'granjamillonaria', 'granja millonaria',
+    'granja millonaria', 'granjamillonaria',
     'granjazo', 'lotto rey', 'lottorey', 'lotto gato', 'lottogato',
     'lotto pantera', 'centena animal', 'centena plus',
     'mega animal', 'chance animal', 'tropigana', 'fruitagana',
-    'panda plus', 'ricachona', 'la ricachona'
+    'panda plus', 'ricachona', 'la ricachona',
+    'calamar', 'calamar a', 'calamar b'
 ]
 
 # ═══════════════════════════════════════════════════════════
@@ -69,12 +76,13 @@ RULETAS_TRIPLES = [
     'triple maracay', 'triple guayana', 'triple nacional',
     'el ruco', 'la ruca', 'triple ruca',
     'chance', 'triple chance', 'terminal chance',
-    'triple activo', 'triple millonario', 'tripletas'
+    'triple activo', 'triple millonario', 'tripletas',
+    'tripleta', 'triples'
 ]
 
 # Palabras que indican que NO es un pronóstico (basura)
 EXCLUIR = [
-    # Otras agencias (que NO somos nosotros)
+    # Otras agencias
     'rodacadiz', 'gogoroyal', 'gogo royal', 'elparcero', 'el parcero',
     'jugabet', 'juga bet', 'somos tu mejor', 'agencia de loteria',
     'agencia de lotería', 'parcero_oficial', 'vip parcero',
@@ -84,6 +92,10 @@ EXCLUIR = [
     'comparte y gana', 'compartir y unirte', 'dale like',
     'comenta el animalito', 'menciona a tres', 'pasos a seguir',
     'instagram.com', 'youtube.com', 'youtu.be', 'facebook.com',
+    # Finanzas / BCV / Tasa
+    'tasa bcv', 'tasa del bcv', 'bcv', 'dolar hoy', 'dólar hoy',
+    'tasa del dia', 'tasa del día', 'tasa de cambio',
+    'binance', 'usdt', 'bitcoin', 'criptomoneda', 'p2p',
     # Deportes
     'copa libertadores', 'flamengo', 'estudiantes de la plata',
     'real madrid', 'vinicius', 'villareal', 'barquisimeto', 'cardenales',
@@ -91,8 +103,6 @@ EXCLUIR = [
     'futbol', 'fútbol', 'beisbol', 'béisbol', 'mundial', 'champions',
     'premier', 'la liga', 'serie a', 'goleada',
     'clasificación', 'clasificacion',
-    # Finanzas
-    'binance', 'usdt', 'bitcoin', 'criptomoneda',
     # Mega pollas
     'mega polla', 'mega-polla', 'sorteo especial', 'premio mayor'
 ]
@@ -143,10 +153,41 @@ def menciona_ruleta_triple(texto):
     return False
 
 
+def tiene_triples_numeros(texto):
+    """
+    Detecta si hay números de 3 dígitos (000-999) → triples
+    """
+    # Buscar secuencias de 3 dígitos separados
+    numeros3 = re.findall(r'\b\d{3}\b', texto)
+    return len(numeros3) >= 2
+
+
+def tiene_patron_animalitos(texto):
+    """
+    Detecta patrones típicos de animalitos:
+    - *XX nombre*
+    - XX-nombre
+    - *XX*YY*ZZ* (3+ números 2 dígitos)
+    - XX/YY/ZZ
+    """
+    t = norm(texto)
+    # Formato *XX nombre*
+    if len(re.findall(r'\*\d{2}\s+[a-z]{4,}', t)) >= 1:
+        return True
+    # Formato *XX*YY*ZZ* (3+ asteriscos con números)
+    if len(re.findall(r'\*\d{2}\*', texto)) >= 3:
+        return True
+    # Formato XX-YY-ZZ-NN
+    if len(re.findall(r'\b\d{2}[\-\/]\d{2}', texto)) >= 2:
+        return True
+    # Formato "0-22-47-74" con guiones
+    if len(re.findall(r'\b\d{1,2}[\-\.]\d{1,2}', texto)) >= 2:
+        return True
+    return False
+
+
 def clasificar(texto):
-    """
-    Devuelve 'animalitos', 'triples' o None
-    """
+    """Devuelve 'animalitos', 'triples' o None"""
     if es_basura(texto):
         return None
 
@@ -157,17 +198,15 @@ def clasificar(texto):
     # Triple explícito → triples
     if tiene_ruleta_triple:
         return 'triples'
+    if tiene_triples_numeros(texto):
+        return 'triples'
 
-    # Animalitos (filtro muy flexible)
+    # Animalitos
     if tiene_ruleta_animal:
         return 'animalitos'
     if cant_animales >= 1:
         return 'animalitos'
-    # Formato tipo "*XX nombre*" → buscar número + animal
-    if re.search(r'\d{1,2}\s+[a-z]{4,}', norm(texto)):
-        return 'animalitos'
-    # Formato "*XX*" solo → probable pronóstico si hay muchos
-    if len(re.findall(r'\*\d{2}\*', texto)) >= 3:
+    if tiene_patron_animalitos(texto):
         return 'animalitos'
 
     return None
@@ -207,7 +246,6 @@ async def extraer():
 
     print(f"Fecha hoy: {hoy}")
 
-    # Últimos 3 días
     fechas_ok = []
     for i in range(3):
         d = ahora_ven - timedelta(days=i)
@@ -227,18 +265,15 @@ async def extraer():
         texto = msg.text.strip()
         examinados += 1
 
-        # Deduplicar
         clave = norm(texto[:80])
         if clave in vistos:
             continue
         vistos.add(clave)
 
-        # Últimos 3 días
         fecha_msg = (msg.date - timedelta(hours=4)).strftime('%Y-%m-%d')
         if fecha_msg not in fechas_ok:
             continue
 
-        # Clasificar
         tipo = clasificar(texto)
         if not tipo:
             basura_count += 1
@@ -251,7 +286,7 @@ async def extraer():
             count_triples += 1
             cant = 0
 
-        # Limpiar texto: quitar "PRONÓSTICOS PARA HOY" del inicio
+        # Limpiar texto
         texto_limpio = re.sub(r'^PRON[ÓO]STICOS\s+PARA\s+HOY\s*', '', texto, flags=re.IGNORECASE).strip()
         texto_limpio = re.sub(r'^PRONOSTICOS\s+PARA\s+HOY\s*', '', texto_limpio, flags=re.IGNORECASE).strip()
 
@@ -274,7 +309,7 @@ async def extraer():
     print("")
     print("--- Lista de pronosticos validos ---")
     for p in pronosticos:
-        print(f"[{p['tipo']}] [{p['hora_publicacion']}] {p['texto'][:100]}")
+        print(f"[{p['tipo']}] [{p['hora_publicacion']}] {p['texto'][:120]}")
 
     subir_a_gist(pronosticos)
 
