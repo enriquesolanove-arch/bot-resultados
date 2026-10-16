@@ -20,17 +20,15 @@ client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
 
 # ═══════════════════════════════════════════════════════════
-#  CATÁLOGO COMPLETO DE ANIMALES (1-99)
+#  CATÁLOGO COMPLETO DE ANIMALES
 # ═══════════════════════════════════════════════════════════
 ANIMALES = [
-    # 0-36 (Lotto Activo / La Granjita)
     'ballena', 'delfin', 'carnero', 'toro', 'ciempies', 'alacran',
     'leon', 'rana', 'perico', 'raton', 'aguila', 'tigre', 'tigresa',
     'gato', 'caballo', 'mono', 'paloma', 'zorro', 'oso', 'pavo',
     'burro', 'chivo', 'cochino', 'gallo', 'camello', 'cebra',
     'iguana', 'gallina', 'vaca', 'perro', 'zamuro', 'elefante',
     'caiman', 'lapa', 'ardilla', 'pescado', 'venado',
-    # 37-75 (Granjazo / Granja Millonaria)
     'jirafa', 'culebra', 'cachicamo', 'guacharito', 'guacharo',
     'morochos', 'bufalo', 'pelicano', 'jabali', 'morza', 'hormiga',
     'comadreja', 'murcielago', 'tortuga', 'mariposa', 'panda', 'buho',
@@ -38,19 +36,13 @@ ANIMALES = [
     'pinguino', 'tiburon', 'pulpo', 'cangrejo', 'langosta', 'foca',
     'lobo', 'hiena', 'pantera', 'leopardo', 'puma', 'rinoceronte',
     'hipopotamo', 'jaguar', 'cocodrilo', 'serpiente',
-    # 76-99 (otras loterías)
     'halcon', 'cuervo', 'loro', 'guacamaya', 'tucan', 'flamenco',
     'cisne', 'ganso', 'pato', 'faisan', 'pavo real', 'abeja',
-    'escorpion', 'araña', 'grillo', 'saltamontes', 'libelula',
-    'pez espada', 'delfin rosado', 'manati', 'nutria', 'castor',
-    'erizo', 'topo', 'camaleon', 'lagartija', 'salamandra', 'rana toro',
-    'tortuga marina', 'cangrejo azul', 'estrella de mar', 'medusa',
-    'caballito de mar', 'pez payaso', 'mantarraya', 'tiburon blanco'
+    'escorpion', 'arana', 'grillo', 'saltamontes', 'libelula',
+    'manati', 'nutria', 'castor', 'erizo', 'topo', 'camaleon',
+    'lagartija', 'salamandra', 'medusa', 'caballito de mar'
 ]
 
-# ═══════════════════════════════════════════════════════════
-#  RULETAS DE ANIMALITOS
-# ═══════════════════════════════════════════════════════════
 RULETAS_ANIMALES = [
     'lotto activo', 'lottoactivo', 'lotto activo rd',
     'la granjita', 'lagranjita', 'granjita plus', 'granjita',
@@ -64,12 +56,9 @@ RULETAS_ANIMALES = [
     'lotto pantera', 'centena animal', 'centena plus',
     'mega animal', 'chance animal', 'tropigana', 'fruitagana',
     'panda plus', 'ricachona', 'la ricachona',
-    'calamar', 'calamar a', 'calamar b'
+    'calamar', 'calamar a', 'calamar b', 'monje millonario'
 ]
 
-# ═══════════════════════════════════════════════════════════
-#  RULETAS DE TRIPLES
-# ═══════════════════════════════════════════════════════════
 RULETAS_TRIPLES = [
     'triple zulia', 'triple tachira', 'triple táchira',
     'triple zamorano', 'triple caracas', 'triple carabobo',
@@ -80,36 +69,33 @@ RULETAS_TRIPLES = [
     'tripleta', 'triples'
 ]
 
-# Palabras que indican que NO es un pronóstico (basura)
 EXCLUIR = [
-    # Otras agencias
     'rodacadiz', 'gogoroyal', 'gogo royal', 'elparcero', 'el parcero',
     'jugabet', 'juga bet', 'somos tu mejor', 'agencia de loteria',
     'agencia de lotería', 'parcero_oficial', 'vip parcero',
-    # Links promocionales
     'wa.me', 't.me/', 'bit.ly', 'http://', 'https://',
     'registrate', 'regístrate', 'activa tu bono', 'unirse', 'unirte',
     'comparte y gana', 'compartir y unirte', 'dale like',
     'comenta el animalito', 'menciona a tres', 'pasos a seguir',
     'instagram.com', 'youtube.com', 'youtu.be', 'facebook.com',
-    # Finanzas / BCV / Tasa
     'tasa bcv', 'tasa del bcv', 'bcv', 'dolar hoy', 'dólar hoy',
     'tasa del dia', 'tasa del día', 'tasa de cambio',
+    'precio del dolar', 'precio del dólar',
     'binance', 'usdt', 'bitcoin', 'criptomoneda', 'p2p',
-    # Deportes
     'copa libertadores', 'flamengo', 'estudiantes de la plata',
     'real madrid', 'vinicius', 'villareal', 'barquisimeto', 'cardenales',
     'tiburones', 'lvbp', 'partido de ida', 'semifinal', 'goles',
     'futbol', 'fútbol', 'beisbol', 'béisbol', 'mundial', 'champions',
     'premier', 'la liga', 'serie a', 'goleada',
     'clasificación', 'clasificacion',
-    # Mega pollas
-    'mega polla', 'mega-polla', 'sorteo especial', 'premio mayor'
+    'mega polla', 'mega-polla', 'sorteo especial', 'premio mayor',
+    'comparte', 'reacciona', 'suscripte', 'suscríbete', 'suscribete',
+    'regalanos', 'regálanos', 'etiqueta a', 'comparte este',
+    'moneda', 'divisa', 'peso colombiano'
 ]
 
 
 def norm(texto):
-    """Normaliza texto: minúsculas y sin tildes."""
     texto = str(texto).lower()
     return ''.join(
         c for c in unicodedata.normalize('NFD', texto)
@@ -126,7 +112,6 @@ def es_basura(texto):
 
 
 def contar_animales(texto):
-    """Cuenta animales únicos."""
     t = norm(texto)
     encontrados = set()
     for a in ANIMALES:
@@ -153,60 +138,48 @@ def menciona_ruleta_triple(texto):
     return False
 
 
-def tiene_triples_numeros(texto):
-    """
-    Detecta si hay números de 3 dígitos (000-999) → triples
-    """
-    # Buscar secuencias de 3 dígitos separados
-    numeros3 = re.findall(r'\b\d{3}\b', texto)
-    return len(numeros3) >= 2
-
-
-def tiene_patron_animalitos(texto):
-    """
-    Detecta patrones típicos de animalitos:
-    - *XX nombre*
-    - XX-nombre
-    - *XX*YY*ZZ* (3+ números 2 dígitos)
-    - XX/YY/ZZ
-    """
-    t = norm(texto)
-    # Formato *XX nombre*
-    if len(re.findall(r'\*\d{2}\s+[a-z]{4,}', t)) >= 1:
-        return True
-    # Formato *XX*YY*ZZ* (3+ asteriscos con números)
-    if len(re.findall(r'\*\d{2}\*', texto)) >= 3:
-        return True
-    # Formato XX-YY-ZZ-NN
-    if len(re.findall(r'\b\d{2}[\-\/]\d{2}', texto)) >= 2:
-        return True
-    # Formato "0-22-47-74" con guiones
-    if len(re.findall(r'\b\d{1,2}[\-\.]\d{1,2}', texto)) >= 2:
-        return True
-    return False
-
-
 def clasificar(texto):
-    """Devuelve 'animalitos', 'triples' o None"""
+    """Devuelve 'animalitos', 'triples' o None. FILTRO ESTRICTO."""
     if es_basura(texto):
+        return None
+
+    t = norm(texto)
+
+    # Excluir decimales (tasas, precios)
+    if re.search(r'\d+[,\.]\d{2,}', texto):
         return None
 
     cant_animales, animales = contar_animales(texto)
     tiene_ruleta_animal = menciona_ruleta_animal(texto)
     tiene_ruleta_triple = menciona_ruleta_triple(texto)
 
-    # Triple explícito → triples
+    # ─── TRIPLES ───
     if tiene_ruleta_triple:
-        return 'triples'
-    if tiene_triples_numeros(texto):
-        return 'triples'
+        nums3 = re.findall(r'\b\d{3}\b', texto)
+        if len(nums3) >= 2:
+            return 'triples'
+        if 'tripleta' in t or 'tripletas' in t:
+            if re.search(r'\d{2,3}', texto):
+                return 'triples'
+        return None
 
-    # Animalitos
+    # ─── ANIMALITOS ───
     if tiene_ruleta_animal:
+        if cant_animales >= 1:
+            return 'animalitos'
+        if len(re.findall(r'\*\d{2}\*', texto)) >= 3:
+            return 'animalitos'
+        if len(re.findall(r'\b\d{1,2}[\-\/\.]\d{1,2}', texto)) >= 3:
+            return 'animalitos'
+        return None
+
+    if len(re.findall(r'\*\d{1,2}\s+[a-záéíóúñ]{4,}', t)) >= 2:
         return 'animalitos'
-    if cant_animales >= 1:
+
+    if cant_animales >= 3:
         return 'animalitos'
-    if tiene_patron_animalitos(texto):
+
+    if cant_animales >= 2 and re.search(r'\*\d{2}\*', texto):
         return 'animalitos'
 
     return None
@@ -286,7 +259,6 @@ async def extraer():
             count_triples += 1
             cant = 0
 
-        # Limpiar texto
         texto_limpio = re.sub(r'^PRON[ÓO]STICOS\s+PARA\s+HOY\s*', '', texto, flags=re.IGNORECASE).strip()
         texto_limpio = re.sub(r'^PRONOSTICOS\s+PARA\s+HOY\s*', '', texto_limpio, flags=re.IGNORECASE).strip()
 
