@@ -123,15 +123,15 @@ def es_pronostico(texto):
     cant_animales, lista = contar_animales(texto)
     tiene_ruleta = menciona_ruleta_ok(texto)
 
-    # Reglas (más flexibles):
+    # Reglas MÁS flexibles:
     # 1. Si menciona ruleta OK y tiene 1+ animales → válido
-    # 2. Si tiene 3+ animales en general → válido
-    # 3. Si tiene 2+ animales y algún número (ej: 05, 22) → válido
+    # 2. Si tiene 2+ animales aunque no mencione ruleta → válido
+    # 3. Si tiene 1 animal + algún número de 2 dígitos → válido
     if tiene_ruleta and cant_animales >= 1:
         return True
-    if cant_animales >= 3:
+    if cant_animales >= 2:
         return True
-    if cant_animales >= 2 and re.search(r'\b\d{1,2}\b', texto):
+    if cant_animales >= 1 and re.search(r'\b\d{2}\b', texto):
         return True
 
     return False
