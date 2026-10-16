@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import unicodedata
 import urllib.request
 import urllib.error
 from datetime import datetime, timedelta
@@ -19,100 +20,118 @@ client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
 
 # ═══════════════════════════════════════════════════════════
-#  LISTA DE ANIMALES DEL LOTTO ACTIVO
+#  ANIMALES (sin duplicados por tildes - normalizados)
 # ═══════════════════════════════════════════════════════════
 ANIMALES = [
-    'ballena', 'delfin', 'delfín', 'carnero', 'toro', 'ciempies', 'ciempiés',
-    'alacran', 'alacrán', 'leon', 'león', 'rana', 'perico', 'raton', 'ratón',
-    'aguila', 'águila', 'tigre', 'tigresa', 'gato', 'caballo', 'mono', 'paloma',
-    'zorro', 'oso', 'pavo', 'burro', 'chivo', 'cochino', 'gallo', 'camello',
-    'cebra', 'iguana', 'gallina', 'vaca', 'perro', 'zamuro', 'elefante',
-    'caiman', 'caimán', 'lapa', 'ardilla', 'pescado', 'venado', 'jirafa',
-    'culebra', 'ballenas', 'cachicamo', 'guacharito', 'guacharo', 'guácharo'
+    'ballena', 'delfin', 'carnero', 'toro', 'ciempies', 'alacran',
+    'leon', 'rana', 'perico', 'raton', 'aguila', 'tigre', 'tigresa',
+    'gato', 'caballo', 'mono', 'paloma', 'zorro', 'oso', 'pavo',
+    'burro', 'chivo', 'cochino', 'gallo', 'camello', 'cebra',
+    'iguana', 'gallina', 'vaca', 'perro', 'zamuro', 'elefante',
+    'caiman', 'lapa', 'ardilla', 'pescado', 'venado', 'jirafa',
+    'culebra', 'cachicamo', 'guacharito', 'guacharo', 'morochos'
 ]
 
-# Palabras que indican que el mensaje NO es un pronóstico (basura)
+# Palabras que indican que NO es un pronóstico
 EXCLUIR = [
     # Otras agencias
     'rodacadiz', 'gogoroyal', 'gogo royal', 'elparcero', 'el parcero',
-    'jugabet', 'juga bet', 'somos tu mejor opcion', 'somos tu mejor opción',
-    'agencia de loteria', 'agencia de lotería', 'nuestra agencia',
-    'nuestro canal', 'nuestro grupo', 'nuestra pagina', 'nuestra página',
+    'jugabet', 'juga bet', 'somos tu mejor', 'agencia de loteria',
+    'agencia de lotería',
     # Links promocionales
     'wa.me', 't.me/', 'bit.ly', 'http://', 'https://',
-    'registrate', 'regístrate', 'activa tu bono', 'unete', 'únete',
-    'unirse', 'unirte', 'comparte y gana', 'compartir y unirte',
-    'dale like', 'comenta el animalito', 'menciona a tres',
-    'pasos a seguir',
+    'registrate', 'regístrate', 'activa tu bono', 'unirse', 'unirte',
+    'comparte y gana', 'compartir y unirte', 'dale like',
+    'comenta el animalito', 'menciona a tres', 'pasos a seguir',
     # Deportes
     'copa libertadores', 'flamengo', 'estudiantes de la plata',
     'real madrid', 'vinicius', 'villareal', 'barquisimeto', 'cardenales',
-    'tiburones', 'lvbp', 'liga ', 'partido de ida', 'semifinal',
-    'goles', 'futbol', 'fútbol', 'beisbol', 'béisbol', 'mundial',
-    'champions', 'premier', 'la liga', 'serie a',
-    # Finanzas / otras cosas
-    'binance', 'usdt', 'criptomoneda', 'bitcoin',
-    # Mega pollas y publicidad
+    'tiburones', 'lvbp', 'partido de ida', 'semifinal', 'goles',
+    'futbol', 'fútbol', 'beisbol', 'béisbol', 'mundial', 'champions',
+    'premier', 'la liga', 'serie a', 'copa ', 'goleada',
+    'clasificación', 'clasificacion',
+    # Finanzas
+    'binance', 'usdt', 'bitcoin',
+    # Mega pollas
     'mega polla', 'mega-polla', 'sorteo especial', 'premio mayor',
-    # Triples/Chance (ya que solo queremos animalitos)
+    # Triples/Chance (solo queremos animalitos)
     'triple zulia', 'triple tachira', 'triple táchira', 'triple zamorano',
-    'triple caracas', 'triple carabobo', 'el ruco', 'la ruca', 'chance',
-    'triple chance', 'triples y parleys'
+    'triple caracas', 'triple carabobo', 'el ruco', 'la ruca',
+    'triple chance', 'triples y parleys', 'terminales y parleys',
+    # Ruletas NO objetivo
+    'la ricachona', 'lotto gato', 'lotto pantera', 'gatazo',
+    'chance animal', 'tropigana', 'fruitagana', 'granjazo',
+    'panda plus', 'mega animal', 'monje millonario', 'zoologico activo'
 ]
 
 
-def esc(texto):
-    return texto.lower()
+def norm(texto):
+    """Normaliza texto: minúsculas y sin tildes."""
+    texto = texto.lower()
+    return ''.join(
+        c for c in unicodedata.normalize('NFD', texto)
+        if unicodedata.category(c) != 'Mn'
+    )
 
 
 def es_basura(texto):
-    """Verifica si el mensaje contiene palabras de exclusión."""
-    t = texto.lower()
+    t = norm(texto)
     for p in EXCLUIR:
-        if p in t:
+        if norm(p) in t:
             return True
     return False
 
 
 def contar_animales(texto):
-    """Cuenta cuántos animales del listado aparecen en el texto."""
-    t = texto.lower()
-    # Reemplazar tildes para mejor matching
-    t = t.replace('á', 'a').replace('é', 'e').replace('í', 'i').replace('ó', 'o').replace('ú', 'u')
-    count = 0
-    encontrados = []
+    """Cuenta animales únicos (sin duplicados por tildes)."""
+    t = norm(texto)
+    encontrados = set()
     for a in ANIMALES:
-        a_limpio = a.replace('á', 'a').replace('é', 'e').replace('í', 'i').replace('ó', 'o').replace('ú', 'u')
-        # Buscar palabra completa
-        patron = r'\b' + re.escape(a_limpio) + r'\b'
+        a_norm = norm(a)
+        patron = r'\b' + re.escape(a_norm) + r'\b'
         if re.search(patron, t):
-            count += 1
-            encontrados.append(a)
-    return count, encontrados
+            encontrados.add(a_norm)
+    return len(encontrados), list(encontrados)
+
+
+# Ruletas que SÍ queremos (todas sus variantes)
+RULETAS_OK = [
+    'lotto activo', 'lottoactivo', 'lotto activo rd', 'lotto activo r',
+    'la granjita', 'lagranjita', 'granjita plus', 'granjita',
+    'guacharo', 'guácharo', 'el guacharito', 'guacharito',
+    'guacharito millonario',
+    'selva plus', 'selvaplus', 'selva',
+    'lotto real', 'lottoreal',
+    'ruleta activa', 'ruletaactiva',
+    'granja millonaria', 'granjamillonaria'
+]
+
+
+def menciona_ruleta_ok(texto):
+    t = norm(texto)
+    for r in RULETAS_OK:
+        if norm(r) in t:
+            return True
+    return False
 
 
 def es_pronostico(texto):
-    """Determina si el mensaje es un pronóstico real de animalitos."""
+    """Determina si el mensaje es un pronóstico válido."""
     if es_basura(texto):
         return False
 
-    t = texto.lower()
+    cant_animales, lista = contar_animales(texto)
+    tiene_ruleta = menciona_ruleta_ok(texto)
 
-    # Verificar si menciona las ruletas objetivo
-    menciona_ruleta = any(k in t for k in [
-        'lotto activo', 'la granjita', 'guacharo', 'guácharo',
-        'selva plus', 'lotto real', 'granjita plus'
-    ])
-
-    # Contar animales
-    cant_animales, animales = contar_animales(texto)
-
-    # Criterios:
-    # 1. Al menos 3 animales mencionados → es un pronóstico
-    # 2. O menciona ruleta + al menos 1 animal → es un pronóstico
+    # Reglas (más flexibles):
+    # 1. Si menciona ruleta OK y tiene 1+ animales → válido
+    # 2. Si tiene 3+ animales en general → válido
+    # 3. Si tiene 2+ animales y algún número (ej: 05, 22) → válido
+    if tiene_ruleta and cant_animales >= 1:
+        return True
     if cant_animales >= 3:
         return True
-    if menciona_ruleta and cant_animales >= 1:
+    if cant_animales >= 2 and re.search(r'\b\d{1,2}\b', texto):
         return True
 
     return False
@@ -157,31 +176,29 @@ async def extraer():
     basura_count = 0
     examinados = 0
 
-    async for msg in client.iter_messages(CANAL, limit=150):
+    async for msg in client.iter_messages(CANAL, limit=200):
         if not msg.text:
             continue
-
         texto = msg.text.strip()
         examinados += 1
 
-        # Deduplicar por primeros 80 caracteres
-        clave = texto[:80].lower()
+        # Deduplicar
+        clave = norm(texto[:80])
         if clave in vistos:
             continue
         vistos.add(clave)
 
-        # Filtrar por fecha (solo hoy)
+        # Solo hoy
         fecha_msg = (msg.date - timedelta(hours=4)).strftime('%Y-%m-%d')
         if fecha_msg != hoy:
             continue
 
-        # Verificar si es pronóstico
+        # Verificar pronóstico
         if not es_pronostico(texto):
             basura_count += 1
             continue
 
-        # Cantidad de animales encontrados (para debug)
-        cant, animales_encontrados = contar_animales(texto)
+        cant, animales = contar_animales(texto)
 
         pronosticos.append({
             "tipo": "animalitos",
@@ -191,16 +208,16 @@ async def extraer():
             "animales": cant
         })
 
-    # Ordenar por hora descendente (más reciente primero)
     pronosticos.sort(key=lambda x: x['hora_publicacion'], reverse=True)
-    # Máximo 40
     pronosticos = pronosticos[:40]
 
     print(f"Mensajes examinados: {examinados}")
     print(f"Mensajes descartados: {basura_count}")
     print(f"Pronosticos validos: {len(pronosticos)}")
-    for p in pronosticos[:5]:
-        print(f"  [{p['hora_publicacion']}] {p['animales']} animales: {p['texto'][:80]}")
+    print("")
+    print("--- Lista de pronosticos validos ---")
+    for p in pronosticos:
+        print(f"[{p['hora_publicacion']}] {p['animales']} animales: {p['texto'][:100]}")
 
     subir_a_gist(pronosticos)
 
