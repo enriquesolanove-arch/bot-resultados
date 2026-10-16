@@ -195,9 +195,9 @@ async def extraer():
             continue
         vistos.add(clave)
 
-        # Solo hoy
+                # Últimos 3 días
         fecha_msg = (msg.date - timedelta(hours=4)).strftime('%Y-%m-%d')
-        if fecha_msg != hoy:
+        if fecha_msg not in fechas_ok:
             continue
 
         # Verificar pronóstico
