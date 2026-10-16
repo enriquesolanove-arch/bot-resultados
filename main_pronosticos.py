@@ -166,7 +166,7 @@ def subir_a_gist(lista):
 
 
 async def extraer():
-        ahora_ven = datetime.utcnow() - timedelta(hours=4)
+    ahora_ven = datetime.utcnow() - timedelta(hours=4)
     hoy = ahora_ven.strftime('%Y-%m-%d')
 
     print(f"Fecha hoy: {hoy}")
@@ -183,7 +183,7 @@ async def extraer():
     basura_count = 0
     examinados = 0
 
-    async for msg in client.iter_messages(CANAL, limit=200):
+    async for msg in client.iter_messages(CANAL, limit=500):
         if not msg.text:
             continue
         texto = msg.text.strip()
@@ -195,7 +195,7 @@ async def extraer():
             continue
         vistos.add(clave)
 
-                # Últimos 3 días
+        # Últimos 3 días
         fecha_msg = (msg.date - timedelta(hours=4)).strftime('%Y-%m-%d')
         if fecha_msg not in fechas_ok:
             continue
@@ -210,11 +210,12 @@ async def extraer():
         pronosticos.append({
             "tipo": "animalitos",
             "texto": texto,
-            "fecha": hoy,
-            "hora_publicacion": (msg.date - timedelta(hours=4)).strftime('%H:%M'),
+            "fecha": fecha_msg,
+            "hora_publicacion": (msg.date - timedelta(hours=4)).strftime('%d/%m %H:%M'),
             "animales": cant
         })
 
+    # Ordenar por fecha y hora descendente
     pronosticos.sort(key=lambda x: x['hora_publicacion'], reverse=True)
     pronosticos = pronosticos[:40]
 
