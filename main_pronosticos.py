@@ -83,38 +83,29 @@ async def extraer():
     pronosticos = []
     vistos = set()
 
-    async for msg in client.iter_messages(CANAL, limit=80):
+async def extraer():
+    ahora_ven = datetime.utcnow() - timedelta(hours=4)
+    hoy = ahora_ven.strftime('%Y-%m-%d')
+
+    print("=== MODO DIAGNOSTICO ===")
+    print(f"Fecha hoy (Venezuela): {hoy}")
+    print("")
+
+    count = 0
+    async for msg in client.iter_messages(CANAL, limit=20):
         if not msg.text:
             continue
-        texto = msg.text.strip()
-        clave = texto[:100].lower()
-        if clave in vistos:
-            continue
-        vistos.add(clave)
+        count += 1
+        fecha_msg = (msg.date - timedelta(hours=4)).strftime('%Y-%m-%d %H:%M')
+        print(f"--- Mensaje #{count} ---")
+        print(f"Fecha: {fecha_msg}")
+        print(f"Texto: {msg.text[:300]}")
+        print("")
 
-        if not es_valido(texto):
-            continue
+    print(f"Total mensajes leídos: {count}")
 
-        tipo = clasificar(texto)
-        if not tipo:
-            continue
-
-        fecha_msg = (msg.date - timedelta(hours=4)).strftime('%Y-%m-%d')
-        if fecha_msg != hoy:
-            continue
-
-        pronosticos.append({
-            "tipo": tipo,
-            "texto": texto,
-            "fecha": hoy,
-            "hora_publicacion": (msg.date - timedelta(hours=4)).strftime('%H:%M')
-        })
-
-    pronosticos.sort(key=lambda x: x['hora_publicacion'], reverse=True)
-    pronosticos = pronosticos[:40]
-
-    print(f"Encontrados {len(pronosticos)} pronosticos del dia")
-    subir_a_gist(pronosticos)
+    # Por si acaso, subir array vacío
+    subir_a_gist([])
 
 
 async def main():
