@@ -9,7 +9,7 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 
 api_id = int(os.environ["TELEGRAM_API_ID"])
-api_hash = int(os.environ["TELEGRAM_API_HASH"]) if False else os.environ["TELEGRAM_API_HASH"]
+api_hash = os.environ["TELEGRAM_API_HASH"]
 string_session = os.environ["TELEGRAM_STRING_SESSION"]
 GITHUB_TOKEN = os.environ.get("TOKEN_GIST", "")
 
@@ -20,9 +20,10 @@ client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
 
 # ═══════════════════════════════════════════════════════════
-#  ANIMALES (para animalitos)
+#  CATÁLOGO COMPLETO DE ANIMALES (1-75)
 # ═══════════════════════════════════════════════════════════
 ANIMALES = [
+    # 0-36 Lotto Activo / La Granjita
     'ballena', 'delfin', 'carnero', 'toro', 'ciempies', 'alacran',
     'leon', 'rana', 'perico', 'raton', 'aguila', 'tigre', 'tigresa',
     'gato', 'caballo', 'mono', 'paloma', 'zorro', 'oso', 'pavo',
@@ -30,25 +31,37 @@ ANIMALES = [
     'iguana', 'gallina', 'vaca', 'perro', 'zamuro', 'elefante',
     'caiman', 'lapa', 'ardilla', 'pescado', 'venado', 'jirafa',
     'culebra', 'cachicamo', 'guacharito', 'guacharo', 'morochos',
-    'panda', 'buho', 'tortuga', 'aguila real', 'mariposa'
+    # 37-75 Granjazo / Granja Millonaria / otros
+    'bufalo', 'pelicano', 'jabali', 'morza', 'morsa', 'hormiga',
+    'comadreja', 'murcielago', 'tortuga', 'mariposa', 'panda', 'buho',
+    'puercoespin', 'avestruz', 'conejo', 'canguro', 'koala', 'pinguino',
+    'tiburon', 'ballenas', 'pulpo', 'cangrejo', 'langosta', 'foca',
+    'lobo', 'hiena', 'pantera', 'leopardo', 'puma', 'rinoceronte',
+    'hipopotamo', 'jaguar', 'cocodrilo', 'serpiente', 'aguila real',
+    'halcon', 'cuervo', 'loro', 'guacamaya', 'tucan', 'flamenco',
+    'pavo real', 'cisne', 'ganso', 'pato', 'gallito', 'faisan'
 ]
 
 # ═══════════════════════════════════════════════════════════
-#  RULETAS DE ANIMALITOS que capturamos
+#  RULETAS DE ANIMALITOS
 # ═══════════════════════════════════════════════════════════
 RULETAS_ANIMALES = [
-    'lotto activo', 'lottoactivo', 'lotto activo rd',
+    'lotto activo', 'lottoactivo', 'lotto activo rd', 'lotto activo r',
     'la granjita', 'lagranjita', 'granjita plus', 'granjita',
     'guacharo', 'guácharo', 'el guacharito', 'guacharito',
     'guacharito millonario',
     'selva plus', 'selvaplus', 'selva',
     'lotto real', 'lottoreal',
     'ruleta activa', 'ruletaactiva',
-    'granja millonaria', 'granjamillonaria'
+    'granja millonaria', 'granjamillonaria', 'granja millonaria',
+    'granjazo', 'lotto rey', 'lottorey', 'lotto gato', 'lottogato',
+    'lotto pantera', 'centena animal', 'centena plus',
+    'mega animal', 'chance animal', 'tropigana', 'fruitagana',
+    'panda plus', 'ricachona', 'la ricachona'
 ]
 
 # ═══════════════════════════════════════════════════════════
-#  RULETAS DE TRIPLES que capturamos
+#  RULETAS DE TRIPLES
 # ═══════════════════════════════════════════════════════════
 RULETAS_TRIPLES = [
     'triple zulia', 'triple tachira', 'triple táchira',
@@ -56,20 +69,21 @@ RULETAS_TRIPLES = [
     'triple maracay', 'triple guayana', 'triple nacional',
     'el ruco', 'la ruca', 'triple ruca',
     'chance', 'triple chance', 'terminal chance',
-    'triple activo', 'triple millonario'
+    'triple activo', 'triple millonario', 'tripletas'
 ]
 
-# Palabras que indican que NO es un pronóstico
+# Palabras que indican que NO es un pronóstico (basura)
 EXCLUIR = [
-    # Otras agencias
+    # Otras agencias (que NO somos nosotros)
     'rodacadiz', 'gogoroyal', 'gogo royal', 'elparcero', 'el parcero',
     'jugabet', 'juga bet', 'somos tu mejor', 'agencia de loteria',
-    'agencia de lotería',
+    'agencia de lotería', 'parcero_oficial', 'vip parcero',
     # Links promocionales
     'wa.me', 't.me/', 'bit.ly', 'http://', 'https://',
     'registrate', 'regístrate', 'activa tu bono', 'unirse', 'unirte',
     'comparte y gana', 'compartir y unirte', 'dale like',
     'comenta el animalito', 'menciona a tres', 'pasos a seguir',
+    'instagram.com', 'youtube.com', 'youtu.be', 'facebook.com',
     # Deportes
     'copa libertadores', 'flamengo', 'estudiantes de la plata',
     'real madrid', 'vinicius', 'villareal', 'barquisimeto', 'cardenales',
@@ -78,7 +92,7 @@ EXCLUIR = [
     'premier', 'la liga', 'serie a', 'goleada',
     'clasificación', 'clasificacion',
     # Finanzas
-    'binance', 'usdt', 'bitcoin',
+    'binance', 'usdt', 'bitcoin', 'criptomoneda',
     # Mega pollas
     'mega polla', 'mega-polla', 'sorteo especial', 'premio mayor'
 ]
@@ -140,16 +154,20 @@ def clasificar(texto):
     tiene_ruleta_animal = menciona_ruleta_animal(texto)
     tiene_ruleta_triple = menciona_ruleta_triple(texto)
 
-    # Prioridad: si menciona triple explícitamente → triples
+    # Triple explícito → triples
     if tiene_ruleta_triple:
         return 'triples'
 
-    # Animalitos
-    if tiene_ruleta_animal and cant_animales >= 1:
+    # Animalitos (filtro muy flexible)
+    if tiene_ruleta_animal:
         return 'animalitos'
-    if cant_animales >= 2:
+    if cant_animales >= 1:
         return 'animalitos'
-    if cant_animales >= 1 and re.search(r'\b\d{2}\b', texto):
+    # Formato tipo "*XX nombre*" → buscar número + animal
+    if re.search(r'\d{1,2}\s+[a-z]{4,}', norm(texto)):
+        return 'animalitos'
+    # Formato "*XX*" solo → probable pronóstico si hay muchos
+    if len(re.findall(r'\*\d{2}\*', texto)) >= 3:
         return 'animalitos'
 
     return None
@@ -232,17 +250,19 @@ async def extraer():
         else:
             count_triples += 1
             cant = 0
-            animales = []
+
+        # Limpiar texto: quitar "PRONÓSTICOS PARA HOY" del inicio
+        texto_limpio = re.sub(r'^PRON[ÓO]STICOS\s+PARA\s+HOY\s*', '', texto, flags=re.IGNORECASE).strip()
+        texto_limpio = re.sub(r'^PRONOSTICOS\s+PARA\s+HOY\s*', '', texto_limpio, flags=re.IGNORECASE).strip()
 
         pronosticos.append({
             "tipo": tipo,
-            "texto": texto,
+            "texto": texto_limpio,
             "fecha": fecha_msg,
             "hora_publicacion": (msg.date - timedelta(hours=4)).strftime('%d/%m %H:%M'),
             "animales": cant
         })
 
-    # Ordenar por fecha/hora descendente
     pronosticos.sort(key=lambda x: x['hora_publicacion'], reverse=True)
     pronosticos = pronosticos[:60]
 
