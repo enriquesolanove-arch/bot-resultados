@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import random
 import unicodedata
 import urllib.request
 import urllib.error
@@ -19,88 +20,36 @@ CANAL = 'pronosticosparahoy'
 client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
 
-# ═══════════════════════════════════════════════════════════
-#  CATÁLOGO COMPLETO DE ANIMALES
-# ═══════════════════════════════════════════════════════════
-ANIMALES = [
-    'ballena', 'delfin', 'carnero', 'toro', 'ciempies', 'alacran',
-    'leon', 'rana', 'perico', 'raton', 'aguila', 'tigre', 'tigresa',
-    'gato', 'caballo', 'mono', 'paloma', 'zorro', 'oso', 'pavo',
-    'burro', 'chivo', 'cochino', 'gallo', 'camello', 'cebra',
-    'iguana', 'gallina', 'vaca', 'perro', 'zamuro', 'elefante',
-    'caiman', 'lapa', 'ardilla', 'pescado', 'venado',
-    'jirafa', 'culebra', 'cachicamo', 'guacharito', 'guacharo',
-    'morochos', 'bufalo', 'pelicano', 'jabali', 'morza', 'hormiga',
-    'comadreja', 'murcielago', 'tortuga', 'mariposa', 'panda', 'buho',
-    'puercoespin', 'avestruz', 'conejo', 'canguro', 'koala',
-    'pinguino', 'tiburon', 'pulpo', 'cangrejo', 'langosta', 'foca',
-    'lobo', 'hiena', 'pantera', 'leopardo', 'puma', 'rinoceronte',
-    'hipopotamo', 'jaguar', 'cocodrilo', 'serpiente',
-    'halcon', 'cuervo', 'loro', 'guacamaya', 'tucan', 'flamenco',
-    'cisne', 'ganso', 'pato', 'faisan', 'pavo real', 'abeja',
-    'escorpion', 'arana', 'grillo', 'saltamontes', 'libelula',
-    'manati', 'nutria', 'castor', 'erizo', 'topo', 'camaleon',
-    'lagartija', 'salamandra', 'medusa', 'caballito de mar'
+BLOQUES = [
+    {'key': 'manana',   'limite': 6 * 60 + 30},   # 6:30 AM
+    {'key': 'mediodia', 'limite': 12 * 60 + 30},  # 12:30 PM
+    {'key': 'cierre',   'limite': 17 * 60 + 30}   # 5:30 PM
 ]
 
-RULETAS_ANIMALES = [
-    'lotto activo', 'lottoactivo', 'lotto activo rd',
-    'la granjita', 'lagranjita', 'granjita plus', 'granjita',
-    'guacharo', 'guácharo', 'el guacharito', 'guacharito',
-    'guacharito millonario',
-    'selva plus', 'selvaplus', 'selva',
-    'lotto real', 'lottoreal',
-    'ruleta activa', 'ruletaactiva',
-    'granja millonaria', 'granjamillonaria',
-    'granjazo', 'lotto rey', 'lottorey', 'lotto gato', 'lottogato',
-    'lotto pantera', 'centena animal', 'centena plus',
-    'mega animal', 'chance animal', 'tropigana', 'fruitagana',
-    'panda plus', 'ricachona', 'la ricachona',
-    'calamar', 'calamar a', 'calamar b', 'monje millonario'
-]
-
-RULETAS_TRIPLES = [
-    'triple zulia', 'triple tachira', 'triple táchira',
-    'triple zamorano', 'triple caracas', 'triple carabobo',
-    'triple maracay', 'triple guayana', 'triple nacional',
-    'el ruco', 'la ruca', 'triple ruca',
-    'chance', 'triple chance', 'terminal chance',
-    'triple activo', 'triple millonario', 'tripletas',
-    'tripleta', 'triples'
+RULETAS = [
+    {'key': 'Lotto Activo',    'max': 36, 'cantidad': 4, 'aliases': ['lotto activo', 'lottoactivo']},
+    {'key': 'La Granjita',     'max': 36, 'cantidad': 4, 'aliases': ['la granjita', 'lagranjita', 'granjita']},
+    {'key': 'Guacharo Activo', 'max': 75, 'cantidad': 5, 'aliases': ['guacharo', 'guácharo', 'guacharo activo', 'el guacharito']}
 ]
 
 EXCLUIR = [
     'rodacadiz', 'gogoroyal', 'gogo royal', 'elparcero', 'el parcero',
-    'jugabet', 'juga bet', 'somos tu mejor', 'agencia de loteria',
-    'agencia de lotería', 'parcero_oficial', 'vip parcero',
-    'wa.me', 't.me/', 'bit.ly', 'http://', 'https://',
-    'registrate', 'regístrate', 'activa tu bono', 'unirse', 'unirte',
-    'comparte y gana', 'compartir y unirte', 'dale like',
-    'comenta el animalito', 'menciona a tres', 'pasos a seguir',
+    'jugabet', 'somos tu mejor', 'agencia de loteria', 'agencia de lotería',
+    'wa.me', 't.me/', 'bit.ly', 'registrate', 'regístrate', 'activa tu bono',
+    'unirse', 'unirte', 'dale like', 'comenta el animalito', 'menciona a tres',
     'instagram.com', 'youtube.com', 'youtu.be', 'facebook.com',
     'tasa bcv', 'tasa del bcv', 'bcv', 'dolar hoy', 'dólar hoy',
-    'tasa del dia', 'tasa del día', 'tasa de cambio',
-    'precio del dolar', 'precio del dólar',
-    'binance', 'usdt', 'bitcoin', 'criptomoneda', 'p2p',
-    'copa libertadores', 'flamengo', 'estudiantes de la plata',
-    'real madrid', 'vinicius', 'villareal', 'barquisimeto', 'cardenales',
-    'tiburones', 'lvbp', 'partido de ida', 'semifinal', 'goles',
-    'futbol', 'fútbol', 'beisbol', 'béisbol', 'mundial', 'champions',
-    'premier', 'la liga', 'serie a', 'goleada',
-    'clasificación', 'clasificacion',
-    'mega polla', 'mega-polla', 'sorteo especial', 'premio mayor',
-    'comparte', 'reacciona', 'suscripte', 'suscríbete', 'suscribete',
-    'regalanos', 'regálanos', 'etiqueta a', 'comparte este',
-    'moneda', 'divisa', 'peso colombiano'
+    'tasa de cambio', 'binance', 'usdt', 'bitcoin',
+    'copa libertadores', 'real madrid', 'flamengo', 'lvbp', 'tiburones',
+    'futbol', 'fútbol', 'beisbol', 'béisbol', 'champions',
+    'mega polla', 'sorteo especial', 'comparte', 'reacciona', 'suscripte',
+    'triple', 'triples', 'terminal', 'parley', 'chance'
 ]
 
 
 def norm(texto):
     texto = str(texto).lower()
-    return ''.join(
-        c for c in unicodedata.normalize('NFD', texto)
-        if unicodedata.category(c) != 'Mn'
-    )
+    return ''.join(c for c in unicodedata.normalize('NFD', texto) if unicodedata.category(c) != 'Mn')
 
 
 def es_basura(texto):
@@ -111,89 +60,80 @@ def es_basura(texto):
     return False
 
 
-def contar_animales(texto):
+def detectar_ruleta(texto):
     t = norm(texto)
-    encontrados = set()
-    for a in ANIMALES:
-        a_norm = norm(a)
-        patron = r'\b' + re.escape(a_norm) + r'\b'
-        if re.search(patron, t):
-            encontrados.add(a_norm)
-    return len(encontrados), list(encontrados)
-
-
-def menciona_ruleta_animal(texto):
-    t = norm(texto)
-    for r in RULETAS_ANIMALES:
-        if norm(r) in t:
-            return True
-    return False
-
-
-def menciona_ruleta_triple(texto):
-    t = norm(texto)
-    for r in RULETAS_TRIPLES:
-        if norm(r) in t:
-            return True
-    return False
-
-
-def clasificar(texto):
-    """Devuelve 'animalitos', 'triples' o None. FILTRO ESTRICTO."""
-    if es_basura(texto):
-        return None
-
-    t = norm(texto)
-
-    # Excluir decimales (tasas, precios)
-    if re.search(r'\d+[,\.]\d{2,}', texto):
-        return None
-
-    cant_animales, animales = contar_animales(texto)
-    tiene_ruleta_animal = menciona_ruleta_animal(texto)
-    tiene_ruleta_triple = menciona_ruleta_triple(texto)
-
-    # ─── TRIPLES ───
-    if tiene_ruleta_triple:
-        nums3 = re.findall(r'\b\d{3}\b', texto)
-        if len(nums3) >= 2:
-            return 'triples'
-        if 'tripleta' in t or 'tripletas' in t:
-            if re.search(r'\d{2,3}', texto):
-                return 'triples'
-        return None
-
-    # ─── ANIMALITOS ───
-    if tiene_ruleta_animal:
-        if cant_animales >= 1:
-            return 'animalitos'
-        if len(re.findall(r'\*\d{2}\*', texto)) >= 3:
-            return 'animalitos'
-        if len(re.findall(r'\b\d{1,2}[\-\/\.]\d{1,2}', texto)) >= 3:
-            return 'animalitos'
-        return None
-
-    if len(re.findall(r'\*\d{1,2}\s+[a-záéíóúñ]{4,}', t)) >= 2:
-        return 'animalitos'
-
-    if cant_animales >= 3:
-        return 'animalitos'
-
-    if cant_animales >= 2 and re.search(r'\*\d{2}\*', texto):
-        return 'animalitos'
-
+    for r in RULETAS:
+        for alias in r['aliases']:
+            if norm(alias) in t:
+                return r
     return None
 
 
-def subir_a_gist(lista):
+def extraer_numeros(texto, maximo):
+    nums = []
+    nums += re.findall(r'\*(\d{1,2})\*', texto)
+    nums += re.findall(r'\*(\d{1,2})\s+[a-záéíóúñ]{3,}', norm(texto))
+    nums += re.findall(r'\b(\d{1,2})\s+[a-záéíóúñ]{4,}\b', norm(texto))
+    nums += re.findall(r'\b(\d{1,2})(?=[\-\/\.])', texto)
+
+    validos = []
+    vistos = set()
+    for n in nums:
+        try:
+            num = int(n)
+        except:
+            continue
+        if num < 0 or num > maximo:
+            continue
+        num_str = str(num).zfill(2)
+        if num_str in vistos:
+            continue
+        vistos.add(num_str)
+        validos.append(num_str)
+    return validos
+
+
+def clasificar_bloque(hora):
+    h = hora.hour
+    if 6 <= h < 12: return 'manana'
+    if 12 <= h < 17: return 'mediodia'
+    if 17 <= h < 20: return 'cierre'
+    return None
+
+
+def generar_aleatorios(maximo, cantidad):
+    """Genera N números únicos aleatorios entre 0 y maximo."""
+    pool = list(range(0, maximo + 1))
+    random.shuffle(pool)
+    elegidos = sorted(pool[:cantidad])
+    return [str(n).zfill(2) for n in elegidos]
+
+
+def descargar_gist():
+    """Descarga el Gist actual."""
+    url = f"https://api.github.com/gists/{GIST_ID}?t={int(datetime.utcnow().timestamp())}"
+    headers = {"User-Agent": "bot"}
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as r:
+            data = json.loads(r.read().decode())
+        content = data['files']['pronosticos.js']['content']
+        # Extraer JSON
+        match = re.search(r'window\.REGALOS\s*=\s*(\{.*\});', content, re.DOTALL)
+        if match:
+            return json.loads(match.group(1))
+    except Exception as e:
+        print(f"Error descargando Gist: {e}")
+    return None
+
+
+def subir_gist(data):
     if not GITHUB_TOKEN:
         print("TOKEN_GIST no configurado")
         return False
-    contenido = "window.PRONOSTICOS = " + json.dumps(lista, ensure_ascii=False) + ";"
+    contenido = "window.REGALOS = " + json.dumps(data, ensure_ascii=False) + ";"
     url = f"https://api.github.com/gists/{GIST_ID}"
-    data = json.dumps({
-        "files": {"pronosticos.js": {"content": contenido}}
-    }).encode("utf-8")
+    body = json.dumps({"files": {"pronosticos.js": {"content": contenido}}}).encode("utf-8")
     headers = {
         "Authorization": f"token {GITHUB_TOKEN}",
         "Accept": "application/vnd.github.v3+json",
@@ -201,89 +141,123 @@ def subir_a_gist(lista):
         "User-Agent": "bot"
     }
     try:
-        req = urllib.request.Request(url, data=data, headers=headers, method="PATCH")
+        req = urllib.request.Request(url, data=body, headers=headers, method="PATCH")
         with urllib.request.urlopen(req, timeout=15) as r:
-            print(f"Gist actualizado: {len(lista)} pronosticos")
+            print(f"Gist actualizado")
             return True
-    except urllib.error.HTTPError as e:
-        print(f"HTTPError: {e.code} - {e.read().decode()[:200]}")
-        return False
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error subiendo: {e}")
         return False
+
+
+def inicializar_estructura():
+    """Crea la estructura base."""
+    est = {}
+    for r in RULETAS:
+        est[r['key']] = {}
+        for b in BLOQUES:
+            est[r['key']][b['key']] = {'nums': [], 'fuente': '', 'hora': ''}
+    return est
 
 
 async def extraer():
     ahora_ven = datetime.utcnow() - timedelta(hours=4)
     hoy = ahora_ven.strftime('%Y-%m-%d')
+    min_ahora = ahora_ven.hour * 60 + ahora_ven.minute
 
     print(f"Fecha hoy: {hoy}")
+    print(f"Hora actual (Venezuela): {ahora_ven.strftime('%H:%M')}")
 
-    fechas_ok = []
-    for i in range(3):
-        d = ahora_ven - timedelta(days=i)
-        fechas_ok.append(d.strftime('%Y-%m-%d'))
-    print(f"Fechas aceptadas: {fechas_ok}")
+    # Leer Gist actual
+    data = descargar_gist()
+    if not data or data.get('fecha') != hoy:
+        data = {'fecha': hoy, 'bloques': inicializar_estructura()}
+    if 'bloques' not in data:
+        data['bloques'] = inicializar_estructura()
 
-    pronosticos = []
-    vistos = set()
-    basura_count = 0
-    examinados = 0
-    count_animales = 0
-    count_triples = 0
+    # Asegurar estructura completa
+    for r in RULETAS:
+        if r['key'] not in data['bloques']:
+            data['bloques'][r['key']] = {}
+        for b in BLOQUES:
+            if b['key'] not in data['bloques'][r['key']]:
+                data['bloques'][r['key']][b['key']] = {'nums': [], 'fuente': '', 'hora': ''}
 
-    async for msg in client.iter_messages(CANAL, limit=500):
+    # ═══════════════════════════════════════════════════════
+    #  1. GENERAR ALEATORIOS si no hay manual
+    # ═══════════════════════════════════════════════════════
+    generados = 0
+    for r in RULETAS:
+        for b in BLOQUES:
+            info = data['bloques'][r['key']][b['key']]
+            if info['fuente'] == 'manual':
+                continue  # respetar manual
+            if min_ahora >= b['limite'] and not info['nums']:
+                # Generar aleatorios
+                info['nums'] = generar_aleatorios(r['max'], r['cantidad'])
+                info['fuente'] = 'auto'
+                info['hora'] = ahora_ven.strftime('%H:%M')
+                generados += 1
+                print(f"  🤖 Generados aleatorios para {r['key']} - {b['key']}: {info['nums']}")
+
+    # ═══════════════════════════════════════════════════════
+    #  2. CAPTURAR DE TELEGRAM
+    # ═══════════════════════════════════════════════════════
+    capturados_telegram = 0
+    async for msg in client.iter_messages(CANAL, limit=100):
         if not msg.text:
             continue
         texto = msg.text.strip()
-        examinados += 1
-
-        clave = norm(texto[:80])
-        if clave in vistos:
+        if es_basura(texto):
             continue
-        vistos.add(clave)
 
+        # Solo hoy
         fecha_msg = (msg.date - timedelta(hours=4)).strftime('%Y-%m-%d')
-        if fecha_msg not in fechas_ok:
+        if fecha_msg != hoy:
             continue
 
-        tipo = clasificar(texto)
-        if not tipo:
-            basura_count += 1
+        ruleta = detectar_ruleta(texto)
+        if not ruleta:
             continue
 
-        if tipo == 'animalitos':
-            count_animales += 1
-            cant, animales = contar_animales(texto)
-        else:
-            count_triples += 1
-            cant = 0
+        nums = extraer_numeros(texto, ruleta['max'])
+        if not nums:
+            continue
 
-        texto_limpio = re.sub(r'^PRON[ÓO]STICOS\s+PARA\s+HOY\s*', '', texto, flags=re.IGNORECASE).strip()
-        texto_limpio = re.sub(r'^PRONOSTICOS\s+PARA\s+HOY\s*', '', texto_limpio, flags=re.IGNORECASE).strip()
+        # Clasificar bloque
+        hora_local = msg.date - timedelta(hours=4)
+        bloque = clasificar_bloque(hora_local)
+        if not bloque:
+            continue
 
-        pronosticos.append({
-            "tipo": tipo,
-            "texto": texto_limpio,
-            "fecha": fecha_msg,
-            "hora_publicacion": (msg.date - timedelta(hours=4)).strftime('%d/%m %H:%M'),
-            "animales": cant
-        })
+        # Solo usar telegram si no hay manual para ese bloque
+        info = data['bloques'][ruleta['key']][bloque]
+        if info['fuente'] == 'manual':
+            continue  # el manual tiene prioridad
 
-    pronosticos.sort(key=lambda x: x['hora_publicacion'], reverse=True)
-    pronosticos = pronosticos[:60]
+        # Si está vacío, usar telegram
+        if not info['nums']:
+            info['nums'] = nums[:ruleta['cantidad']]
+            info['fuente'] = 'telegram'
+            info['hora'] = hora_local.strftime('%H:%M')
+            capturados_telegram += 1
 
-    print(f"Mensajes examinados: {examinados}")
-    print(f"Mensajes descartados: {basura_count}")
-    print(f"Pronosticos validos: {len(pronosticos)}")
-    print(f"  - Animalitos: {count_animales}")
-    print(f"  - Triples: {count_triples}")
-    print("")
-    print("--- Lista de pronosticos validos ---")
-    for p in pronosticos:
-        print(f"[{p['tipo']}] [{p['hora_publicacion']}] {p['texto'][:120]}")
+    data['actualizado'] = ahora_ven.strftime('%d/%m/%Y %H:%M')
 
-    subir_a_gist(pronosticos)
+    print(f"")
+    print(f"🤖 Generados aleatorios: {generados}")
+    print(f"📡 Capturados de Telegram: {capturados_telegram}")
+
+    # Mostrar resumen
+    for r in RULETAS:
+        print(f"\n{r['key']}:")
+        for b in BLOQUES:
+            info = data['bloques'][r['key']][b['key']]
+            fuente = info['fuente'] or 'vacío'
+            nums = ', '.join(info['nums']) if info['nums'] else '—'
+            print(f"  {b['key']}: [{fuente}] {nums}")
+
+    subir_gist(data)
 
 
 async def main():
