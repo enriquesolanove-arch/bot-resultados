@@ -1384,5 +1384,71 @@
     "hora": "01:15 PM",
     "numero": "0",
     "animal": "Delfín"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "01:15 PM",
+    "numero": "93",
+    "animal": "Gaviota"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "01:30 PM",
+    "numero": "38",
+    "animal": "Rinoceronte"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "01:30 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "01:30 PM",
+    "numero": "42",
+    "animal": "Tucan"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "01:30 PM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "01:30 PM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "01:40 PM",
+    "numero": "64",
+    "animal": "Gavilan"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "01:30 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "11:00 AM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "12:00 PM",
+    "numero": "14",
+    "animal": "Paloma"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "01:00 PM",
+    "numero": "8",
+    "animal": "Ratón"
   }
 ]
