@@ -9,7 +9,7 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 
 api_id = int(os.environ["TELEGRAM_API_ID"])
-api_hash = os.environ["TELEGRAM_API_HASH"]
+api_hash = int(os.environ["TELEGRAM_API_HASH"]) if False else os.environ["TELEGRAM_API_HASH"]
 string_session = os.environ["TELEGRAM_STRING_SESSION"]
 GITHUB_TOKEN = os.environ.get("TOKEN_GIST", "")
 
@@ -20,7 +20,7 @@ client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
 
 # ═══════════════════════════════════════════════════════════
-#  ANIMALES (sin duplicados por tildes - normalizados)
+#  ANIMALES (para animalitos)
 # ═══════════════════════════════════════════════════════════
 ANIMALES = [
     'ballena', 'delfin', 'carnero', 'toro', 'ciempies', 'alacran',
@@ -29,7 +29,34 @@ ANIMALES = [
     'burro', 'chivo', 'cochino', 'gallo', 'camello', 'cebra',
     'iguana', 'gallina', 'vaca', 'perro', 'zamuro', 'elefante',
     'caiman', 'lapa', 'ardilla', 'pescado', 'venado', 'jirafa',
-    'culebra', 'cachicamo', 'guacharito', 'guacharo', 'morochos'
+    'culebra', 'cachicamo', 'guacharito', 'guacharo', 'morochos',
+    'panda', 'buho', 'tortuga', 'aguila real', 'mariposa'
+]
+
+# ═══════════════════════════════════════════════════════════
+#  RULETAS DE ANIMALITOS que capturamos
+# ═══════════════════════════════════════════════════════════
+RULETAS_ANIMALES = [
+    'lotto activo', 'lottoactivo', 'lotto activo rd',
+    'la granjita', 'lagranjita', 'granjita plus', 'granjita',
+    'guacharo', 'guácharo', 'el guacharito', 'guacharito',
+    'guacharito millonario',
+    'selva plus', 'selvaplus', 'selva',
+    'lotto real', 'lottoreal',
+    'ruleta activa', 'ruletaactiva',
+    'granja millonaria', 'granjamillonaria'
+]
+
+# ═══════════════════════════════════════════════════════════
+#  RULETAS DE TRIPLES que capturamos
+# ═══════════════════════════════════════════════════════════
+RULETAS_TRIPLES = [
+    'triple zulia', 'triple tachira', 'triple táchira',
+    'triple zamorano', 'triple caracas', 'triple carabobo',
+    'triple maracay', 'triple guayana', 'triple nacional',
+    'el ruco', 'la ruca', 'triple ruca',
+    'chance', 'triple chance', 'terminal chance',
+    'triple activo', 'triple millonario'
 ]
 
 # Palabras que indican que NO es un pronóstico
@@ -48,26 +75,18 @@ EXCLUIR = [
     'real madrid', 'vinicius', 'villareal', 'barquisimeto', 'cardenales',
     'tiburones', 'lvbp', 'partido de ida', 'semifinal', 'goles',
     'futbol', 'fútbol', 'beisbol', 'béisbol', 'mundial', 'champions',
-    'premier', 'la liga', 'serie a', 'copa ', 'goleada',
+    'premier', 'la liga', 'serie a', 'goleada',
     'clasificación', 'clasificacion',
     # Finanzas
     'binance', 'usdt', 'bitcoin',
     # Mega pollas
-    'mega polla', 'mega-polla', 'sorteo especial', 'premio mayor',
-    # Triples/Chance (solo queremos animalitos)
-    'triple zulia', 'triple tachira', 'triple táchira', 'triple zamorano',
-    'triple caracas', 'triple carabobo', 'el ruco', 'la ruca',
-    'triple chance', 'triples y parleys', 'terminales y parleys',
-    # Ruletas NO objetivo
-    'la ricachona', 'lotto gato', 'lotto pantera', 'gatazo',
-    'chance animal', 'tropigana', 'fruitagana', 'granjazo',
-    'panda plus', 'mega animal', 'monje millonario', 'zoologico activo'
+    'mega polla', 'mega-polla', 'sorteo especial', 'premio mayor'
 ]
 
 
 def norm(texto):
     """Normaliza texto: minúsculas y sin tildes."""
-    texto = texto.lower()
+    texto = str(texto).lower()
     return ''.join(
         c for c in unicodedata.normalize('NFD', texto)
         if unicodedata.category(c) != 'Mn'
@@ -83,7 +102,7 @@ def es_basura(texto):
 
 
 def contar_animales(texto):
-    """Cuenta animales únicos (sin duplicados por tildes)."""
+    """Cuenta animales únicos."""
     t = norm(texto)
     encontrados = set()
     for a in ANIMALES:
@@ -94,47 +113,46 @@ def contar_animales(texto):
     return len(encontrados), list(encontrados)
 
 
-# Ruletas que SÍ queremos (todas sus variantes)
-RULETAS_OK = [
-    'lotto activo', 'lottoactivo', 'lotto activo rd', 'lotto activo r',
-    'la granjita', 'lagranjita', 'granjita plus', 'granjita',
-    'guacharo', 'guácharo', 'el guacharito', 'guacharito',
-    'guacharito millonario',
-    'selva plus', 'selvaplus', 'selva',
-    'lotto real', 'lottoreal',
-    'ruleta activa', 'ruletaactiva',
-    'granja millonaria', 'granjamillonaria'
-]
-
-
-def menciona_ruleta_ok(texto):
+def menciona_ruleta_animal(texto):
     t = norm(texto)
-    for r in RULETAS_OK:
+    for r in RULETAS_ANIMALES:
         if norm(r) in t:
             return True
     return False
 
 
-def es_pronostico(texto):
-    """Determina si el mensaje es un pronóstico válido."""
-    if es_basura(texto):
-        return False
-
-    cant_animales, lista = contar_animales(texto)
-    tiene_ruleta = menciona_ruleta_ok(texto)
-
-    # Reglas MÁS flexibles:
-    # 1. Si menciona ruleta OK y tiene 1+ animales → válido
-    # 2. Si tiene 2+ animales aunque no mencione ruleta → válido
-    # 3. Si tiene 1 animal + algún número de 2 dígitos → válido
-    if tiene_ruleta and cant_animales >= 1:
-        return True
-    if cant_animales >= 2:
-        return True
-    if cant_animales >= 1 and re.search(r'\b\d{2}\b', texto):
-        return True
-
+def menciona_ruleta_triple(texto):
+    t = norm(texto)
+    for r in RULETAS_TRIPLES:
+        if norm(r) in t:
+            return True
     return False
+
+
+def clasificar(texto):
+    """
+    Devuelve 'animalitos', 'triples' o None
+    """
+    if es_basura(texto):
+        return None
+
+    cant_animales, animales = contar_animales(texto)
+    tiene_ruleta_animal = menciona_ruleta_animal(texto)
+    tiene_ruleta_triple = menciona_ruleta_triple(texto)
+
+    # Prioridad: si menciona triple explícitamente → triples
+    if tiene_ruleta_triple:
+        return 'triples'
+
+    # Animalitos
+    if tiene_ruleta_animal and cant_animales >= 1:
+        return 'animalitos'
+    if cant_animales >= 2:
+        return 'animalitos'
+    if cant_animales >= 1 and re.search(r'\b\d{2}\b', texto):
+        return 'animalitos'
+
+    return None
 
 
 def subir_a_gist(lista):
@@ -171,7 +189,7 @@ async def extraer():
 
     print(f"Fecha hoy: {hoy}")
 
-    # Últimos 3 días (hoy, ayer, antes de ayer)
+    # Últimos 3 días
     fechas_ok = []
     for i in range(3):
         d = ahora_ven - timedelta(days=i)
@@ -182,6 +200,8 @@ async def extraer():
     vistos = set()
     basura_count = 0
     examinados = 0
+    count_animales = 0
+    count_triples = 0
 
     async for msg in client.iter_messages(CANAL, limit=500):
         if not msg.text:
@@ -200,32 +220,41 @@ async def extraer():
         if fecha_msg not in fechas_ok:
             continue
 
-        # Verificar pronóstico
-        if not es_pronostico(texto):
+        # Clasificar
+        tipo = clasificar(texto)
+        if not tipo:
             basura_count += 1
             continue
 
-        cant, animales = contar_animales(texto)
+        if tipo == 'animalitos':
+            count_animales += 1
+            cant, animales = contar_animales(texto)
+        else:
+            count_triples += 1
+            cant = 0
+            animales = []
 
         pronosticos.append({
-            "tipo": "animalitos",
+            "tipo": tipo,
             "texto": texto,
             "fecha": fecha_msg,
             "hora_publicacion": (msg.date - timedelta(hours=4)).strftime('%d/%m %H:%M'),
             "animales": cant
         })
 
-    # Ordenar por fecha y hora descendente
+    # Ordenar por fecha/hora descendente
     pronosticos.sort(key=lambda x: x['hora_publicacion'], reverse=True)
-    pronosticos = pronosticos[:40]
+    pronosticos = pronosticos[:60]
 
     print(f"Mensajes examinados: {examinados}")
     print(f"Mensajes descartados: {basura_count}")
     print(f"Pronosticos validos: {len(pronosticos)}")
+    print(f"  - Animalitos: {count_animales}")
+    print(f"  - Triples: {count_triples}")
     print("")
     print("--- Lista de pronosticos validos ---")
     for p in pronosticos:
-        print(f"[{p['hora_publicacion']}] {p['animales']} animales: {p['texto'][:100]}")
+        print(f"[{p['tipo']}] [{p['hora_publicacion']}] {p['texto'][:100]}")
 
     subir_a_gist(pronosticos)
 
