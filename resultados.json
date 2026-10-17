@@ -1228,5 +1228,17 @@
     "hora": "12:30 PM",
     "numero": "37",
     "animal": "Mariposa"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "12:40 PM",
+    "numero": "43",
+    "animal": "Mariposa"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "01:00 PM",
+    "numero": "18",
+    "animal": "Burro"
   }
 ]
