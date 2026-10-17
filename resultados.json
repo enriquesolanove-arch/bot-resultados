@@ -2548,5 +2548,17 @@
     "hora": "06:30 PM",
     "numero": "37",
     "animal": "Guacamaya"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "06:40 PM",
+    "numero": "56",
+    "animal": "Tiburon"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "06:30 PM",
+    "numero": "07",
+    "animal": "Perico"
   }
 ]
