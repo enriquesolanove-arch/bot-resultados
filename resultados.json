@@ -2668,5 +2668,23 @@
     "hora": "07:00 PM",
     "numero": "14",
     "animal": "Paloma"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "08:00 PM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "08:15 PM",
+    "numero": "72",
+    "animal": "Gorila"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "08:15 PM",
+    "numero": "87",
+    "animal": "Cabra"
   }
 ]
