@@ -2110,5 +2110,17 @@
     "hora": "04:30 PM",
     "numero": "38",
     "animal": "Rinoceronte"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "04:40 PM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "04:30 PM",
+    "numero": "30",
+    "animal": "Caimán"
   }
 ]
