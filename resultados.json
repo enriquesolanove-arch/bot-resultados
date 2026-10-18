@@ -1480,5 +1480,131 @@
     "hora": "01:40 PM",
     "numero": "52",
     "animal": "Pulpo"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "02:00 PM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "02:00 PM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "02:00 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "02:00 PM",
+    "numero": "09",
+    "animal": "Águila"
+  },
+  {
+    "loteria": "MEGA ANIMAL",
+    "hora": "02:00 PM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "ZOOLOGICO ACTIVO",
+    "hora": "02:00 PM",
+    "numero": "41",
+    "animal": "Pelicano"
+  },
+  {
+    "loteria": "LOTTOMAX",
+    "hora": "02:00 PM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "02:00 PM",
+    "numero": "2",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "02:00 PM",
+    "numero": "6",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "02:00 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "LA GRANJITA",
+    "hora": "02:00 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "02:00 PM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "02:00 PM",
+    "numero": "37",
+    "animal": "Martillo"
+  },
+  {
+    "loteria": "GUACHARO ACTIVO",
+    "hora": "02:00 PM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "02:00 PM",
+    "numero": "74",
+    "animal": "Turpial"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "02:00 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "02:00 PM",
+    "numero": "34",
+    "animal": "Jobo"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "02:00 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "CHANCE ANIMAL",
+    "hora": "02:00 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "02:00 PM",
+    "numero": "70",
+    "animal": "Bisonte"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "02:00 PM",
+    "numero": "25",
+    "animal": "Gallina"
   }
 ]
