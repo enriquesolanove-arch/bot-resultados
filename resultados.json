@@ -2680,5 +2680,11 @@
     "hora": "07:00 PM",
     "numero": "45",
     "animal": "Garza"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "08:30 PM",
+    "numero": "32",
+    "animal": "Ardilla"
   }
 ]
