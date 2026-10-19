@@ -2554,5 +2554,131 @@
     "hora": "06:30 PM",
     "numero": "03",
     "animal": "Ciempiés"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "06:30 PM",
+    "numero": "16",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "06:40 PM",
+    "numero": "39",
+    "animal": "Lechuza"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "07:00 PM",
+    "numero": "36",
+    "animal": "Culebra"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "07:00 PM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "07:00 PM",
+    "numero": "23",
+    "animal": "Cebra"
+  },
+  {
+    "loteria": "LOTTOMAX",
+    "hora": "07:00 PM",
+    "numero": "26",
+    "animal": "Vaca"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "07:00 PM",
+    "numero": "36",
+    "animal": "Culebra"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "07:00 PM",
+    "numero": "26",
+    "animal": "Vaca"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "07:00 PM",
+    "numero": "36",
+    "animal": "Culebra"
+  },
+  {
+    "loteria": "LA GRANJITA",
+    "hora": "07:00 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "07:00 PM",
+    "numero": "26",
+    "animal": "Cuchara"
+  },
+  {
+    "loteria": "GUACHARO ACTIVO",
+    "hora": "07:00 PM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "07:00 PM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "07:00 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "07:00 PM",
+    "numero": "21",
+    "animal": "Uva"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "07:00 PM",
+    "numero": "26",
+    "animal": "Vaca"
+  },
+  {
+    "loteria": "MEGA ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "11",
+    "animal": "Gato"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "07:00 PM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "CHANCE ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "07:00 PM",
+    "numero": "13",
+    "animal": "Mono"
   }
 ]
