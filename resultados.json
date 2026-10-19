@@ -1402,5 +1402,71 @@
     "hora": "01:10 PM",
     "numero": "09",
     "animal": "Águila"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "01:15 PM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "01:00 PM",
+    "numero": "42",
+    "animal": "Tucan"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "12:00 PM",
+    "numero": "25",
+    "animal": "Gallina"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "01:30 PM",
+    "numero": "18",
+    "animal": "Burro"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "01:30 PM",
+    "numero": "50",
+    "animal": "Perezoso"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "01:30 PM",
+    "numero": "10",
+    "animal": "Tigre"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "01:30 PM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "01:30 PM",
+    "numero": "55",
+    "animal": "Foca"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "01:30 PM",
+    "numero": "04",
+    "animal": "Alacrán"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "01:30 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "01:40 PM",
+    "numero": "18",
+    "animal": "Burro"
   }
 ]
