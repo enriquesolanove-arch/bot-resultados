@@ -19,29 +19,33 @@ CANAL = 'pronosticosparahoy'
 
 client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
-
+# ═══════════════════════════════════════════════════════════
+#  CONFIGURACIÓN DE HORARIOS (BLOQUES DE 2 SORTEOS)
+# ═══════════════════════════════════════════════════════════
+# El bot publica a las 6:30, 8:30, 10:30, 12:30, 14:30, 16:30
 BLOQUES = [
-    {'key': 'manana',   'limite': 6 * 60 + 30},   # 6:30 AM
-    {'key': 'mediodia', 'limite': 12 * 60 + 30},  # 12:30 PM
-    {'key': 'cierre',   'limite': 17 * 60 + 30}   # 5:30 PM
+    {'key': 'bloque1', 'limite': 6 * 60 + 30},   # 6:30 AM -> Para sorteos 8:00 y 9:00
+    {'key': 'bloque2', 'limite': 8 * 60 + 30},   # 8:30 AM -> Para sorteos 10:00 y 11:00
+    {'key': 'bloque3', 'limite': 10 * 60 + 30},  # 10:30 AM -> Para sorteos 12:00 y 1:00
+    {'key': 'bloque4', 'limite': 12 * 60 + 30},  # 12:30 PM -> Para sorteos 2:00 y 3:00
+    {'key': 'bloque5', 'limite': 14 * 60 + 30},  # 2:30 PM -> Para sorteos 4:00 y 5:00
+    {'key': 'bloque6', 'limite': 16 * 60 + 30}   # 4:30 PM -> Para sorteos 6:00 y 7:00
 ]
 
 RULETAS = [
     {'key': 'Lotto Activo',    'max': 36, 'cantidad': 4, 'aliases': ['lotto activo', 'lottoactivo']},
     {'key': 'La Granjita',     'max': 36, 'cantidad': 4, 'aliases': ['la granjita', 'lagranjita', 'granjita']},
-    {'key': 'Guacharo Activo', 'max': 75, 'cantidad': 5, 'aliases': ['guacharo', 'guácharo', 'guacharo activo', 'el guacharito']}
+    {'key': 'Guacharo Activo', 'max': 75, 'cantidad': 5, 'aliases': ['guacharo', 'guácharo', 'guacharo activo']}
 ]
 
 EXCLUIR = [
-    'rodacadiz', 'gogoroyal', 'gogo royal', 'elparcero', 'el parcero',
-    'jugabet', 'somos tu mejor', 'agencia de loteria', 'agencia de lotería',
-    'wa.me', 't.me/', 'bit.ly', 'registrate', 'regístrate', 'activa tu bono',
-    'unirse', 'unirte', 'dale like', 'comenta el animalito', 'menciona a tres',
-    'instagram.com', 'youtube.com', 'youtu.be', 'facebook.com',
-    'tasa bcv', 'tasa del bcv', 'bcv', 'dolar hoy', 'dólar hoy',
-    'tasa de cambio', 'binance', 'usdt', 'bitcoin',
-    'copa libertadores', 'real madrid', 'flamengo', 'lvbp', 'tiburones',
-    'futbol', 'fútbol', 'beisbol', 'béisbol', 'champions',
+    'rodacadiz', 'gogoroyal', 'elparcero', 'jugabet', 'somos tu mejor',
+    'agencia de loteria', 'wa.me', 't.me/', 'bit.ly', 'registrate',
+    'activa tu bono', 'unirse', 'unirte', 'dale like', 'comenta el animalito',
+    'menciona a tres', 'instagram.com', 'youtube.com', 'youtu.be', 'facebook.com',
+    'tasa bcv', 'tasa del bcv', 'bcv', 'dolar hoy', 'dólar hoy', 'tasa de cambio',
+    'binance', 'usdt', 'bitcoin', 'copa libertadores', 'real madrid', 'flamengo',
+    'lvbp', 'tiburones', 'futbol', 'fútbol', 'beisbol', 'béisbol', 'champions',
     'mega polla', 'sorteo especial', 'comparte', 'reacciona', 'suscripte',
     'triple', 'triples', 'terminal', 'parley', 'chance'
 ]
@@ -93,14 +97,6 @@ def extraer_numeros(texto, maximo):
     return validos
 
 
-def clasificar_bloque(hora):
-    h = hora.hour
-    if 6 <= h < 12: return 'manana'
-    if 12 <= h < 17: return 'mediodia'
-    if 17 <= h < 20: return 'cierre'
-    return None
-
-
 def generar_aleatorios(maximo, cantidad):
     """Genera N números únicos aleatorios entre 0 y maximo."""
     pool = list(range(0, maximo + 1))
@@ -118,7 +114,6 @@ def descargar_gist():
         with urllib.request.urlopen(req, timeout=15) as r:
             data = json.loads(r.read().decode())
         content = data['files']['pronosticos.js']['content']
-        # Extraer JSON
         match = re.search(r'window\.REGALOS\s*=\s*(\{.*\});', content, re.DOTALL)
         if match:
             return json.loads(match.group(1))
@@ -143,7 +138,7 @@ def subir_gist(data):
     try:
         req = urllib.request.Request(url, data=body, headers=headers, method="PATCH")
         with urllib.request.urlopen(req, timeout=15) as r:
-            print(f"Gist actualizado")
+            print(f"Gist actualizado correctamente")
             return True
     except Exception as e:
         print(f"Error subiendo: {e}")
@@ -151,7 +146,7 @@ def subir_gist(data):
 
 
 def inicializar_estructura():
-    """Crea la estructura base."""
+    """Crea la estructura base para los bloques."""
     est = {}
     for r in RULETAS:
         est[r['key']] = {}
@@ -168,10 +163,15 @@ async def extraer():
     print(f"Fecha hoy: {hoy}")
     print(f"Hora actual (Venezuela): {ahora_ven.strftime('%H:%M')}")
 
-    # Leer Gist actual
+    # 1. Leer Gist actual
     data = descargar_gist()
     if not data or data.get('fecha') != hoy:
-        data = {'fecha': hoy, 'bloques': inicializar_estructura()}
+        data = {
+            'fecha': hoy, 
+            'flyer': '', 
+            'triples': [],
+            'bloques': inicializar_estructura()
+        }
     if 'bloques' not in data:
         data['bloques'] = inicializar_estructura()
 
@@ -183,26 +183,29 @@ async def extraer():
             if b['key'] not in data['bloques'][r['key']]:
                 data['bloques'][r['key']][b['key']] = {'nums': [], 'fuente': '', 'hora': ''}
 
-    # ═══════════════════════════════════════════════════════
-    #  1. GENERAR ALEATORIOS si no hay manual
-    # ═══════════════════════════════════════════════════════
+    # 2. GENERAR TRIPLES (Solo 1 vez al día, en el primer bloque)
+    if not data.get('triples') and min_ahora >= BLOQUES[0]['limite']:
+        # Generar 3 triples aleatorios (000 al 999)
+        data['triples'] = [str(random.randint(0, 999)).zfill(3) for _ in range(3)]
+        print(f"  🎯 Triples generados: {data['triples']}")
+
+    # 3. GENERAR ALEATORIOS POR BLOQUES SI NO HAY MANUAL
     generados = 0
     for r in RULETAS:
         for b in BLOQUES:
             info = data['bloques'][r['key']][b['key']]
             if info['fuente'] == 'manual':
-                continue  # respetar manual
+                continue
+            
+            # Si ya pasó la hora límite de este bloque y está vacío
             if min_ahora >= b['limite'] and not info['nums']:
-                # Generar aleatorios
                 info['nums'] = generar_aleatorios(r['max'], r['cantidad'])
                 info['fuente'] = 'auto'
                 info['hora'] = ahora_ven.strftime('%H:%M')
                 generados += 1
                 print(f"  🤖 Generados aleatorios para {r['key']} - {b['key']}: {info['nums']}")
 
-    # ═══════════════════════════════════════════════════════
-    #  2. CAPTURAR DE TELEGRAM
-    # ═══════════════════════════════════════════════════════
+    # 4. CAPTURAR DE TELEGRAM (Se mantiene la lógica para intentar pescar algo)
     capturados_telegram = 0
     async for msg in client.iter_messages(CANAL, limit=100):
         if not msg.text:
@@ -211,7 +214,6 @@ async def extraer():
         if es_basura(texto):
             continue
 
-        # Solo hoy
         fecha_msg = (msg.date - timedelta(hours=4)).strftime('%Y-%m-%d')
         if fecha_msg != hoy:
             continue
@@ -224,38 +226,32 @@ async def extraer():
         if not nums:
             continue
 
-        # Clasificar bloque
-        hora_local = msg.date - timedelta(hours=4)
-        bloque = clasificar_bloque(hora_local)
-        if not bloque:
+        # Clasificar en qué bloque cae la hora del mensaje
+        hora_msg_min = (msg.date - timedelta(hours=4)).hour * 60 + (msg.date - timedelta(hours=4)).minute
+        bloque_destino = None
+        for b in BLOQUES:
+            # Si el mensaje cae entre el límite de este bloque y el siguiente
+            if hora_msg_min >= b['limite']:
+                bloque_destino = b['key']
+        
+        if not bloque_destino:
             continue
 
-        # Solo usar telegram si no hay manual para ese bloque
-        info = data['bloques'][ruleta['key']][bloque]
+        info = data['bloques'][ruleta['key']][bloque_destino]
         if info['fuente'] == 'manual':
-            continue  # el manual tiene prioridad
+            continue
 
-        # Si está vacío, usar telegram
         if not info['nums']:
             info['nums'] = nums[:ruleta['cantidad']]
             info['fuente'] = 'telegram'
-            info['hora'] = hora_local.strftime('%H:%M')
+            info['hora'] = (msg.date - timedelta(hours=4)).strftime('%H:%M')
             capturados_telegram += 1
 
     data['actualizado'] = ahora_ven.strftime('%d/%m/%Y %H:%M')
 
     print(f"")
-    print(f"🤖 Generados aleatorios: {generados}")
+    print(f"🤖 Bloques generados auto: {generados}")
     print(f"📡 Capturados de Telegram: {capturados_telegram}")
-
-    # Mostrar resumen
-    for r in RULETAS:
-        print(f"\n{r['key']}:")
-        for b in BLOQUES:
-            info = data['bloques'][r['key']][b['key']]
-            fuente = info['fuente'] or 'vacío'
-            nums = ', '.join(info['nums']) if info['nums'] else '—'
-            print(f"  {b['key']}: [{fuente}] {nums}")
 
     subir_gist(data)
 
