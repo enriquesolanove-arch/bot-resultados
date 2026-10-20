@@ -1630,5 +1630,149 @@
     "hora": "02:15 PM",
     "numero": "74",
     "animal": "Turpial"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "02:30 PM",
+    "numero": "48",
+    "animal": "Puercoespin"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "02:30 PM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "02:30 PM",
+    "numero": "79",
+    "animal": "Calamar"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "02:30 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "02:30 PM",
+    "numero": "35",
+    "animal": "Pantera"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "03:00 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "03:00 PM",
+    "numero": "11",
+    "animal": "Gato"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "03:00 PM",
+    "numero": "33",
+    "animal": "Pescado"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "03:00 PM",
+    "numero": "24",
+    "animal": "Iguana"
+  },
+  {
+    "loteria": "MEGA ANIMAL",
+    "hora": "03:00 PM",
+    "numero": "6",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "ZOOLOGICO ACTIVO",
+    "hora": "03:00 PM",
+    "numero": "51",
+    "animal": "Buho"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "03:00 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "03:00 PM",
+    "numero": "18",
+    "animal": "Burro"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "03:00 PM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "LA GRANJITA",
+    "hora": "03:00 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "03:00 PM",
+    "numero": "13",
+    "animal": "Ventana"
+  },
+  {
+    "loteria": "GUACHARO ACTIVO",
+    "hora": "03:00 PM",
+    "numero": "48",
+    "animal": "Puercoespin"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "03:00 PM",
+    "numero": "17",
+    "animal": "Pavo"
+  },
+  {
+    "loteria": "CHANCE ANIMAL",
+    "hora": "03:00 PM",
+    "numero": "14",
+    "animal": "Paloma"
+  },
+  {
+    "loteria": "LOTTOMAX",
+    "hora": "03:00 PM",
+    "numero": "32",
+    "animal": "Ardilla"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "03:00 PM",
+    "numero": "17",
+    "animal": "Pavo"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "03:00 PM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "03:00 PM",
+    "numero": "02",
+    "animal": "Guayaba"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "03:00 PM",
+    "numero": "37",
+    "animal": "Tortuga"
   }
 ]
