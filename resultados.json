@@ -2020,5 +2020,95 @@
     "hora": "04:00 PM",
     "numero": "08",
     "animal": "Ratón"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "04:00 PM",
+    "numero": "53",
+    "animal": "Caracol"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "04:00 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "04:00 PM",
+    "numero": "28",
+    "animal": "Coco"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "04:05 PM",
+    "numero": "23",
+    "animal": "Cebra"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "04:10 PM",
+    "numero": "49",
+    "animal": "Pereza"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "04:15 PM",
+    "numero": "32",
+    "animal": "Ardilla"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "04:10 PM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "04:10 PM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "04:00 PM",
+    "numero": "0",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "04:00 PM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "04:15 PM",
+    "numero": "79",
+    "animal": "Calamar"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "04:30 PM",
+    "numero": "60",
+    "animal": "Camaleon"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "04:30 PM",
+    "numero": "57",
+    "animal": "Pato"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "04:30 PM",
+    "numero": "48",
+    "animal": "Morza"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "04:30 PM",
+    "numero": "29",
+    "animal": "Elefante"
   }
 ]
