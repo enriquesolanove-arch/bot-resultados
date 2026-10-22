@@ -1852,5 +1852,83 @@
     "hora": "03:15 PM",
     "numero": "76",
     "animal": "Rinoceronte"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "03:30 PM",
+    "numero": "86",
+    "animal": "Buey"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "03:30 PM",
+    "numero": "04",
+    "animal": "Alacrán"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "03:30 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "03:30 PM",
+    "numero": "69",
+    "animal": "Conejo"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "03:30 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "03:30 PM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "03:40 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "04:00 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "04:00 PM",
+    "numero": "04",
+    "animal": "Alacrán"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "04:00 PM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "04:00 PM",
+    "numero": "03",
+    "animal": "Ciempiés"
+  },
+  {
+    "loteria": "MEGA ANIMAL",
+    "hora": "04:00 PM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "ZOOLOGICO ACTIVO",
+    "hora": "04:00 PM",
+    "numero": "11",
+    "animal": "Gato"
   }
 ]
