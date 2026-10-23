@@ -1756,5 +1756,119 @@
     "hora": "03:00 PM",
     "numero": "29",
     "animal": "Elefante"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "03:00 PM",
+    "numero": "10",
+    "animal": "Tigre"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "03:00 PM",
+    "numero": "29",
+    "animal": "Elefante"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "03:00 PM",
+    "numero": "59",
+    "animal": "Pantera"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "03:00 PM",
+    "numero": "03",
+    "animal": "Ciempiés"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "03:00 PM",
+    "numero": "02",
+    "animal": "Guayaba"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "03:00 PM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "03:05 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "03:00 PM",
+    "numero": "23",
+    "animal": "Cebra"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "03:00 PM",
+    "numero": "64",
+    "animal": "Gavilan"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "03:10 PM",
+    "numero": "53",
+    "animal": "Caracol"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "03:10 PM",
+    "numero": "27",
+    "animal": "Perro"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "03:10 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "03:15 PM",
+    "numero": "46",
+    "animal": "Puma"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "03:15 PM",
+    "numero": "4",
+    "animal": "Alacrán"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "03:30 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "03:30 PM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "03:30 PM",
+    "numero": "36",
+    "animal": "Culebra"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "03:30 PM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "03:30 PM",
+    "numero": "19",
+    "animal": "Chivo"
   }
 ]
