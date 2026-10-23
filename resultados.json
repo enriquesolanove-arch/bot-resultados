@@ -2476,5 +2476,83 @@
     "hora": "06:05 PM",
     "numero": "16",
     "animal": "Oso"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "06:00 PM",
+    "numero": "16",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "06:00 PM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "06:10 PM",
+    "numero": "9",
+    "animal": "Águila"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "06:10 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "06:10 PM",
+    "numero": "27",
+    "animal": "Perro"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "06:15 PM",
+    "numero": "87",
+    "animal": "Saltamonte"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "06:15 PM",
+    "numero": "0",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "06:30 PM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "06:30 PM",
+    "numero": "55",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "06:30 PM",
+    "numero": "54",
+    "animal": "Orca"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "06:30 PM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "06:30 PM",
+    "numero": "33",
+    "animal": "Pescado"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "06:30 PM",
+    "numero": "43",
+    "animal": "Koala"
   }
 ]
