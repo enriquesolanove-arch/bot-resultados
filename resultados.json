@@ -2662,5 +2662,23 @@
     "hora": "07:00 PM",
     "numero": "15",
     "animal": "Zorro"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "07:00 PM",
+    "numero": "70",
+    "animal": "Bisonte"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "07:00 PM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "07:00 PM",
+    "numero": "02",
+    "animal": "Guayaba"
   }
 ]
