@@ -1150,5 +1150,95 @@
     "hora": "12:00 PM",
     "numero": "11",
     "animal": "Gato"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "12:15 PM",
+    "numero": "24",
+    "animal": "Iguana"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "12:10 PM",
+    "numero": "25",
+    "animal": "Gallina"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "12:00 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "12:00 PM",
+    "numero": "16",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "12:15 PM",
+    "numero": "88",
+    "animal": "Erizo"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "12:00 PM",
+    "numero": "06",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "12:00 PM",
+    "numero": "52",
+    "animal": "Pulpo"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "12:30 PM",
+    "numero": "40",
+    "animal": "Avispa"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "12:30 PM",
+    "numero": "37",
+    "animal": "Tortuga"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "12:30 PM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "12:30 PM",
+    "numero": "55",
+    "animal": "Cachicamo"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "12:30 PM",
+    "numero": "18",
+    "animal": "Burro"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "12:30 PM",
+    "numero": "71",
+    "animal": "Rabipelao"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "12:30 PM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "12:40 PM",
+    "numero": "71",
+    "animal": "Guacamaya"
   }
 ]
