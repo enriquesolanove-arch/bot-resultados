@@ -1222,5 +1222,65 @@
     "hora": "12:30 PM",
     "numero": "41",
     "animal": "Canguro"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "12:30 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "12:30 PM",
+    "numero": "52",
+    "animal": "Buho"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "12:30 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "12:30 PM",
+    "numero": "43",
+    "animal": "Koala"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "12:40 PM",
+    "numero": "48",
+    "animal": "Puerco"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "01:00 PM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "01:00 PM",
+    "numero": "40",
+    "animal": "Pantera"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "01:00 PM",
+    "numero": "18",
+    "animal": "Burro"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "01:00 PM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "ZOOLOGICO ACTIVO",
+    "hora": "01:00 PM",
+    "numero": "18",
+    "animal": "Burro"
   }
 ]
