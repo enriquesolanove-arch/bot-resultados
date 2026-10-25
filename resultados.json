@@ -2098,5 +2098,35 @@
     "hora": "04:30 PM",
     "numero": "12",
     "animal": "Caballo"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "04:30 PM",
+    "numero": "15",
+    "animal": "Zorro"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "04:30 PM",
+    "numero": "18",
+    "animal": "Burro"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "04:30 PM",
+    "numero": "16",
+    "animal": "Oso"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "04:40 PM",
+    "numero": "56",
+    "animal": "Tiburon"
+  },
+  {
+    "loteria": "LOTTOMAX",
+    "hora": "05:00 PM",
+    "numero": "29",
+    "animal": "Elefante"
   }
 ]
