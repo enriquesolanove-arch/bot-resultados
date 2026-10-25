@@ -1006,5 +1006,89 @@
     "hora": "11:30 AM",
     "numero": "49",
     "animal": "Hiena"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "11:40 AM",
+    "numero": "63",
+    "animal": "Cangrejo"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "11:30 AM",
+    "numero": "32",
+    "animal": "Ardilla"
+  },
+  {
+    "loteria": "MEGA ANIMAL",
+    "hora": "12:00 PM",
+    "numero": "8",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "12:00 PM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "12:00 PM",
+    "numero": "01",
+    "animal": "Carnero"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "12:00 PM",
+    "numero": "06",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "12:00 PM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "ZOOLOGICO ACTIVO",
+    "hora": "12:00 PM",
+    "numero": "41",
+    "animal": "Pelicano"
+  },
+  {
+    "loteria": "LOTTOMAX",
+    "hora": "12:00 PM",
+    "numero": "4",
+    "animal": "Alacrán"
+  },
+  {
+    "loteria": "GUACHARO ACTIVO",
+    "hora": "12:00 PM",
+    "numero": "67",
+    "animal": "Avestruz"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "12:00 PM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "12:00 PM",
+    "numero": "24",
+    "animal": "Machete"
+  },
+  {
+    "loteria": "LA GRANJITA",
+    "hora": "12:00 PM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "12:00 PM",
+    "numero": "29",
+    "animal": "Elefante"
   }
 ]
