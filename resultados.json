@@ -2680,5 +2680,11 @@
     "hora": "07:00 PM",
     "numero": "28",
     "animal": "Zamuro"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "08:30 PM",
+    "numero": "36",
+    "animal": "Culebra"
   }
 ]
