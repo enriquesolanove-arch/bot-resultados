@@ -2656,5 +2656,17 @@
     "hora": "07:00 PM",
     "numero": "32",
     "animal": "Ardilla"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "06:30 PM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "06:30 PM",
+    "numero": "33",
+    "animal": "Pescado"
   }
 ]
