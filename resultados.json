@@ -148,5 +148,11 @@
     "hora": "09:00 PM",
     "numero": "4",
     "animal": "Alacrán"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "07:30 AM",
+    "numero": "31",
+    "animal": "Lapa"
   }
 ]
