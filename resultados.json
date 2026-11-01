@@ -1168,5 +1168,77 @@
     "hora": "12:15 PM",
     "numero": "6",
     "animal": "Rana"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "12:10 PM",
+    "numero": "59",
+    "animal": "Pantera"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "12:10 PM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "12:30 PM",
+    "numero": "43",
+    "animal": "Mariposa"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "12:30 PM",
+    "numero": "37",
+    "animal": "Guacamaya"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "12:30 PM",
+    "numero": "72",
+    "animal": "Gorila"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "12:30 PM",
+    "numero": "18",
+    "animal": "Burro"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "12:30 PM",
+    "numero": "06",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "12:30 PM",
+    "numero": "36",
+    "animal": "Culebra"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "12:40 PM",
+    "numero": "54",
+    "animal": "Grillo"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "10:30 AM",
+    "numero": "06",
+    "animal": "Rana"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "11:30 AM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "12:30 PM",
+    "numero": "24",
+    "animal": "Iguana"
   }
 ]
