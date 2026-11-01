@@ -2674,5 +2674,11 @@
     "hora": "07:15 PM",
     "numero": "03",
     "animal": "Ciempiés"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "08:30 PM",
+    "numero": "18",
+    "animal": "Burro"
   }
 ]
