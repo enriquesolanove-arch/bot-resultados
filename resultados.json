@@ -2560,5 +2560,17 @@
     "hora": "07:00 PM",
     "numero": "33",
     "animal": "Pescado"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "06:00 PM",
+    "numero": "12",
+    "animal": "Plato"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "07:00 PM",
+    "numero": "39",
+    "animal": "Mesa"
   }
 ]
