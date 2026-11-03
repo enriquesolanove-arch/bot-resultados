@@ -460,5 +460,95 @@
     "hora": "09:15 AM",
     "numero": "15",
     "animal": "Zorro"
+  },
+  {
+    "loteria": "PANDA PLUS",
+    "hora": "09:30 AM",
+    "numero": "42",
+    "animal": "Tucan"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "09:30 AM",
+    "numero": "18",
+    "animal": "Burro"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "09:30 AM",
+    "numero": "86",
+    "animal": "Buey"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "09:30 AM",
+    "numero": "24",
+    "animal": "Iguana"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "09:30 AM",
+    "numero": "24",
+    "animal": "Iguana"
+  },
+  {
+    "loteria": "GRANJAZO",
+    "hora": "09:30 AM",
+    "numero": "62",
+    "animal": "Tucan"
+  },
+  {
+    "loteria": "RULETA ROYAL",
+    "hora": "09:30 AM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "GATAZO",
+    "hora": "09:40 AM",
+    "numero": "04",
+    "animal": "Alacrán"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "10:00 AM",
+    "numero": "04",
+    "animal": "Alacrán"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "10:00 AM",
+    "numero": "36",
+    "animal": "Culebra"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "10:00 AM",
+    "numero": "50",
+    "animal": "Canario"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "10:00 AM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "10:00 AM",
+    "numero": "23",
+    "animal": "Piña"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "10:00 AM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "10:05 AM",
+    "numero": "71",
+    "animal": "Guacamaya"
   }
 ]
