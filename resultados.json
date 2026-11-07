@@ -196,5 +196,11 @@
     "hora": "08:30 PM",
     "numero": "0",
     "animal": "Tiburon"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "07:30 AM",
+    "numero": "76",
+    "animal": "Dinosaurio"
   }
 ]
