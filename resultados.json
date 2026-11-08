@@ -610,5 +610,71 @@
     "hora": "04:40 PM",
     "numero": "02",
     "animal": "Toro"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "07:00 PM",
+    "numero": "17",
+    "animal": "Pavo"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "07:00 PM",
+    "numero": "50",
+    "animal": "Medias"
+  },
+  {
+    "loteria": "LOTTOMAX",
+    "hora": "07:00 PM",
+    "numero": "22",
+    "animal": "Camello"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "08:00 AM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "07:00 PM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "07:00 PM",
+    "numero": "26",
+    "animal": "Vaca"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "07:00 PM",
+    "numero": "0",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "07:00 PM",
+    "numero": "07",
+    "animal": "Perico"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "07:00 PM",
+    "numero": "23",
+    "animal": "Piña"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "08:05 AM",
+    "numero": "50",
+    "animal": "Canario"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "07:00 PM",
+    "numero": "15",
+    "animal": "Zorro"
   }
 ]
