@@ -856,5 +856,11 @@
     "hora": "06:10 PM",
     "numero": "35",
     "animal": "Jirafa"
+  },
+  {
+    "loteria": "CHANCE ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "12",
+    "animal": "Caballo"
   }
 ]
