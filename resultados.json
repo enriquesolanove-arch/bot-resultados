@@ -616,5 +616,35 @@
     "hora": "06:15 PM",
     "numero": "78",
     "animal": "Mapache"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "07:00 PM",
+    "numero": "21",
+    "animal": "Gallo"
+  },
+  {
+    "loteria": "CONDOR GANA",
+    "hora": "07:00 PM",
+    "numero": "12",
+    "animal": "Caballo"
+  },
+  {
+    "loteria": "TROPIGANA",
+    "hora": "07:00 PM",
+    "numero": "25",
+    "animal": "Gallina"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "07:00 PM",
+    "numero": "04",
+    "animal": "Pistacho"
+  },
+  {
+    "loteria": "LOTTO LA QUINTA",
+    "hora": "09:00 AM",
+    "numero": "11",
+    "animal": "Silla"
   }
 ]
