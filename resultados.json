@@ -190,5 +190,131 @@
     "hora": "09:00 PM",
     "numero": "24",
     "animal": "Iguana"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "07:30 AM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "LOTOANIMALITO",
+    "hora": "08:00 AM",
+    "numero": "00",
+    "animal": "Ballena"
+  },
+  {
+    "loteria": "LOTTO PANTERA",
+    "hora": "08:00 AM",
+    "numero": "45",
+    "animal": "Pato"
+  },
+  {
+    "loteria": "CENTENA ANIMAL",
+    "hora": "08:00 AM",
+    "numero": "31",
+    "animal": "Lapa"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "08:00 AM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "GUACHARO ACTIVO",
+    "hora": "08:00 AM",
+    "numero": "28",
+    "animal": "Zamuro"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "08:00 AM",
+    "numero": "43",
+    "animal": "Mariposa"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "08:00 AM",
+    "numero": "32",
+    "animal": "Ardilla"
+  },
+  {
+    "loteria": "LA GRANJITA",
+    "hora": "08:00 AM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "08:00 AM",
+    "numero": "02",
+    "animal": "Toro"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "08:00 AM",
+    "numero": "34",
+    "animal": "Venado"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "08:00 AM",
+    "numero": "35",
+    "animal": "Jirafa"
+  },
+  {
+    "loteria": "MONJE MILLONARIO",
+    "hora": "08:05 AM",
+    "numero": "39",
+    "animal": "Lechuza"
+  },
+  {
+    "loteria": "GRANJITA PLUS",
+    "hora": "08:10 AM",
+    "numero": "53",
+    "animal": "Caracol"
+  },
+  {
+    "loteria": "CENTENA PLUS",
+    "hora": "08:15 AM",
+    "numero": "65",
+    "animal": "Araña"
+  },
+  {
+    "loteria": "LA RICACHONA",
+    "hora": "08:10 AM",
+    "numero": "30",
+    "animal": "Caimán"
+  },
+  {
+    "loteria": "SELVA PLUS",
+    "hora": "08:15 AM",
+    "numero": "59",
+    "animal": "Pantera"
+  },
+  {
+    "loteria": "EL GUACHARITO MILLONARIO",
+    "hora": "08:30 AM",
+    "numero": "95",
+    "animal": "Escarabajo"
+  },
+  {
+    "loteria": "MEGA GUACA",
+    "hora": "08:30 AM",
+    "numero": "29",
+    "animal": "Elefante"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RD INT",
+    "hora": "08:30 AM",
+    "numero": "05",
+    "animal": "León"
+  },
+  {
+    "loteria": "GUACA ACTIVA",
+    "hora": "08:30 AM",
+    "numero": "00",
+    "animal": "Ballena"
   }
 ]
