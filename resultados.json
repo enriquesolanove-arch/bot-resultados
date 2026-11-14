@@ -664,5 +664,17 @@
     "hora": "06:00 PM",
     "numero": "00",
     "animal": "Ballena"
+  },
+  {
+    "loteria": "CHANCE ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "0",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "CALAMAR A",
+    "hora": "07:00 PM",
+    "numero": "0",
+    "animal": "Delfín"
   }
 ]
