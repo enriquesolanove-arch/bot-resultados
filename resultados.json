@@ -400,5 +400,17 @@
     "hora": "04:30 PM",
     "numero": "30",
     "animal": "Caimán"
+  },
+  {
+    "loteria": "LOTTOMAX",
+    "hora": "07:00 PM",
+    "numero": "0",
+    "animal": "Delfín"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "07:00 PM",
+    "numero": "12",
+    "animal": "Caballo"
   }
 ]
