@@ -424,5 +424,35 @@
     "hora": "02:30 PM",
     "numero": "24",
     "animal": "Iguana"
+  },
+  {
+    "loteria": "LOTTO CHAIMA",
+    "hora": "07:00 PM",
+    "numero": "41",
+    "animal": "Canguro"
+  },
+  {
+    "loteria": "CHANCE ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "07:00 PM",
+    "numero": "09",
+    "animal": "Águila"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "07:00 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "07:00 PM",
+    "numero": "02",
+    "animal": "Toro"
   }
 ]
