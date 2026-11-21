@@ -604,5 +604,23 @@
     "hora": "05:15 PM",
     "numero": "67",
     "animal": "Avestruz"
+  },
+  {
+    "loteria": "FRUITAGANA",
+    "hora": "07:00 PM",
+    "numero": "28",
+    "animal": "Coco"
+  },
+  {
+    "loteria": "LOTTO REAL",
+    "hora": "07:00 PM",
+    "numero": "25",
+    "animal": "Gallina"
+  },
+  {
+    "loteria": "LOTTO GATO",
+    "hora": "07:10 PM",
+    "numero": "22",
+    "animal": "Camello"
   }
 ]
