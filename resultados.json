@@ -640,5 +640,29 @@
     "hora": "06:15 PM",
     "numero": "93",
     "animal": "Gaviota"
+  },
+  {
+    "loteria": "GRANJA MILLONARIA",
+    "hora": "07:00 PM",
+    "numero": "23",
+    "animal": "Cebra"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "07:00 PM",
+    "numero": "3",
+    "animal": "Ciempiés"
+  },
+  {
+    "loteria": "LOTTO ACTIVO",
+    "hora": "07:00 PM",
+    "numero": "20",
+    "animal": "Cochino"
+  },
+  {
+    "loteria": "RULETA ACTIVA",
+    "hora": "07:00 PM",
+    "numero": "06",
+    "animal": "Rana"
   }
 ]
