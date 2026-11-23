@@ -652,5 +652,17 @@
     "hora": "06:40 PM",
     "numero": "69",
     "animal": "Conejo"
+  },
+  {
+    "loteria": "CALAMAR B",
+    "hora": "07:00 PM",
+    "numero": "08",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "CHANCE ANIMAL",
+    "hora": "07:00 PM",
+    "numero": "32",
+    "animal": "Ardilla"
   }
 ]
