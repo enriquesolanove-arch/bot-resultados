@@ -1,239 +1,5 @@
 [
   {
-    "loteria": "LA RICACHONA",
-    "hora": "08:10 AM",
-    "numero": "16",
-    "animal": "Oso"
-  },
-  {
-    "loteria": "GRANJITA PLUS",
-    "hora": "08:10 AM",
-    "numero": "38",
-    "animal": "Bufalo"
-  },
-  {
-    "loteria": "CENTENA PLUS",
-    "hora": "08:15 AM",
-    "numero": "67",
-    "animal": "Avestruz"
-  },
-  {
-    "loteria": "SELVA PLUS",
-    "hora": "08:15 AM",
-    "numero": "3",
-    "animal": "Ciempiés"
-  },
-  {
-    "loteria": "GUACA ACTIVA",
-    "hora": "08:30 AM",
-    "numero": "00",
-    "animal": "Ballena"
-  },
-  {
-    "loteria": "MEGA GUACA",
-    "hora": "08:30 AM",
-    "numero": "00",
-    "animal": "Ballena"
-  },
-  {
-    "loteria": "EL GUACHARITO MILLONARIO",
-    "hora": "08:30 AM",
-    "numero": "60",
-    "animal": "Camaleon"
-  },
-  {
-    "loteria": "LOTTO ACTIVO RD INT",
-    "hora": "08:30 AM",
-    "numero": "13",
-    "animal": "Mono"
-  },
-  {
-    "loteria": "LOTOANIMALITO",
-    "hora": "09:00 AM",
-    "numero": "10",
-    "animal": "Tigre"
-  },
-  {
-    "loteria": "LOTTO PANTERA",
-    "hora": "09:00 AM",
-    "numero": "27",
-    "animal": "Perro"
-  },
-  {
-    "loteria": "CENTENA ANIMAL",
-    "hora": "09:00 AM",
-    "numero": "07",
-    "animal": "Perico"
-  },
-  {
-    "loteria": "LOTTO ACTIVO RDOMINICANA",
-    "hora": "09:00 AM",
-    "numero": "15",
-    "animal": "Zorro"
-  },
-  {
-    "loteria": "MEGA ANIMAL",
-    "hora": "09:00 AM",
-    "numero": "25",
-    "animal": "Gallina"
-  },
-  {
-    "loteria": "ZOOLOGICO ACTIVO",
-    "hora": "09:00 AM",
-    "numero": "46",
-    "animal": "Corocoro"
-  },
-  {
-    "loteria": "GUACHARO ACTIVO",
-    "hora": "09:00 AM",
-    "numero": "33",
-    "animal": "Pescado"
-  },
-  {
-    "loteria": "RULETON PERU",
-    "hora": "09:00 AM",
-    "numero": "23",
-    "animal": "Cebra"
-  },
-  {
-    "loteria": "LA GRANJITA",
-    "hora": "09:00 AM",
-    "numero": "35",
-    "animal": "Jirafa"
-  },
-  {
-    "loteria": "GRANJA MILLONARIA",
-    "hora": "09:00 AM",
-    "numero": "03",
-    "animal": "Ciempiés"
-  },
-  {
-    "loteria": "LOTTO CHAIMA",
-    "hora": "09:00 AM",
-    "numero": "37",
-    "animal": "Tortuga"
-  },
-  {
-    "loteria": "RULETON COLOMBIA",
-    "hora": "09:00 AM",
-    "numero": "33",
-    "animal": "Pescado"
-  },
-  {
-    "loteria": "RULETON VENEZUELA",
-    "hora": "09:00 AM",
-    "numero": "18",
-    "animal": "Burro"
-  },
-  {
-    "loteria": "LOTTO ACTIVO",
-    "hora": "09:00 AM",
-    "numero": "19",
-    "animal": "Chivo"
-  },
-  {
-    "loteria": "CHANCE ANIMAL",
-    "hora": "09:00 AM",
-    "numero": "13",
-    "animal": "Mono"
-  },
-  {
-    "loteria": "CONDOR GANA",
-    "hora": "09:00 AM",
-    "numero": "72",
-    "animal": "Gorila"
-  },
-  {
-    "loteria": "TROPIGANA",
-    "hora": "09:00 AM",
-    "numero": "00",
-    "animal": "Ballena"
-  },
-  {
-    "loteria": "FRUITAGANA",
-    "hora": "09:00 AM",
-    "numero": "35",
-    "animal": "Parchita"
-  },
-  {
-    "loteria": "MONJE MILLONARIO",
-    "hora": "09:05 AM",
-    "numero": "12",
-    "animal": "Caballo"
-  },
-  {
-    "loteria": "RULETA ROYAL",
-    "hora": "08:30 AM",
-    "numero": "07",
-    "animal": "Perico"
-  },
-  {
-    "loteria": "RULETA ACTIVA",
-    "hora": "09:00 AM",
-    "numero": "35",
-    "animal": "Jirafa"
-  },
-  {
-    "loteria": "LOTTOMAX",
-    "hora": "09:00 AM",
-    "numero": "28",
-    "animal": "Zamuro"
-  },
-  {
-    "loteria": "LOTTO REAL",
-    "hora": "09:00 AM",
-    "numero": "08",
-    "animal": "Ratón"
-  },
-  {
-    "loteria": "LOTTO LA QUINTA",
-    "hora": "09:00 AM",
-    "numero": "16",
-    "animal": "Tenedor"
-  },
-  {
-    "loteria": "GRANJA MILLONARIA",
-    "hora": "07:00 PM",
-    "numero": "29",
-    "animal": "Elefante"
-  },
-  {
-    "loteria": "LOTTO ACTIVO",
-    "hora": "07:00 PM",
-    "numero": "29",
-    "animal": "Elefante"
-  },
-  {
-    "loteria": "CONDOR GANA",
-    "hora": "07:00 PM",
-    "numero": "25",
-    "animal": "Gallina"
-  },
-  {
-    "loteria": "TROPIGANA",
-    "hora": "07:00 PM",
-    "numero": "14",
-    "animal": "Paloma"
-  },
-  {
-    "loteria": "FRUITAGANA",
-    "hora": "07:00 PM",
-    "numero": "29",
-    "animal": "Naranja"
-  },
-  {
-    "loteria": "RULETA ACTIVA",
-    "hora": "07:00 PM",
-    "numero": "31",
-    "animal": "Lapa"
-  },
-  {
-    "loteria": "MONJE MILLONARIO",
-    "hora": "07:05 PM",
-    "numero": "46",
-    "animal": "Puma"
-  },
-  {
     "loteria": "CALAMAR A",
     "hora": "07:00 PM",
     "numero": "03",
@@ -388,5 +154,29 @@
     "hora": "08:30 PM",
     "numero": "07",
     "animal": "Perico"
+  },
+  {
+    "loteria": "LOTTO ACTIVO RDOMINICANA",
+    "hora": "09:00 PM",
+    "numero": "19",
+    "animal": "Chivo"
+  },
+  {
+    "loteria": "RULETON PERU",
+    "hora": "09:00 PM",
+    "numero": "13",
+    "animal": "Mono"
+  },
+  {
+    "loteria": "RULETON COLOMBIA",
+    "hora": "09:00 PM",
+    "numero": "8",
+    "animal": "Ratón"
+  },
+  {
+    "loteria": "RULETON VENEZUELA",
+    "hora": "09:00 PM",
+    "numero": "00",
+    "animal": "Ballena"
   }
 ]
